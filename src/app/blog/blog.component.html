@@ -1,0 +1,10 @@
+<ng-container *ngIf="blog$ | async as blog">
+  <h1 class="text-center text-4xl font-bold">{{ blog.title }}</h1>
+
+  <hr/>
+
+  <!-- This is where Scully will inject the static HTML -->
+  <scully-content></scully-content>
+  <hr/>
+  <h4>End of content</h4>
+</ng-container>

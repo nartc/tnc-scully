@@ -10,7 +10,8 @@
           "inlineTemplate": true,
           "inlineStyle": true,
           "style": "scss",
-          "skipTests": true
+          "skipTests": true,
+          "changeDetection": "OnPush"
         },
         "@schematics/angular:class": {
           "skipTests": true
@@ -39,8 +40,11 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "configs/webpack-dev.config.js"
+            },
             "outputPath": "dist/tnc-scully",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -58,6 +62,9 @@
           },
           "configurations": {
             "production": {
+              "customWebpackConfig": {
+                "path": "configs/webpack-prod.config.js"
+              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -88,7 +95,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "tnc-scully:build"
           },
@@ -105,6 +112,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "tnc-scully"
 }
