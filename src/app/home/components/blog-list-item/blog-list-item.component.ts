@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
-import { ScullyRoute } from '@scullyio/ng-lib';
+import { Frontmatter } from '../../../shared/frontmatter';
 
 @Component({
   selector: 'app-blog-list-item',
@@ -7,7 +7,7 @@ import { ScullyRoute } from '@scullyio/ng-lib';
     <div class="flex justify-between items-center">
       <span class="font-light text-gray-600">{{ route.date | date: 'mediumDate' }}</span>
       <a
-        class="px-2 py-1 text-sm text-secondary font-bold rounded hover:text-white hover:bg-secondary transition-colors duration-200 ease-in-out"
+        class="px-2 py-1 text-sm text-secondary font-bold rounded hover:text-white hover:bg-secondary transition-colors duration-200 ease-in-out cursor-pointer"
       >
         {{ route.tags[0] }}
       </a>
@@ -30,6 +30,6 @@ import { ScullyRoute } from '@scullyio/ng-lib';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogListItemComponent {
-  @Input() route: ScullyRoute;
+  @Input() route: Frontmatter;
   @HostBinding('class.py-4') padding = true;
 }

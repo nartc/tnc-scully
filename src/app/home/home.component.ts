@@ -1,7 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map, takeUntil } from 'rxjs/operators';
+import { Destroyable } from '../shared/destroyable';
+import { Frontmatter } from '../shared/frontmatter';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,7 @@ import { map, tap } from 'rxjs/operators';
           <app-info></app-info>
           <app-navigation></app-navigation>
           <app-socials></app-socials>
-          <p class="text-gray-400 font-thin text-sm">© All rights reserved.</p>
+          <app-copyright></app-copyright>
         </div>
       </div>
       <div class="col-span-4 lg:col-span-3">
@@ -28,17 +30,17 @@ import { map, tap } from 'rxjs/operators';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit {
-  links$: Observable<ScullyRoute[]>;
+export class HomeComponent extends Destroyable implements OnInit {
+  links$: Observable<Frontmatter[]>;
 
-  constructor(private readonly scullyRoutesService: ScullyRoutesService) {}
+  constructor(private readonly scullyRoutesService: ScullyRoutesService) {
+    super();
+  }
 
   ngOnInit(): void {
     this.links$ = this.scullyRoutesService.available$.pipe(
       map((links) => links.filter((l) => l.route !== '/' || l.title != null)),
-      tap((links) => {
-        console.log(links);
-      }),
+      takeUntil(this.$destroyed),
     );
   }
 }

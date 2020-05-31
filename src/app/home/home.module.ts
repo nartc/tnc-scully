@@ -10,6 +10,7 @@ import { SocialsComponent } from './components/socials/socials.component';
 import { homeRoutes } from './home-routes';
 
 import { HomeComponent } from './home.component';
+import { CopyrightComponent } from './components/copyright/copyright.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HomeComponent } from './home.component';
     NavigationComponent,
     SocialsComponent,
     BlogListItemComponent,
+    CopyrightComponent,
   ],
   imports: [CommonModule, RouterModule.forChild(homeRoutes)],
 })
