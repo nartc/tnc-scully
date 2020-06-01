@@ -19,5 +19,5 @@ export class SocialsComponent {
     { id: 'Facebook', link: 'https://www.facebook.com/ctran2428' },
   ];
   @HostBinding('class')
-  socialsClasses = `w-1/2 grid grid-cols-${this.socials.length} lg:grid-cols-3 gap-2 mb-4`;
+  socialsClasses = `w-1/2 grid grid-cols-4 lg:grid-cols-3 gap-2 mb-4`;
 }
