@@ -1,13 +1,14 @@
 import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
-import { Frontmatter } from '../../../shared/frontmatter';
+import { Frontmatter } from '../../frontmatter';
 
 @Component({
-  selector: 'app-blog-list-item',
+  selector: 'app-blog-list',
   template: `
     <div class="flex justify-between items-center">
       <span class="font-light text-gray-600">{{ route.date | date: 'mediumDate' }}</span>
       <a
         class="px-2 py-1 text-sm text-secondary font-bold rounded hover:text-white hover:bg-secondary transition-colors duration-200 ease-in-out cursor-pointer"
+        [routerLink]="['/tag', route.tags[0].toLowerCase()]"
       >
         {{ route.tags[0] }}
       </a>
@@ -27,9 +28,10 @@ import { Frontmatter } from '../../../shared/frontmatter';
       <a class="text-primary hover:underline" [routerLink]="[route.route]">Read more</a>
     </div>
   `,
+  styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlogListItemComponent {
+export class BlogListComponent {
   @Input() route: Frontmatter;
   @HostBinding('class.py-4') padding = true;
 }

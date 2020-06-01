@@ -4,4 +4,5 @@ export interface Frontmatter extends ScullyRoute {
   description?: string;
   date?: string;
   tags?: string[];
+  url?: string;
 }

@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BlogListModule } from '../shared/components/blog-list/blog-list.module';
 import { AvatarComponent } from './components/avatar/avatar.component';
-import { BlogListItemComponent } from './components/blog-list-item/blog-list-item.component';
+import { CopyrightComponent } from './components/copyright/copyright.component';
 import { InfoComponent } from './components/info/info.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SocialIconComponent } from './components/social-icon/social-icon.component';
@@ -10,7 +11,6 @@ import { SocialsComponent } from './components/socials/socials.component';
 import { homeRoutes } from './home-routes';
 
 import { HomeComponent } from './home.component';
-import { CopyrightComponent } from './components/copyright/copyright.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,8 @@ import { CopyrightComponent } from './components/copyright/copyright.component';
     InfoComponent,
     NavigationComponent,
     SocialsComponent,
-    BlogListItemComponent,
     CopyrightComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(homeRoutes)],
+  imports: [CommonModule, RouterModule.forChild(homeRoutes), BlogListModule],
 })
 export class HomeModule {}
