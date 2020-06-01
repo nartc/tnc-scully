@@ -15,6 +15,9 @@ module.exports = {
       xl: '1280px',
     },
     extend: {
+      inset: {
+        '1': '1rem',
+      },
       colors: {
         primary: colors.purple['600'],
         secondary: colors.yellow['600'],

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
 import { shareReplay, takeUntil } from 'rxjs/operators';
@@ -13,7 +13,7 @@ import { Frontmatter } from '../shared/frontmatter';
   encapsulation: ViewEncapsulation.Emulated,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlogComponent extends Destroyable implements OnInit {
+export class BlogComponent extends Destroyable {
   blog$: Observable<Frontmatter> = this.scullyRoutesService
     .getCurrent()
     .pipe(shareReplay(1), takeUntil(this.$destroyed));
@@ -21,6 +21,4 @@ export class BlogComponent extends Destroyable implements OnInit {
   constructor(private readonly scullyRoutesService: ScullyRoutesService) {
     super();
   }
-
-  ngOnInit() {}
 }
