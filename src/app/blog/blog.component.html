@@ -1,10 +1,10 @@
 <ng-container *ngIf="blog$ | async as blog">
   <app-all-blogs-btn></app-all-blogs-btn>
-  <h1 class="text-center text-4xl font-bold">{{ blog.title }}</h1>
+  <h1 class="text-center text-4xl font-bold mb-6">{{ blog.title }}</h1>
   <!-- This is where Scully will inject the static HTML -->
   <scully-content></scully-content>
   <!-- This is where Scully will inject the static HTML -->
-  <h4 class="italic">Published on {{ blog.date | date: 'mediumDate' }}</h4>
+  <h4 class="italic text-lg mt-4">Published on {{ blog.date | date: 'mediumDate' }}</h4>
   <hr />
   <div class="flex flex-row items-center my-4">
     <a

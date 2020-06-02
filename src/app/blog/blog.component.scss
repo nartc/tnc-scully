@@ -1,0 +1,47 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply my-2;
+}
+
+blockquote {
+  @apply text-gray-500;
+  @apply my-4;
+  @apply py-1;
+  @apply px-2;
+  @apply border-l-4;
+  @apply border-gray-600;
+  @apply border-solid;
+}
+
+ol {
+  @apply list-disc;
+}
+
+ul {
+  @apply list-decimal;
+}
+
+ol,
+ul {
+  @apply ml-8;
+}
+
+li,
+p {
+  @apply font-thin;
+  @apply leading-7;
+  @apply text-lg;
+}
+
+:not(pre) > code {
+  @apply text-secondary;
+  @apply bg-gray-200;
+  @apply rounded;
+  @apply px-1;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}

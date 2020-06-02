@@ -17,7 +17,7 @@ import { MetaService } from '../shared/services/meta.service';
           No blogs to display
         </ng-container>
         <ng-template #list>
-          <app-blog-list *ngFor="let link of taggedBlogs" [route]="link"></app-blog-list>
+          <app-blog-list-item *ngFor="let link of taggedBlogs" [route]="link"></app-blog-list-item>
         </ng-template>
       </ng-container>
     </div>

@@ -12,7 +12,8 @@
           "/manifest.webmanifest",
           "/assets/scully-routes.json",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/about/**"
         ]
       }
     },

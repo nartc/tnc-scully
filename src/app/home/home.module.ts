@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { BlogListModule } from '../shared/components/blog-list/blog-list.module';
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { CopyrightComponent } from './components/copyright/copyright.component';
 import { InfoComponent } from './components/info/info.component';
@@ -22,6 +21,6 @@ import { HomeComponent } from './home.component';
     SocialsComponent,
     CopyrightComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(homeRoutes), BlogListModule],
+  imports: [CommonModule, RouterModule.forChild(homeRoutes)],
 })
 export class HomeModule {}

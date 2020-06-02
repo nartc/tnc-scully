@@ -1,9 +1,4 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ScullyRoutesService } from '@scullyio/ng-lib';
-import { Observable } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
-import { Destroyable } from '../shared/destroyable';
-import { Frontmatter } from '../shared/frontmatter';
 import { MetaService } from '../shared/services/meta.service';
 
 @Component({
@@ -20,29 +15,18 @@ import { MetaService } from '../shared/services/meta.service';
         </div>
       </div>
       <div class="col-span-4 lg:col-span-3">
-        <div class="rounded overflow-hidden shadow-lg p-4 flex flex-col divide-y divide-gray-400">
-          <app-blog-list *ngFor="let link of links$ | async" [route]="link"></app-blog-list>
+        <div class="rounded overflow-hidden shadow-lg p-4">
+          <router-outlet></router-outlet>
         </div>
       </div>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent extends Destroyable implements OnInit {
-  links$: Observable<Frontmatter[]>;
-
-  constructor(
-    private readonly scullyRoutesService: ScullyRoutesService,
-    private readonly metaService: MetaService,
-  ) {
-    super();
-  }
+export class HomeComponent implements OnInit {
+  constructor(private readonly metaService: MetaService) {}
 
   ngOnInit(): void {
     this.metaService.resetMeta();
-    this.links$ = this.scullyRoutesService.available$.pipe(
-      map((links) => links.filter((l) => l.route !== '/' || l.title != null)),
-      takeUntil(this.$destroyed),
-    );
   }
 }

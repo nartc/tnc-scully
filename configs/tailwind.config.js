@@ -2,7 +2,7 @@ const { fontFamily, colors } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   prefix: '',
-  important: false,
+  important: true,
   separator: ':',
   theme: {
     fontFamily: {

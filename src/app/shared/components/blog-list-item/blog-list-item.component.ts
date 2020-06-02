@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular
 import { Frontmatter } from '../../frontmatter';
 
 @Component({
-  selector: 'app-blog-list',
+  selector: 'app-blog-list-item',
   template: `
     <div class="flex justify-between items-center">
       <span class="font-light text-gray-600">{{ route.date | date: 'mediumDate' }}</span>
@@ -31,7 +31,7 @@ import { Frontmatter } from '../../frontmatter';
   styles: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlogListComponent {
+export class BlogListItemComponent {
   @Input() route: Frontmatter;
   @HostBinding('class.py-4') padding = true;
 }

@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { BlogListComponent } from './blog-list.component';
+import { BlogListItemComponent } from './blog-list-item.component';
 
 @NgModule({
-  declarations: [BlogListComponent],
+  declarations: [BlogListItemComponent],
   imports: [CommonModule, RouterModule],
-  exports: [BlogListComponent],
+  exports: [BlogListItemComponent],
 })
-export class BlogListModule {}
+export class BlogListItemModule {}
