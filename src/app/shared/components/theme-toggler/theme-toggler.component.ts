@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, HostBinding, HostListener } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  HostListener,
+  Input,
+} from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 
 @Component({
@@ -61,8 +67,11 @@ import { ThemeService } from '../../services/theme.service';
 export class ThemeTogglerComponent {
   current$ = this.themeService.colorScheme$;
 
-  @HostBinding('class') themeTogglerClasses =
-    'w-10 h-10 flex items-center justify-center cursor-pointer absolute top-2 right-2';
+  @Input() positionClass: string;
+
+  @HostBinding('class') get themeTogglerClasses() {
+    return 'w-10 h-10 lg:flex lg:items-center lg:justify-center cursor-pointer' + ' ' + this.positionClass;
+  }
 
   @HostListener('click')
   onClick() {

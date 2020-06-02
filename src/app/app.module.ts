@@ -8,7 +8,6 @@ import { appRoutes } from './app-routes';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ThemeTogglerModule } from './shared/components/theme-toggler/theme-toggler.module';
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],
@@ -17,7 +16,6 @@ import { ThemeTogglerModule } from './shared/components/theme-toggler/theme-togg
     RouterModule.forRoot(appRoutes),
     ScullyLibModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    ThemeTogglerModule,
   ],
   bootstrap: [AppComponent],
 })

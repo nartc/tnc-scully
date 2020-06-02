@@ -5,7 +5,6 @@ import { ThemeService } from './shared/services/theme.service';
   selector: 'app-root',
   template: `
     <div class="container mx-auto p-4">
-      <app-theme-toggler></app-theme-toggler>
       <router-outlet></router-outlet>
     </div>
   `,
