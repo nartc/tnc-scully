@@ -16,7 +16,7 @@ module.exports = {
             purgecss({
               content: ['./**/*.html', './**/*.ts'],
               // Example to let PurgeCss know how to exclude cdk and mat prefixes if your using Angular CDK and Angular Material
-              whitelistPatterns: [/^cdk-|mat-/],
+              whitelistPatterns: [/^cdk-|mat-|theme-/],
               defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
             }),
           ],

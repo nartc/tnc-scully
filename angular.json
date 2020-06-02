@@ -52,13 +52,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": [
-              "src/assets/variable.scss",
-              "src/assets/code.scss",
-              "src/assets/font.scss",
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "styles": ["src/assets/code.scss", "src/assets/font.scss", "src/styles.scss"]
           },
           "configurations": {
             "production": {
