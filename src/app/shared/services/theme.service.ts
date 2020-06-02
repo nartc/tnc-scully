@@ -18,7 +18,11 @@ export class ThemeService {
 
   load() {
     this.getColorScheme();
-    this.renderer.addClass(document.body, 'theme-' + this.$colorScheme.getValue());
+    const scheme = this.$colorScheme.getValue();
+    if (scheme === 'dark') {
+      this.renderer.removeClass(document.body, 'theme-light');
+    }
+    this.renderer.addClass(document.body, 'theme-' + scheme);
   }
 
   update() {
