@@ -17,10 +17,14 @@ module.exports = {
     extend: {
       inset: {
         '1': '1rem',
+        '2': '1.5rem'
       },
       colors: {
-        primary: colors.purple['600'],
-        secondary: colors.yellow['600'],
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        'gray-light': 'var(--gray-light)',
+        'gray-medium': 'var(--gray-medium)',
+        'gray-dark': 'var(--gray-dark)',
       },
     },
   },

@@ -3,8 +3,8 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
 @Component({
   selector: 'app-copyright',
   template: `
-    <p class="text-gray-400 font-thin text-sm">© All rights reserved.</p>
-    <p class="text-gray-400 font-thin text-sm ml-1 mt-0 lg:mt-2 lg:ml-0">
+    <p class="text-gray-light font-thin text-sm">© All rights reserved.</p>
+    <p class="text-gray-light font-thin text-sm ml-1 mt-0 lg:mt-2 lg:ml-0">
       Built with
       <a
         href="https://angular.io"

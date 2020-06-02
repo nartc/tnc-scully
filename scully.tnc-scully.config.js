@@ -8,7 +8,7 @@ exports.config = {
     projectRoot: './src',
     projectName: 'tnc-scully',
     outDir: './dist/static',
-    defaultPostRenderers: [scully_plugin_http404_1.getHttp404Plugin()],
+    defaultPostRenderers: [scully_plugin_http404_1.getHttp404Plugin(), 'seoHrefOptimise'],
     routes: {
         '/blog/:slug': {
             type: 'contentFolder',

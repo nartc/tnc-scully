@@ -8,12 +8,12 @@ h6 {
 }
 
 blockquote {
-  @apply text-gray-500;
+  @apply text-gray-medium;
   @apply my-4;
   @apply py-1;
   @apply px-2;
   @apply border-l-4;
-  @apply border-gray-600;
+  @apply border-gray-dark;
   @apply border-solid;
 }
 
@@ -39,7 +39,6 @@ p {
 
 *:not(pre) > code {
   @apply text-secondary;
-  @apply bg-gray-200;
   @apply rounded;
   @apply px-1;
   padding-top: 0.1rem;

@@ -3,3 +3,10 @@
 @import 'assets/custom-tailwind.css';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out, fill 200ms ease-in-out, stroke 200ms ease-in-out;
+}

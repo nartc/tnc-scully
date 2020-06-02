@@ -9,7 +9,8 @@
   <div class="flex flex-row items-center my-4">
     <a
       class="px-4 py-2 rounded-full border border-gray-300 text-center cursor-pointer transition-colors duration-200 ease-in-out hover:text-primary"
-      *ngFor="let tag of blog.tags"
+      [ngClass]="{ 'ml-1': !first }"
+      *ngFor="let tag of blog.tags; let first = first"
       [routerLink]="['/tag', tag]"
     >
       {{ tag }}
