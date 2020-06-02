@@ -8,6 +8,7 @@ type Social = 'Facebook' | 'Github' | 'LinkedIn' | 'Twitter';
     <a
       class="w-full h-full rounded-full overflow-hidden flex items-center justify-center cursor-pointer border border-gray-300 hover:text-primary hover:border-primary transition-colors duration-200 ease-in-out"
       [href]="link"
+      rel="noreferrer"
       target="_blank"
     >
       <svg

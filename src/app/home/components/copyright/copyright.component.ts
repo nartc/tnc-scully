@@ -8,6 +8,7 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
       Built with
       <a
         href="https://angular.io"
+        rel="noreferrer"
         target="_blank"
         class="cursor-pointer text-primary hover:underline"
       >
@@ -16,6 +17,7 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
       and
       <a
         href="https://scully.io"
+        rel="noreferrer"
         target="_blank"
         class="cursor-pointer text-primary hover:underline"
       >

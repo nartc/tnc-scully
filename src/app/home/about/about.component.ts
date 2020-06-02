@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       for
       <a
         href="https://architectnow.net"
+        rel="noreferrer"
         target="_blank"
         class="text-primary underline cursor-pointer"
       >
@@ -18,6 +19,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       solutions to many clients. Follow us at
       <a
         href="https://twitter.com/architectnow"
+        rel="noreferrer"
         target="_blank"
         class="text-primary underline cursor-pointer"
       >
@@ -29,15 +31,30 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       the world. With that said, the blog will focus on Web Technologies like Angular, React,
       TypeScript, NestJS etc. on the tech side of things and will probably be about any random
       things about my daily life activities. My personal blog has been powered by
-      <a href="https://gatsbyjs.org" target="_blank" class="text-primary underline cursor-pointer">
+      <a
+        href="https://gatsbyjs.org"
+        rel="noreferrer"
+        target="_blank"
+        class="text-primary underline cursor-pointer"
+      >
         GatsbyJS
       </a>
       but now is written with
-      <a href="https://angular.io" target="_blank" class="text-primary underline cursor-pointer">
+      <a
+        href="https://angular.io"
+        rel="noreferrer"
+        target="_blank"
+        class="text-primary underline cursor-pointer"
+      >
         Angular
       </a>
       and
-      <a href="https://scully.io" target="_blank" class="text-primary underline cursor-pointer">
+      <a
+        href="https://scully.io"
+        rel="noreferrer"
+        target="_blank"
+        class="text-primary underline cursor-pointer"
+      >
         Scully
       </a>
     </p>
