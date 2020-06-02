@@ -74,8 +74,9 @@ export class MetaService {
     this.meta.removeTag("property='og:image'");
     this.meta.removeTag("name='twitter:title'");
     this.meta.removeTag("name='twitter:description'");
-    this.meta.removeTag("name='description'");
     this.meta.removeTag("name='twitter:image'");
+
+    this.meta.updateTag({ name: 'description', content: 'Personal blog by Chau Tran' });
     this.title.setTitle('Chau Tran');
     this.updateCanonical();
   }
