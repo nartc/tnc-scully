@@ -21,23 +21,3 @@ h5 {
 h6 {
   @apply text-lg;
 }
-
-.theme-dark {
-  --primary: theme('colors.yellow.500');
-  --secondary: theme('colors.purple.500');
-  --background-color: theme('colors.gray.800');
-  --text-color: theme('colors.white');
-  --gray-light: theme('colors.gray.200');
-  --gray-medium: theme('colors.gray.400');
-  --gray-dark: theme('colors.gray.500');
-}
-
-.theme-light {
-  --primary: theme('colors.purple.600');
-  --secondary: theme('colors.yellow.600');
-  --background-color: theme('colors.white');
-  --text-color: theme('colors.black');
-  --gray-light: theme('colors.gray.400');
-  --gray-medium: theme('colors.gray.600');
-  --gray-dark: theme('colors.gray.700');
-}
