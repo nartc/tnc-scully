@@ -86,7 +86,7 @@ export class MetaService {
 
   private updateCanonical(url: string = environment.baseUrl) {
     let head = this.dom.querySelector('head');
-    if (Array.isArray(head)) {
+    if (head != null && Array.isArray(head)) {
       head = head[0];
     }
     let element: HTMLLinkElement = this.dom.querySelector(`link[rel='canonical']`) || null;

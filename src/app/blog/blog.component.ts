@@ -18,7 +18,7 @@ import { MetaService } from '../shared/services/meta.service';
 export class BlogComponent extends Destroyable {
   blog$: Observable<Frontmatter> = this.scullyRoutesService.getCurrent().pipe(
     tap((blog: Frontmatter) => {
-      this.metaService.update({ ...blog, url: `${environment.baseUrl}/${blog.route}` });
+      this.metaService.update({ ...blog, url: `${environment.baseUrl}${blog.route}` });
     }),
     shareReplay(1),
     takeUntil(this.$destroyed),

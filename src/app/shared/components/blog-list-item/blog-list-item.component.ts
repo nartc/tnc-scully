@@ -7,6 +7,7 @@ import { Frontmatter } from '../../frontmatter';
     <div class="flex justify-between items-center">
       <span class="font-light text-gray-600">{{ route.date | date: 'mediumDate' }}</span>
       <a
+        *ngIf="route.tags?.length"
         class="px-2 py-1 text-sm text-secondary font-bold rounded hover:text-white hover:bg-secondary transition-colors duration-200 ease-in-out cursor-pointer"
         [routerLink]="['/tag', route.tags[0].toLowerCase()]"
       >
