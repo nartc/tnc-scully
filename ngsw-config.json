@@ -10,6 +10,7 @@
           "/favicon.ico",
           "/index.html",
           "/manifest.webmanifest",
+          "/assets/scully-routes.json",
           "/*.css",
           "/*.js",
           "/about/**"
