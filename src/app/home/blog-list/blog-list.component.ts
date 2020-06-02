@@ -23,7 +23,7 @@ export class BlogListComponent extends Destroyable implements OnInit {
 
   ngOnInit(): void {
     this.links$ = this.scullyRoutesService.available$.pipe(
-      map((links) => links.filter((l) => l.route !== '/' || l.title != null)),
+      map((links) => links.filter((l) => l.route.includes('/blog') && l.title != null)),
       takeUntil(this.$destroyed),
     );
   }

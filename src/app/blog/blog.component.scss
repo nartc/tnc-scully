@@ -37,7 +37,7 @@ p {
   @apply text-lg;
 }
 
-:not(pre) > code {
+*:not(pre) > code {
   @apply text-secondary;
   @apply bg-gray-200;
   @apply rounded;
