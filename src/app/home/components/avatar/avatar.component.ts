@@ -4,9 +4,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-avatar',
   template: `
     <div class="w-16 h-16 relative mb-4">
-      <div
-        class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center table cursor-pointer"
-      >
+      <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center table">
         <span class="hidden group-hover:table-cell text-white font-bold align-middle">
           KR
         </span>
