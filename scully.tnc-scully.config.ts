@@ -8,7 +8,7 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'tnc-scully',
   outDir: './dist/static',
-  defaultPostRenderers: [getHttp404Plugin()],
+  defaultPostRenderers: [getHttp404Plugin(), 'seoHrefOptimise'],
   routes: {
     '/blog/:slug': {
       type: 'contentFolder',

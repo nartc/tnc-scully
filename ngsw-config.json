@@ -13,7 +13,8 @@
           "/*.css",
           "/*.js",
           "/about/**"
-        ]
+        ],
+        "urls": ["https://avatars*.githubusercontent.com/**/*"]
       }
     },
     {
@@ -21,7 +22,8 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
-        "files": ["/blog/**/*.html"]
+        "files": ["/blog/**/*.html"],
+        "urls": ["https://avatars*.githubusercontent.com/**/*"]
       }
     },
     {
