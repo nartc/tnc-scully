@@ -1,6 +1,6 @@
 ---
 title: Getting started with Scully
-description: In this blog post, I will show you how to get started with Scully, and TailwindCSS which is exactly how this blog is built
+description: In this blog post, I will show you how to get started with Scully
 date: '2020-06-02'
 published: true
 slug: 'getting-started-scully'
