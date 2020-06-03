@@ -47,6 +47,10 @@ export class MetaService {
       content: front.url,
     });
 
+    if (front.tags?.length) {
+      this.meta.updateTag({ name: 'keywords', content: front.tags.join(', ') });
+    }
+
     if (front.image) {
       this.meta.updateTag({
         name: 'twitter:image',
@@ -75,6 +79,7 @@ export class MetaService {
     this.meta.removeTag("name='twitter:title'");
     this.meta.removeTag("name='twitter:description'");
     this.meta.removeTag("name='twitter:image'");
+    this.meta.removeTag("name='keywords'");
 
     this.meta.updateTag({ name: 'description', content: 'Personal blog by Chau Tran' });
     this.title.setTitle('Chau Tran');
