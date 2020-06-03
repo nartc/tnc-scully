@@ -186,6 +186,7 @@ function update() {
   document.body.classList.remove(`theme-${currentScheme}`);
   document.body.classList.add(`theme-${updateScheme}`);
   buildSvg(updateScheme);
+  localStorage.setItem('prefers-scheme', updateScheme);
 }
 
 themeToggler.addEventListener('click', update);
