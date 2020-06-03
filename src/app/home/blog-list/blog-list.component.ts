@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 import { Destroyable } from '../../shared/destroyable';
 import { Frontmatter } from '../../shared/frontmatter';
+import { latestByDate } from '../../shared/utils/operators/latest-by-date.operator';
 
 @Component({
   selector: 'app-blog-list',
@@ -24,6 +25,7 @@ export class BlogListComponent extends Destroyable implements OnInit {
   ngOnInit(): void {
     this.links$ = this.scullyRoutesService.available$.pipe(
       map((links) => links.filter((l) => l.route.includes('/blog') && l.title != null)),
+      latestByDate<Frontmatter[]>(),
       takeUntil(this.$destroyed),
     );
   }

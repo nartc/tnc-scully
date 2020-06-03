@@ -6,6 +6,7 @@ import { map, pluck, switchMap, takeUntil } from 'rxjs/operators';
 import { Destroyable } from '../shared/destroyable';
 import { Frontmatter } from '../shared/frontmatter';
 import { MetaService } from '../shared/services/meta.service';
+import { latestByDate } from '../shared/utils/operators/latest-by-date.operator';
 
 @Component({
   selector: 'app-tag',
@@ -40,6 +41,7 @@ export class TagComponent extends Destroyable {
               route.tags?.[0] != null && route.tags[0].toLowerCase() === tagName.toLowerCase(),
           ),
         ),
+        latestByDate(),
       );
     }),
     takeUntil(this.$destroyed),
