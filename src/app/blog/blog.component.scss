@@ -2,9 +2,35 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   @apply my-2;
+}
+
+h6 {
+  @apply flex;
+  @apply border-b;
+  @apply border-solid;
+  @apply border-gray-dark;
+
+  & > strong {
+    @apply font-thin;
+    @apply text-sm;
+    @apply px-2;
+    @apply py-1;
+    @apply mt-4;
+    @apply text-white;
+    background-color: #2e3440;
+  }
+
+  & + pre {
+    @apply mt-0 !important;
+  }
+}
+
+a:not([ng-reflect-router-link]) {
+  @apply text-primary;
+  @apply underline;
+  @apply cursor-pointer;
 }
 
 blockquote {
@@ -18,11 +44,11 @@ blockquote {
 }
 
 ol {
-  @apply list-disc;
+  @apply list-decimal;
 }
 
 ul {
-  @apply list-decimal;
+  @apply list-disc;
 }
 
 ol,
@@ -41,6 +67,7 @@ p {
   @apply text-secondary;
   @apply rounded;
   @apply px-1;
+  @apply font-thin;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
 }
