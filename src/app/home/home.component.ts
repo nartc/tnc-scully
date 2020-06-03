@@ -6,7 +6,7 @@ import { MetaService } from '../shared/services/meta.service';
   template: `
     <div class="grid col-gap-4 grid-cols-1 lg:grid-cols-4">
       <aside class="col-span-4 lg:col-span-1">
-        <div class="max-w-full lg:max-w-sm rounded overflow-hidden shadow-lg p-4 relative">
+        <div class="max-w-full lg:max-w-sm rounded overflow-hidden shadow-common p-4 relative">
           <app-theme-toggler positionClass="absolute top-1 right-1"></app-theme-toggler>
           <app-avatar></app-avatar>
           <app-info></app-info>
@@ -16,7 +16,7 @@ import { MetaService } from '../shared/services/meta.service';
         </div>
       </aside>
       <main class="col-span-4 lg:col-span-3">
-        <div class="rounded overflow-hidden shadow-lg p-4">
+        <div class="rounded overflow-hidden shadow-common p-4">
           <router-outlet></router-outlet>
         </div>
       </main>

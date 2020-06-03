@@ -1,4 +1,4 @@
-const { fontFamily, colors } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   prefix: '',
@@ -17,7 +17,10 @@ module.exports = {
     extend: {
       inset: {
         '1': '1rem',
-        '2': '1.5rem'
+        '2': '1.5rem',
+      },
+      boxShadow: {
+        common: 'var(--shadow)',
       },
       colors: {
         primary: 'var(--primary)',
