@@ -7,7 +7,7 @@ slug: 'getting-started-scully'
 tags: ['Scully', 'Angular', 'TypeScript']
 ---
 
-Allow me to start off by saying how good and _at home_ I feel to be able to write my blog posts using [Angular](https://angular.io){:target=\_blank} with the help of [Scully](https://scully.io){:target=\_blank}.
+Allow me to start off by saying how good and _at home_ I feel to be able to write my blog posts using [Angular](https://angular.io){:target=\_blank rel=noreferrer} with the help of [Scully](https://scully.io){:target=\_blank rel=noreferrer}.
 And I believe most people who are looking into Scully will try to find the same feeling working on their personal blogs. In this blog, we are going to
 explore all the basic steps needed to get your personal blog up and running with Scully and Angular
 
@@ -206,4 +206,4 @@ As of now, you have a working pre-rendered blog with Angular and Scully but it's
 > I'll write about all of the above points in future blog(s)
 
 and there are tons of other stuffs to add to your blog like Newsletter, Discussion section, Google Analytics etc.
-Make sure to read [Scully documentations](https://scully.io){:target=\_blank}. Have fun and good luck building your personal blog 👋
+Make sure to read [Scully documentations](https://scully.io){:target=\_blank rel=noreferrer}. Have fun and good luck building your personal blog 👋
