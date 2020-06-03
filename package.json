@@ -50,6 +50,7 @@
     "postcss-loader": "3.0.0",
     "postcss-scss": "2.1.1",
     "prettier": "2.0.5",
+    "scully-plugin-disable-angular": "^4.0.2",
     "scully-plugin-minify-html": "3.1.2",
     "tailwindcss": "1.4.6",
     "ts-node": "8.10.2",
