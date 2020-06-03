@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
   selector: 'app-avatar',
   template: `
-    <div class="w-16 h-16 relative mb-4">
+    <div class="w-16 h-16 relative mb-4" role="img" aria-label="Avatar of blog author">
       <div class="group w-full h-full rounded-full overflow-hidden shadow-inner text-center table">
         <span class="hidden group-hover:table-cell text-white font-bold align-middle">
           KR

@@ -5,7 +5,7 @@ import { MetaService } from '../shared/services/meta.service';
   selector: 'app-home',
   template: `
     <div class="grid col-gap-4 grid-cols-1 lg:grid-cols-4">
-      <div class="col-span-4 lg:col-span-1">
+      <aside class="col-span-4 lg:col-span-1">
         <div class="max-w-full lg:max-w-sm rounded overflow-hidden shadow-lg p-4 relative">
           <app-theme-toggler positionClass="absolute top-1 right-1"></app-theme-toggler>
           <app-avatar></app-avatar>
@@ -14,12 +14,12 @@ import { MetaService } from '../shared/services/meta.service';
           <app-socials></app-socials>
           <app-copyright></app-copyright>
         </div>
-      </div>
-      <div class="col-span-4 lg:col-span-3">
+      </aside>
+      <main class="col-span-4 lg:col-span-3">
         <div class="rounded overflow-hidden shadow-lg p-4">
           <router-outlet></router-outlet>
         </div>
-      </div>
+      </main>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,

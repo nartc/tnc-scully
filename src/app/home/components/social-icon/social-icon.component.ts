@@ -10,6 +10,7 @@ type Social = 'Facebook' | 'Github' | 'LinkedIn' | 'Twitter' | 'Stackoverflow' |
       [href]="link"
       rel="noreferrer"
       target="_blank"
+      [attr.aria-label]="'Link to ' + socialId"
     >
       <svg
         class="text-xs w-1/2"

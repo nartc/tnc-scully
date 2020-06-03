@@ -24,8 +24,8 @@ h6 {
 
 /*! purgecss start ignore */
 :root .theme-dark {
-  --primary: theme('colors.yellow.500');
-  --secondary: theme('colors.purple.500');
+  --primary: theme('colors.yellow.400');
+  --secondary: theme('colors.purple.400');
   --background-color: theme('colors.gray.800');
   --text-color: theme('colors.white');
   --gray-light: theme('colors.gray.300');

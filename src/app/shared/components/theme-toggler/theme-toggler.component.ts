@@ -70,8 +70,14 @@ export class ThemeTogglerComponent {
   @Input() positionClass: string;
 
   @HostBinding('class') get themeTogglerClasses() {
-    return 'w-10 h-10 lg:flex lg:items-center lg:justify-center cursor-pointer' + ' ' + this.positionClass;
+    return (
+      'w-10 h-10 lg:flex lg:items-center lg:justify-center cursor-pointer' +
+      ' ' +
+      this.positionClass
+    );
   }
+
+  @HostBinding('attr.aria-label') ariaLabel = 'Dark and Light mode toggle button';
 
   @HostListener('click')
   onClick() {
