@@ -28,7 +28,7 @@ h6 {
   }
 }
 
-a:not([ng-reflect-router-link]) {
+a:not(.tag-link) {
   @apply text-primary;
   @apply underline;
   @apply cursor-pointer;
