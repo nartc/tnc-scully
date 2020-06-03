@@ -8,10 +8,17 @@ import { Frontmatter } from '../../frontmatter';
       <span class="font-light text-gray-medium">
         {{ route.date | date: 'mediumDate' }}
       </span>
+      <!--      <a-->
+      <!--        *ngIf="route.tags?.length"-->
+      <!--        class="px-2 py-1 text-sm text-secondary font-bold rounded hover:text-white hover:bg-secondary transition-colors duration-200 ease-in-out cursor-pointer"-->
+      <!--        [routerLink]="['/tag', route.tags[0].toLowerCase()]"-->
+      <!--      >-->
+      <!--        {{ route.tags[0] }}-->
+      <!--      </a>-->
       <a
         *ngIf="route.tags?.length"
-        class="px-2 py-1 text-sm text-secondary font-bold rounded hover:text-white hover:bg-secondary transition-colors duration-200 ease-in-out cursor-pointer"
-        [routerLink]="['/tag', route.tags[0].toLowerCase()]"
+        class="px-2 py-1 text-sm text-secondary font-bold rounded"
+        [attr.aria-label]="route.tags[0]"
       >
         {{ route.tags[0] }}
       </a>

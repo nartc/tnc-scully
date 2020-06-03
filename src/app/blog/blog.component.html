@@ -10,11 +10,19 @@
   <h4 class="italic text-lg mt-4">Published on {{ blog.date | date: 'mediumDate' }}</h4>
   <hr />
   <div class="flex flex-row items-center my-4">
+    <!--    <a-->
+    <!--      class="tag-link px-4 py-2 rounded-full border border-gray-300 text-center cursor-pointer transition-colors duration-200 ease-in-out hover:text-primary"-->
+    <!--      [ngClass]="{ 'ml-1': !first }"-->
+    <!--      *ngFor="let tag of blog.tags; let first = first"-->
+    <!--      [routerLink]="['/tag', tag.toLowerCase()]"-->
+    <!--    >-->
+    <!--      {{ tag }}-->
+    <!--    </a>-->
     <a
-      class="tag-link px-4 py-2 rounded-full border border-gray-300 text-center cursor-pointer transition-colors duration-200 ease-in-out hover:text-primary"
+      class="tag-link px-4 py-2 rounded-full border border-gray-300 text-center"
       [ngClass]="{ 'ml-1': !first }"
       *ngFor="let tag of blog.tags; let first = first"
-      [routerLink]="['/tag', tag.toLowerCase()]"
+      [attr.aria-label]="tag"
     >
       {{ tag }}
     </a>
