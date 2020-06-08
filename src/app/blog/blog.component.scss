@@ -34,6 +34,19 @@ a:not(.tag-link) {
   @apply cursor-pointer;
 }
 
+iframe {
+  @apply my-2;
+  @apply mx-auto;
+
+  & + p {
+    @apply text-center;
+    @apply mt-2-rev;
+    & > em {
+      @apply text-sm;
+    }
+  }
+}
+
 /*! purgecss end ignore */
 
 blockquote {

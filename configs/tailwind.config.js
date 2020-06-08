@@ -1,4 +1,4 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   prefix: '',
@@ -18,6 +18,9 @@ module.exports = {
       inset: {
         '1': '1rem',
         '2': '1.5rem',
+      },
+      spacing: {
+        '2-rev': `-${spacing['2']}`
       },
       boxShadow: {
         common: 'var(--shadow)',
