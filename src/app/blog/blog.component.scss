@@ -3,7 +3,8 @@ h2,
 h3,
 h4,
 h5 {
-  @apply my-2;
+  @apply mb-2;
+  @apply mt-4;
 }
 
 /*! purgecss start ignore */
@@ -35,7 +36,8 @@ a:not(.tag-link) {
 }
 
 iframe {
-  @apply my-2;
+  @apply mt-4;
+  @apply mb-2;
   @apply mx-auto;
 
   & + p {
