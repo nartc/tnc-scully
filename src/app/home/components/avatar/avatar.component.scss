@@ -1,0 +1,60 @@
+/*! purgecss start ignore */
+.avatar {
+  background-clip: padding-box; /* !importanté */
+
+  &:before {
+    content: '';
+    z-index: -1;
+    margin: -10%; /* !important */
+    border-radius: inherit; /* !important */
+    background: linear-gradient(
+      to bottom right,
+      #b827fc 0%,
+      #2c90fc 25%,
+      #b8fd33 50%,
+      #fec837 75%,
+      #fd1892 100%
+    );
+    @apply absolute;
+    @apply top-0;
+    @apply right-0;
+    @apply bottom-0;
+    @apply left-0;
+    @apply opacity-0;
+    @apply transition-opacity;
+    @apply duration-200;
+    @apply ease-out;
+  }
+
+  &.show:before {
+    @apply opacity-100;
+  }
+
+  &.tooltip {
+    @apply relative;
+    &:after {
+      content: attr(data-tooltip);
+      top: -1rem;
+      left: 100%;
+      transform: translateX(10%) translateY(0);
+      background: transparent;
+      border-color: var(--text-color);
+      color: var(--text-color);
+      transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1),
+        transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+      @apply block;
+      @apply w-32;
+      @apply max-w-32;
+      @apply visible;
+      @apply absolute;
+      @apply py-1;
+      @apply px-2;
+      @apply border;
+      @apply border-solid;
+      @apply rounded;
+      @apply z-10;
+      @apply text-xs;
+    }
+  }
+}
+/*! purgecss end ignore */

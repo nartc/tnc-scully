@@ -20,10 +20,13 @@ module.exports = {
         '2': '1.5rem',
       },
       spacing: {
-        '2-rev': `-${spacing['2']}`
+        '2-rev': `-${spacing['2']}`,
       },
       boxShadow: {
         common: 'var(--shadow)',
+      },
+      maxWidth: {
+        '32': '8rem',
       },
       colors: {
         primary: 'var(--primary)',
