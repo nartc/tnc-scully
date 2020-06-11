@@ -2,8 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { of } from 'rxjs';
-import { map, pluck, switchMap, takeUntil } from 'rxjs/operators';
-import { Destroyable } from '../shared/destroyable';
+import { map, pluck, switchMap } from 'rxjs/operators';
 import { Frontmatter } from '../shared/frontmatter';
 import { MetaService } from '../shared/services/meta.service';
 import { latestByDate } from '../shared/utils/operators/latest-by-date.operator';
@@ -28,7 +27,7 @@ import { latestByDate } from '../shared/utils/operators/latest-by-date.operator'
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TagComponent extends Destroyable {
+export class TagComponent {
   taggedBlogs$ = this.route.params.pipe(
     pluck('tagName'),
     switchMap((tagName: string) => {
@@ -44,14 +43,11 @@ export class TagComponent extends Destroyable {
         latestByDate(),
       );
     }),
-    takeUntil(this.$destroyed),
   );
 
   constructor(
     private readonly route: ActivatedRoute,
     private readonly scullyRoutesService: ScullyRoutesService,
     private readonly metaService: MetaService,
-  ) {
-    super();
-  }
+  ) {}
 }
