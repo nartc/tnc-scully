@@ -11,14 +11,14 @@ import { Destroyable } from '../../../shared/destroyable';
       class="w-16 h-16 relative mb-4"
       role="img"
       aria-label="Avatar of blog author"
-      *ngIf="hasUpdate$ | async as hasUpdate"
-      [ngClass]="{ 'pointer-events-none': !hasUpdate, 'cursor-pointer': hasUpdate }"
-      (click)="reload(hasUpdate)"
+      *ngIf="{ hasUpdate: hasUpdate$ | async } as vm"
+      [ngClass]="{ 'pointer-events-none': !vm.hasUpdate, 'cursor-pointer': vm.hasUpdate }"
+      (click)="reload(vm.hasUpdate)"
     >
       <div
         class="group w-full h-full rounded-full border-4 border-transparent text-center flex items-center relative avatar"
         [attr.data-tooltip]="'New version available 🚀'"
-        [ngClass]="{ 'show tooltip cursor-pointer': hasUpdate }"
+        [ngClass]="{ 'show tooltip cursor-pointer': vm.hasUpdate }"
       >
         <span class="hidden group-hover:table-cell text-white font-bold align-middle">
           KR
