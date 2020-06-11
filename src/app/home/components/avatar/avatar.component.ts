@@ -17,8 +17,8 @@ import { Destroyable } from '../../../shared/destroyable';
     >
       <div
         class="group w-full h-full rounded-full border-4 border-transparent text-center flex items-center relative avatar"
-        [attr.data-tooltip]="'Some tooltip goes here'"
-        [ngClass]="{ show: hasUpdate, tooltip: hasUpdate }"
+        [attr.data-tooltip]="'New version available 🚀'"
+        [ngClass]="{ 'show tooltip cursor-pointer': hasUpdate }"
       >
         <span class="hidden group-hover:table-cell text-white font-bold align-middle">
           KR
@@ -35,7 +35,7 @@ import { Destroyable } from '../../../shared/destroyable';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AvatarComponent extends Destroyable {
-  hasUpdate$ = this.swUpdate.available.pipe(startWith(false), mapTo(true));
+  hasUpdate$ = this.swUpdate.available.pipe(mapTo(true), startWith(false));
 
   constructor(readonly appRef: ApplicationRef, private readonly swUpdate: SwUpdate) {
     super();
