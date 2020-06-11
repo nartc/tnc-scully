@@ -30,7 +30,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       This is the place that I use to share my knowledge about programming and personal stuffs with
       the world. With that said, the blog will focus on Web Technologies like Angular, React,
       TypeScript, NestJS etc. on the tech side of things and will probably be about any random
-      things about my daily life activities. My personal blog has been powered by
+      things about my daily life activities. My personal blog was powered by
       <a
         href="https://gatsbyjs.org"
         rel="noreferrer"
