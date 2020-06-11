@@ -26,35 +26,37 @@
     @apply ease-out;
   }
 
-  &.show:before {
-    @apply opacity-100;
+  &:after {
+    opacity: 0;
+    content: attr(data-tooltip);
+    top: -1rem;
+    left: 100%;
+    transform: translateX(10%) translateY(0);
+    background: transparent;
+    border-color: var(--text-color);
+    color: var(--text-color);
+    transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1),
+      transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    @apply block;
+    @apply w-32;
+    @apply max-w-32;
+    @apply visible;
+    @apply absolute;
+    @apply py-1;
+    @apply px-2;
+    @apply border;
+    @apply border-solid;
+    @apply rounded;
+    @apply z-10;
+    @apply text-xs;
   }
 
-  &.tooltip {
-    @apply relative;
-    &:after {
-      content: attr(data-tooltip);
-      top: -1rem;
-      left: 100%;
-      transform: translateX(10%) translateY(0);
-      background: transparent;
-      border-color: var(--text-color);
-      color: var(--text-color);
-      transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1),
-        transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-      @apply block;
-      @apply w-32;
-      @apply max-w-32;
-      @apply visible;
-      @apply absolute;
-      @apply py-1;
-      @apply px-2;
-      @apply border;
-      @apply border-solid;
-      @apply rounded;
-      @apply z-10;
-      @apply text-xs;
+  &.show {
+    &:after,
+    &:before {
+      @apply opacity-100;
     }
   }
 }
+
 /*! purgecss end ignore */

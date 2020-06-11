@@ -18,7 +18,7 @@ import { Destroyable } from '../../../shared/destroyable';
       <div
         class="group w-full h-full rounded-full border-4 border-transparent text-center flex items-center relative avatar"
         [attr.data-tooltip]="'New version available 🚀'"
-        [ngClass]="{ 'show tooltip cursor-pointer': vm.hasUpdate }"
+        [ngClass]="{ 'show cursor-pointer': vm.hasUpdate }"
       >
         <span class="hidden group-hover:table-cell text-white font-bold align-middle">
           KR
