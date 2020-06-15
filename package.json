@@ -40,10 +40,10 @@
   },
   "devDependencies": {
     "@angular-builders/custom-webpack": "9.1.0",
-    "@angular-devkit/build-angular": "0.901.7",
-    "@angular/cli": "9.1.7",
+    "@angular-devkit/build-angular": "0.901.8",
+    "@angular/cli": "9.1.8",
     "@angular/compiler-cli": "9.1.11",
-    "@fullhuman/postcss-purgecss": "2.2.0",
+    "@fullhuman/postcss-purgecss": "2.3.0",
     "@gammastream/scully-plugin-http404": "1.0.1",
     "@nartc/scully-plugin-google-gtag": "0.0.7",
     "@types/gtag.js": "0.0.3",

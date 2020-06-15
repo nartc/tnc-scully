@@ -15,15 +15,7 @@
       #fec837 75%,
       #fd1892 100%
     );
-    @apply absolute;
-    @apply top-0;
-    @apply right-0;
-    @apply bottom-0;
-    @apply left-0;
-    @apply opacity-0;
-    @apply transition-opacity;
-    @apply duration-200;
-    @apply ease-out;
+    @apply absolute top-0 right-0 bottom-0 left-0 opacity-0 transition-opacity duration-200 ease-out;
   }
 
   &:after {
@@ -37,18 +29,7 @@
     color: var(--text-color);
     transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1),
       transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-    @apply block;
-    @apply w-32;
-    @apply max-w-32;
-    @apply visible;
-    @apply absolute;
-    @apply py-1;
-    @apply px-2;
-    @apply border;
-    @apply border-solid;
-    @apply rounded;
-    @apply z-10;
-    @apply text-xs;
+    @apply block w-32 max-w-32 visible absolute py-1 px-2 border border-solid rounded z-10 text-xs;
   }
 
   &.show {

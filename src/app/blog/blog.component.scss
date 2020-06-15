@@ -3,24 +3,15 @@ h2,
 h3,
 h4,
 h5 {
-  @apply mb-2;
-  @apply mt-4;
+  @apply mb-2 mt-4;
 }
 
 /*! purgecss start ignore */
 h6 {
-  @apply flex;
-  @apply border-b;
-  @apply border-solid;
-  @apply border-gray-dark;
+  @apply flex border-b border-solid border-gray-dark;
 
   & > strong {
-    @apply font-thin;
-    @apply text-sm;
-    @apply px-2;
-    @apply py-1;
-    @apply mt-4;
-    @apply text-white;
+    @apply font-thin text-sm px-2 py-1 mt-4 text-white;
     background-color: #2e3440;
   }
 
@@ -30,19 +21,14 @@ h6 {
 }
 
 a:not(.tag-link) {
-  @apply text-primary;
-  @apply underline;
-  @apply cursor-pointer;
+  @apply text-primary underline cursor-pointer;
 }
 
 iframe {
-  @apply mt-4;
-  @apply mb-2;
-  @apply mx-auto;
+  @apply mt-4 mb-2 mx-auto;
 
   & + p {
-    @apply text-center;
-    @apply mt-2-rev;
+    @apply text-center mt-2-rev;
     & > em {
       @apply text-sm;
     }
@@ -52,13 +38,7 @@ iframe {
 /*! purgecss end ignore */
 
 blockquote {
-  @apply text-gray-medium;
-  @apply my-4;
-  @apply py-1;
-  @apply px-2;
-  @apply border-l-4;
-  @apply border-gray-dark;
-  @apply border-solid;
+  @apply text-gray-medium my-4 py-1 px-2 border-l-4 border-gray-dark border-solid;
 }
 
 ol {
@@ -76,17 +56,12 @@ ul {
 
 li,
 p {
-  @apply font-thin;
-  @apply leading-7;
-  @apply text-lg;
+  @apply font-thin leading-7 text-lg;
 }
 
 /*! purgecss start ignore */
 :not(pre) > code {
-  @apply text-secondary;
-  @apply rounded;
-  @apply px-1;
-  @apply font-thin;
+  @apply text-secondary rounded px-1 font-thin;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
 }
