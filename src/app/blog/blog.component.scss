@@ -3,7 +3,7 @@ h2,
 h3,
 h4,
 h5 {
-  @apply mb-2 mt-4;
+  @apply mb-2 mt-8;
 }
 
 /*! purgecss start ignore */
@@ -16,7 +16,7 @@ h6 {
   }
 
   & + pre {
-    @apply mt-0;
+    @apply mt-0 !important;
   }
 }
 
@@ -25,7 +25,7 @@ a:not(.tag-link) {
 }
 
 iframe {
-  @apply mt-4 mb-2 mx-auto;
+  @apply mt-4 mb-2 mx-auto max-w-full min-h-full;
 
   & + p {
     @apply text-center mt-2-rev;
@@ -61,7 +61,7 @@ p {
 
 /*! purgecss start ignore */
 :not(pre) > code {
-  @apply text-secondary rounded px-1 font-thin;
+  @apply text-secondary rounded px-1 font-thin break-words;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
 }
