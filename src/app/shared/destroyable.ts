@@ -1,7 +1,8 @@
-import { OnDestroy } from '@angular/core';
+import { Directive, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
 
-export abstract class Destroyable implements OnDestroy {
+@Directive()
+export class Destroyable implements OnDestroy {
   protected $destroyed = new Subject();
 
   ngOnDestroy() {
