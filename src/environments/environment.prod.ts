@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://nartc-scully.netlify.app',
+  baseUrl: 'https://nartc.me',
 };
