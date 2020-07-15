@@ -8,6 +8,9 @@ import { Frontmatter } from '../frontmatter';
   providedIn: 'root',
 })
 export class MetaService {
+  private _defaultImage =
+    'https://avatars1.githubusercontent.com/u/25516557?s=460&u=b15a0b6c89d6d8d0b7225a6eab30c060f70d3d9f&v=4';
+
   constructor(
     private readonly meta: Meta,
     private readonly title: Title,
@@ -51,17 +54,15 @@ export class MetaService {
       this.meta.updateTag({ name: 'keywords', content: front.tags.join(', ') });
     }
 
-    if (front.image) {
-      this.meta.updateTag({
-        name: 'twitter:image',
-        content: front.image,
-      });
+    this.meta.updateTag({
+      name: 'twitter:image',
+      content: front.image || this._defaultImage,
+    });
 
-      this.meta.updateTag({
-        property: 'og:image',
-        content: front.image,
-      });
-    }
+    this.meta.updateTag({
+      property: 'og:image',
+      content: front.image || this._defaultImage,
+    });
 
     this.updateCanonical(front.url);
   }
@@ -75,13 +76,20 @@ export class MetaService {
     this.meta.removeTag("property='og:title'");
     this.meta.removeTag("property='og:description'");
     this.meta.removeTag("property='og:url'");
-    this.meta.removeTag("property='og:image'");
     this.meta.removeTag("name='twitter:title'");
     this.meta.removeTag("name='twitter:description'");
-    this.meta.removeTag("name='twitter:image'");
     this.meta.removeTag("name='keywords'");
 
     this.meta.updateTag({ name: 'description', content: 'Personal blog by Chau Tran' });
+    this.meta.updateTag({
+      name: 'twitter:image',
+      content: this._defaultImage,
+    });
+
+    this.meta.updateTag({
+      property: 'og:image',
+      content: this._defaultImage,
+    });
     this.title.setTitle('Chau Tran');
     this.updateCanonical();
   }

@@ -7,6 +7,10 @@ h5 {
 }
 
 /*! purgecss start ignore */
+strong {
+  @apply font-bold;
+}
+
 h6 {
   @apply flex border-b border-solid border-gray-dark;
 
