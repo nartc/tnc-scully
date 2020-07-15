@@ -68,3 +68,18 @@ running in watch-mode, routefile in source assets will not be updated
 This is a development tool for Scully applications.
 You can ignore the warning (TLS) or run scully with --no-warning
 ****************************************************************************************
+
+
+
+
+
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "[33mnpm run scully -- --scanRoutes[39m"
+----------------------------------
+No configuration for route "[33m/tag/:tagName[39m" found. Skipping
+
+
+

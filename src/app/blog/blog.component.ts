@@ -19,7 +19,6 @@ export class BlogComponent {
     tap((blog: Frontmatter) => {
       this.metaService.update({ ...blog, url: `${environment.baseUrl}${blog.route}` });
     }),
-    shareReplay(1),
   );
 
   constructor(
