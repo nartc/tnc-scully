@@ -1,6 +1,6 @@
-import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import { getGaPlugin, GoogleAnalyticsConfig } from '@nartc/scully-plugin-google-gtag';
 import { RouteTypes, ScullyConfig, setPluginConfig } from '@scullyio/scully';
+import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import { MinifyHtml } from 'scully-plugin-minify-html';
 
 const GaPlugin = getGaPlugin();
