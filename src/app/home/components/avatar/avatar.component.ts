@@ -1,7 +1,7 @@
 import { ApplicationRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { concat, interval } from 'rxjs';
-import { first, mapTo, startWith, takeUntil } from 'rxjs/operators';
+import { first, mapTo, startWith, takeUntil, tap } from 'rxjs/operators';
 import { Destroyable } from '../../../shared/destroyable';
 
 @Component({
@@ -34,7 +34,7 @@ import { Destroyable } from '../../../shared/destroyable';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AvatarComponent extends Destroyable {
-  hasUpdate$ = this.swUpdate.available.pipe(mapTo(true), startWith(false));
+  hasUpdate$ = this.swUpdate.available.pipe(tap(console.log), mapTo(true), startWith(false));
 
   constructor(readonly appRef: ApplicationRef, private readonly swUpdate: SwUpdate) {
     super();
