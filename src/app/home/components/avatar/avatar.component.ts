@@ -12,7 +12,7 @@ import { Destroyable } from '../../../shared/destroyable';
         [class.pointer-events-none]="!vm.hasUpdate"
         [class.cursor-pointer]="vm.hasUpdate"
         role="img"
-        aria-label="Avatar of blog author"
+        aria-label="Avatar of the blog author"
         *ngIf="{ hasUpdate: hasUpdate$ | async } as vm"
         (click)="reload(vm.hasUpdate)"
     >
