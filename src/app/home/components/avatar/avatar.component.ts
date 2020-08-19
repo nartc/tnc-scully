@@ -40,9 +40,9 @@ export class AvatarComponent extends Destroyable {
     super();
     if (swUpdate.isEnabled) {
       const appIsStable$ = appRef.isStable.pipe(first((isStable) => isStable === true));
-      const everySixHours$ = interval(6 * 60 * 60 * 1000);
-      const everySixHoursOnceAppIsStable$ = concat(appIsStable$, everySixHours$);
-      everySixHoursOnceAppIsStable$
+      const everyFiveSeconds$ = interval(5000); // every 5 seconds
+      const everyFiveSecondsOnceAppIsStable$ = concat(appIsStable$, everyFiveSeconds$);
+      everyFiveSecondsOnceAppIsStable$
         .pipe(takeUntil(this.$destroyed))
         .subscribe(() => swUpdate.checkForUpdate());
     }
