@@ -97,6 +97,16 @@ export class MetaService {
     });
 
     this.meta.updateTag({
+      name: 'twitter:card',
+      content: 'summary',
+    });
+
+    this.meta.updateTag({
+      name: 'twitter:creator',
+      content: 'Nartc1410',
+    });
+
+    this.meta.updateTag({
       property: 'og:image',
       content: this._defaultImage,
     });
