@@ -12,12 +12,15 @@ tags: ['Scully']
 Ever since I started working and publishing my personal blog, I've always wanted to add a **Comment** section to
 improve engagement with everybody. However, there has been no easy solution at all, until [Utterances](https://utteranc.es/).
 
+
 Before knowing about Utterances (via [Tania's blog post](https://www.taniarascia.com/adding-comments-to-my-blog/)), either thought about rolling my own solution with low barrier of **Authentication** or implement something like
 **Disqus** with all the API keys and such. Either way, I mostly forgot to implement it considering the amount of work I needed to do.
+
 
 With Utterances, I need to create a [repository for comments](https://github.com/nartc/tnc-scully-comments) because
 Utterances works based on Github Issues (😛, how neat is that!) and setup Utterances app with that repository. That's
 all I needed to do for setting up.
+
 
 Implementing is just as easy. All I did was to implement a **directive** as all Utterances needs is to inject a
 `<script>` tag where you want to display your comment section, which for me, is at the end of each blog post. Here's
@@ -58,7 +61,7 @@ export class UtterancesDirective implements AfterViewInit {
 }
 ```
 
-and add the following to `blog.component.html`:
+Add the following to `blog.component.html`:
 
 ###### **blog.component.html**
 
