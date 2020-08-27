@@ -17,12 +17,14 @@ import { MetaService } from '../shared/services/meta.service';
 export class BlogComponent {
   blog$: Observable<Frontmatter> = this.scullyRoutesService.getCurrent().pipe(
     tap((blog: Frontmatter) => {
-      this.metaService.update({ ...blog, url: `${environment.baseUrl}${blog.route}` });
+      this.metaService.update({ ...blog, url: `${ environment.baseUrl }${ blog.route }` });
     }),
   );
+  isProd = environment.production;
 
   constructor(
     private readonly scullyRoutesService: ScullyRoutesService,
     private readonly metaService: MetaService,
-  ) {}
+  ) {
+  }
 }

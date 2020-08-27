@@ -4,7 +4,7 @@ import { MetaService } from '../shared/services/meta.service';
 @Component({
   selector: 'app-home',
   template: `
-    <div class="grid col-gap-4 grid-cols-1 lg:grid-cols-4">
+    <div class="grid gap-x-4 grid-cols-1 lg:grid-cols-4">
       <aside class="col-span-4 lg:col-span-1">
         <div class="max-w-full lg:max-w-sm rounded overflow-hidden shadow-common p-4 relative">
           <app-theme-toggler positionClass="absolute top-1 right-1"></app-theme-toggler>

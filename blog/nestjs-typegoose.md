@@ -15,14 +15,14 @@ Today, I am going to share with you a workflow/technique that I’ve been using 
 
 Start off by initializing a new **NestJS** application with `@nestjs/cli`
 
-```shell script
+```bash
 nest new your_nest_application_name
 cd your_nest_application_name
 ```
 
 Next, let's install the dependencies we're going to need:
 
-```shell script
+```bash
 npm i mongoose @typegoose/typegoose nestjs-typegoose mongoose-autopopulate mongoose-lean-virtuals
 npm i -D @types/mongoose
 ```
@@ -43,7 +43,7 @@ export class AppModule {}
 
 Run `npm start` now and you'll see the following:
 
-```shell script
+```bash
 [Nest] 10198   - 07/22/2020, 11:59:18 AM   [NestFactory] Starting Nest application...
 [Nest] 10198   - 07/22/2020, 11:59:18 AM   [InstanceLoader] AppModule dependencies initialized +41ms
 [Nest] 10198   - 07/22/2020, 11:59:18 AM   [InstanceLoader] TypegooseModule dependencies initialized +1ms
@@ -55,7 +55,7 @@ Run `npm start` now and you'll see the following:
 
 Next, let's create some files:
 
-```shell script
+```bash
 mkdir shared
 touch shared/base.model.ts
 touch shared/base.repository.ts
@@ -296,7 +296,7 @@ those have direct contracts with the Database. But for the purpose of this blog,
 
 Now that we have our Bases, let's create a **Feature Module**
 
-```shell script
+```bash
 nest generate module product
 nest generate service product --no-spec
 nest generate controller product --no-spec

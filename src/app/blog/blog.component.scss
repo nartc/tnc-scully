@@ -70,4 +70,8 @@ p {
   padding-bottom: 0.1rem;
 }
 
+:host ::ng-deep .utterances {
+  max-width: 100% !important;
+}
+
 /*! purgecss end ignore */

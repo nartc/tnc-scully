@@ -4,6 +4,9 @@ module.exports = {
   prefix: '',
   important: true,
   separator: ':',
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   theme: {
     fontFamily: {
       sans: ['"Open Sans"', ...fontFamily.sans],

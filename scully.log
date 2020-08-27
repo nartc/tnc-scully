@@ -165,3 +165,134 @@ running in watch-mode, routefile in source assets will not be updated
 This is a development tool for Scully applications.
 You can ignore the warning (TLS) or run scully with --no-warning
 ****************************************************************************************
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "[33mnpm run scully -- --scanRoutes[39m"
+----------------------------------No configuration for route "[33m/tag/:tagName[39m" found. Skipping
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "[33mnpm run scully -- --scanRoutes[39m"
+----------------------------------No configuration for route "[33m/tag/:tagName[39m" found. Skippingrunning in watch-mode, routefile in source assets will not be updated
+
+
+No configuration for route "[33m/tag/:tagName[39m" found. Skippingrunning in watch-mode, routefile in source assets will not be updated
+
+No configuration for route "[33m/tag/:tagName[39m" found. Skippingrunning in watch-mode, routefile in source assets will not be updated
+
+No configuration for route "[33m/tag/:tagName[39m" found. Skippingrunning in watch-mode, routefile in source assets will not be updated
+
+
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/nestjs-typegoose[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/nestjs-typegoose[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/getting-started-scully[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/getting-started-scully[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/angular-recaptcha-v2[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/angular-recaptcha-v2[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/angular-root-injector[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/angular-root-injector[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/nestjs-swagger-generics[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/nestjs-swagger-generics[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/nestjs-swagger-generics[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/nestjs-swagger-generics[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/getting-started-scully[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/getting-started-scully[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/nestjs-typegoose[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/nestjs-typegoose[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/angular-root-injector[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/angular-root-injector[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+      ----------------
+      Error, missing "[33m<scully-content>[39m" in route "[33m/blog/angular-recaptcha-v2[39m"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "[33mhttp://localhost:4200/blog/angular-recaptcha-v2[39m"
+      when you serve your app with [33mng serve[39m and then in the browsers console run:
+      [33mdocument.querySelector('scully-content')[39m
+      ----------------
+      
+
+
+
+
+
+
+
+
+
+No configuration for route "[33m/tag/:tagName[39m" found. Skippingrunning in watch-mode, routefile in source assets will not be updated
+
+running in watch-mode, routefile in source assets will not be updated
+No configuration for route "[33m/tag/:tagName[39m" found. Skippingrunning in watch-mode, routefile in source assets will not be updated
+
+No configuration for route "[33m/tag/:tagName[39m" found. Skippingrunning in watch-mode, routefile in source assets will not be updated
+
+No configuration for route "[33m/tag/:tagName[39m" found. Skippingrunning in watch-mode, routefile in source assets will not be updated
+
+****************************************************************************************
+This is a development tool for Scully applications.
+You can ignore the warning (TLS) or run scully with --no-warning
+****************************************************************************************
