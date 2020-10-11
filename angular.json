@@ -43,7 +43,7 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "configs/webpack-dev.config.js"
+              "path": "webpack.config.js"
             },
             "outputPath": "dist/tnc-scully",
             "index": "src/index.html",
@@ -52,13 +52,10 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/assets/code.scss", "src/assets/font.scss", "src/styles.scss"]
+            "styles": ["src/styles.scss"]
           },
           "configurations": {
             "production": {
-              "customWebpackConfig": {
-                "path": "configs/webpack-prod.config.js"
-              },
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
