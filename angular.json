@@ -51,8 +51,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"]
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ]
           },
           "configurations": {
             "production": {
@@ -107,5 +112,8 @@
       }
     }
   },
-  "defaultProject": "tnc-scully"
+  "defaultProject": "tnc-scully",
+  "cli": {
+    "analytics": "b17e69be-2690-4937-901d-56d0e94a9b8e"
+  }
 }

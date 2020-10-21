@@ -13,7 +13,7 @@ module.exports = (isProd) => ({
   },
   theme: {
     fontFamily: {
-      sans: ['"Open Sans"', ...fontFamily.sans],
+      sans: ['Quicksand', ...fontFamily.sans],
     },
     screens: {
       sm: '640px',
