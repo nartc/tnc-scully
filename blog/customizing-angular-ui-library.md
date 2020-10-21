@@ -1,6 +1,7 @@
 ---
 title: Customize UI Library in Angular
-description: Utilizing Directive to customize third-party UI library with Angular
+description: Utilizing Directive to customize third-party UI library with Angular. We are customizing TooltipModule
+ from PrimeNG in this blog.
 date: '2020-10-20'
 published: true
 slug: 'customizing-angular-ui-library'
