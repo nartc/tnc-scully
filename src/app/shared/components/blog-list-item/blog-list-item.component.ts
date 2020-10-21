@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Frontmatter } from '../../frontmatter';
 
 @Component({
@@ -35,14 +35,14 @@ import { Frontmatter } from '../../frontmatter';
       </p>
     </div>
     <div class="flex justify-between items-center mt-4">
-      <a class="text-primary hover:underline" [routerLink]="[route.route]">
-        Read more
-      </a>
+      <a class="text-primary hover:underline" [routerLink]="[route.route]"> Read more </a>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'py-4',
+  },
 })
 export class BlogListItemComponent {
   @Input() route: Frontmatter;
-  @HostBinding('class.py-4') padding = true;
 }

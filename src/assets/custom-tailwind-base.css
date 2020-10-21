@@ -22,7 +22,6 @@ h6 {
   @apply text-lg;
 }
 
-/*! purgecss start ignore */
 :root .theme-dark {
   --primary: theme('colors.yellow.400');
   --secondary: theme('colors.purple.400');
@@ -44,5 +43,3 @@ h6 {
   --gray-dark: theme('colors.gray.700');
   --shadow: theme('boxShadow.lg');
 }
-
-/*! purgecss end ignore */

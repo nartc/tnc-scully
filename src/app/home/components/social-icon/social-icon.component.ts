@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 type Social = 'Facebook' | 'Github' | 'LinkedIn' | 'Twitter' | 'Stackoverflow' | 'Youtube';
 
@@ -73,11 +73,11 @@ type Social = 'Facebook' | 'Github' | 'LinkedIn' | 'Twitter' | 'Stackoverflow' |
     </a>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'w-10 h-10',
+  },
 })
 export class SocialIconComponent {
   @Input() socialId: Social;
   @Input() link: string;
-
-  @HostBinding('class.w-10') iconWidth = true;
-  @HostBinding('class.h-10') iconHeight = true;
 }

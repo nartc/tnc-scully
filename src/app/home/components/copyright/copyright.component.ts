@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-copyright',
@@ -26,7 +26,8 @@ import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
     </p>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'flex flex-row lg:flex-col',
+  },
 })
-export class CopyrightComponent {
-  @HostBinding('class') copyrightClasses = 'flex flex-row lg:flex-col';
-}
+export class CopyrightComponent {}

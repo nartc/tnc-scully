@@ -6,8 +6,7 @@ import { AfterViewInit, Directive, ElementRef, Input, Renderer2 } from '@angular
 export class UtterancesDirective implements AfterViewInit {
   @Input() appUtterances = false;
 
-  constructor(private readonly renderer: Renderer2, private readonly el: ElementRef) {
-  }
+  constructor(private readonly renderer: Renderer2, private readonly el: ElementRef) {}
 
   ngAfterViewInit() {
     if (this.appUtterances) {
@@ -24,10 +23,8 @@ export class UtterancesDirective implements AfterViewInit {
       } catch (e) {
         console.log('Error adding utterances comments', e);
       }
-
     } else {
       this.el.nativeElement.innerHTML = '<h6>Utterances comment is not available in DEV mode</h6>';
     }
-
   }
 }

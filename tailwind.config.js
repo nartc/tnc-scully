@@ -1,15 +1,15 @@
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 
-module.exports = isProd => ({
+module.exports = (isProd) => ({
   prefix: '',
   important: true,
   future: {
     removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true
+    purgeLayersByDefault: true,
   },
   purge: {
     enabled: isProd,
-    content: ['./src/**/*.html', './src/**/*.ts']
+    content: ['./src/**/*.html', './src/**/*.ts'],
   },
   theme: {
     fontFamily: {
@@ -23,8 +23,8 @@ module.exports = isProd => ({
     },
     extend: {
       inset: {
-        '1': '1rem',
-        '2': '1.5rem',
+        1: '1rem',
+        2: '1.5rem',
       },
       spacing: {
         '2-rev': `-${spacing['2']}`,
@@ -33,7 +33,7 @@ module.exports = isProd => ({
         common: 'var(--shadow)',
       },
       maxWidth: {
-        '32': '8rem',
+        32: '8rem',
       },
       colors: {
         primary: 'var(--primary)',
@@ -41,7 +41,7 @@ module.exports = isProd => ({
         'gray-light': 'var(--gray-light)',
         'gray-medium': 'var(--gray-medium)',
         'gray-dark': 'var(--gray-dark)',
-        text: 'var(--text-color)'
+        text: 'var(--text-color)',
       },
     },
   },

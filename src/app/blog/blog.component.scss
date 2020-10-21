@@ -6,7 +6,6 @@ h5 {
   @apply mb-2 mt-8;
 }
 
-/*! purgecss start ignore */
 strong {
   @apply font-bold;
 }
@@ -39,8 +38,6 @@ iframe {
   }
 }
 
-/*! purgecss end ignore */
-
 blockquote {
   @apply text-gray-medium my-4 py-1 px-2 border-l-4 border-gray-dark border-solid;
 }
@@ -55,7 +52,7 @@ ul {
 
 ol,
 ul {
-  @apply ml-8;
+  @apply ml-8 my-4;
 }
 
 li,
@@ -63,7 +60,13 @@ p {
   @apply font-thin leading-7 text-lg;
 }
 
-/*! purgecss start ignore */
+p {
+  @apply my-4;
+  & > img ~ em {
+    @apply block text-center text-sm;
+  }
+}
+
 :not(pre) > code {
   @apply text-secondary rounded px-1 font-thin break-words;
   padding-top: 0.1rem;
@@ -73,5 +76,3 @@ p {
 :host ::ng-deep .utterances {
   max-width: 100% !important;
 }
-
-/*! purgecss end ignore */

@@ -9,6 +9,12 @@ import { TagComponent } from './tag.component';
 
 @NgModule({
   declarations: [TagComponent],
-  imports: [CommonModule, RouterModule.forChild(tagRoutes), BlogListItemModule, AllBlogsBtnModule, ThemeTogglerModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(tagRoutes),
+    BlogListItemModule,
+    AllBlogsBtnModule,
+    ThemeTogglerModule,
+  ],
 })
 export class TagModule {}

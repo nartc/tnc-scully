@@ -1,6 +1,5 @@
-/*! purgecss start ignore */
 .avatar {
-  background-clip: padding-box; /* !importanté */
+  background-clip: padding-box; /* !important */
 
   &:before {
     content: '';
@@ -39,5 +38,3 @@
     }
   }
 }
-
-/*! purgecss end ignore */
