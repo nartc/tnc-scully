@@ -37,7 +37,7 @@ export interface ApiResponse<TData> {
 }
 
 /**
- * A transformation operation to trasnform Observable<TData> to Observable<ApiResponse<TData>>
+ * A transformation operation to transform Observable<TData> to Observable<ApiResponse<TData>>
  *
  * - startsWith() to kick-off an emission with the `initialValue` and the status of `loading`.
  * - map() to map the actual data from the API and switch status to `success`
