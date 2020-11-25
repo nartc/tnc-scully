@@ -3,10 +3,6 @@ const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 module.exports = (isProd) => ({
   prefix: '',
   important: true,
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
   purge: {
     enabled: isProd,
     content: ['./src/**/*.html', './src/**/*.ts'],
