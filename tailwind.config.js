@@ -31,6 +31,9 @@ module.exports = (isProd) => ({
       maxWidth: {
         32: '8rem',
       },
+      minHeight: {
+        128: '32rem',
+      },
       colors: {
         primary: 'var(--primary)',
         secondary: 'var(--secondary)',

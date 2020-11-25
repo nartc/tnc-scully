@@ -67,6 +67,10 @@ p {
   }
 }
 
+iframe {
+  @apply w-full min-h-128;
+}
+
 :not(pre) > code {
   @apply text-secondary rounded px-1 font-thin break-words;
   padding-top: 0.1rem;
