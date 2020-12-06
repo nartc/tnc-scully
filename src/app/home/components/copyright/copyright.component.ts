@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 @Component({
   selector: 'app-copyright',
   template: `
-    <p class="text-gray-light font-thin text-sm">© All rights reserved.</p>
+    <p class="text-gray-light font-thin text-sm">© All rights reserved. AngularVietnam</p>
     <p class="text-gray-light font-thin text-sm ml-1 mt-0 lg:mt-2 lg:ml-0">
       Built with
       <a
