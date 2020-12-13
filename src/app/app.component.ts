@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
 import { ThemeService } from './shared/services/theme.service';
 
 @Component({
@@ -12,10 +10,10 @@ import { ThemeService } from './shared/services/theme.service';
   `,
 })
 export class AppComponent {
-  constructor(readonly themeService: ThemeService, readonly router: Router) {
+  constructor(readonly themeService: ThemeService) {
     themeService.load();
-    router.events.pipe(filter((e) => e instanceof NavigationEnd)).subscribe((ee: NavigationEnd) => {
-      gtag('config', 'UA-154847070-1', { page_path: ee.urlAfterRedirects });
-    });
+    // router.events.pipe(filter((e) => e instanceof NavigationEnd)).subscribe((ee: NavigationEnd) => {
+    //   gtag('config', 'UA-154847070-1', { page_path: ee.urlAfterRedirects });
+    // });
   }
 }
