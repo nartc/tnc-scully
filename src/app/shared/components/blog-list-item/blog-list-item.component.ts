@@ -15,13 +15,6 @@ import { Frontmatter } from '../../frontmatter';
       >
         {{ route.tags[0] }}
       </a>
-      <!--      <a-->
-      <!--        *ngIf="route.tags?.length"-->
-      <!--        class="px-2 py-1 text-sm text-secondary font-bold rounded"-->
-      <!--        [attr.aria-label]="route.tags[0]"-->
-      <!--      >-->
-      <!--        {{ route.tags[0] }}-->
-      <!--      </a>-->
     </div>
     <div class="mt-2">
       <a
@@ -33,9 +26,6 @@ import { Frontmatter } from '../../frontmatter';
       <p class="mt-2 font-thin text-gray-dark">
         {{ route.description }}
       </p>
-    </div>
-    <div class="flex justify-between items-center mt-4">
-      <a class="text-primary hover:underline" [routerLink]="[route.route]"> Read more </a>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
