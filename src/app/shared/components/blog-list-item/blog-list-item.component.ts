@@ -7,6 +7,9 @@ import { Frontmatter } from '../../frontmatter';
     <div class="flex justify-between items-center">
       <span class="font-light text-gray-medium">
         {{ route.date | date: 'mediumDate' }}
+        <span *ngIf="route.readingTime">
+          - {{ route.readingTime | number: '1.0-0' }} min<ng-container *ngIf="route.readingTime > 1">s</ng-container>
+        </span>
       </span>
       <a
         *ngIf="route.tags?.length"

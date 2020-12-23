@@ -5,4 +5,5 @@ export interface Frontmatter extends ScullyRoute {
   date?: string;
   tags?: string[];
   url?: string;
+  readingTime?: number;
 }

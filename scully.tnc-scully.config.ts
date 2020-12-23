@@ -2,6 +2,7 @@
 import { RouteTypes, ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import { MinifyHtml } from 'scully-plugin-minify-html';
+import { timeToRead, timeToReadOptions } from 'scully-plugin-time-to-read';
 
 // const GaPlugin = getGaPlugin();
 
@@ -10,6 +11,10 @@ setPluginConfig('md', { enableSyntaxHighlighting: true });
 //   dryRun: true,
 //   trackingIds: ['UA-154847070-1'],
 // });
+
+setPluginConfig(timeToRead, {
+  path: '/blog',
+} as timeToReadOptions);
 
 export const config: ScullyConfig = {
   projectRoot: './src',
