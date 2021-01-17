@@ -182,6 +182,6 @@ The above mapping configuration is executed for 10000 items for each library. Th
 | `@automapper/classes` | -                                                        | 79.1730ms   |
 | `@automapper/pojos`   | -                                                        | 81.8340ms   |
 
-### Conclustion
+### Conclusion
 
 I hope this blog post piques your interests to learn more about `@automapper`, and **AutoMapper TypeScript** in general. Please visit [`@automapper` documentations](https://automapperts.netlify.app) to check out even more information on the library, and everything that leads to its creation. Thank you all for reading!
