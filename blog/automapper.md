@@ -15,7 +15,7 @@ Since then, `@nartc/automapper` has been doing pretty well (<span>![npm](https:/
 
 However, the work done in the library was tailored specific for some projects at where I work at the time. The growing adoption from the community has also raised the number of issues the library has. To be quite honest, I've been _fixing_ the issues with patches after patches. All I'm trying to say is the library was poorly written. At one point, I couldn't understand what I wrote.
 
-Ultimately, that was the signal for me to re-architect `@nartc/automapper` to accommodate the growing usages, and to welcome contributors. The result of this is `@automapper/*`.
+Ultimately, that was the signal for me to re-architect `@nartc/automapper` to accommodate the growing usages, and to welcome contributors. The result of this is `@automapper/*`, which can be found on [Github](https://github.com/nartc/mapper)
 
 ### Difference from `@nartc/automapper`
 
@@ -50,6 +50,16 @@ With multiple packages in a monorepo, I need a versioning system that can help m
 #### ReleaseIt!
 
 With **Semantic Versioning** and **Conventional Commit**, I can utilize some tool to automate the process of document the changes between versions. My answer for this is [release-it](https://github.com/release-it/release-it). **ReleaseIt** looks at **conventional commits** to generate a **CHANGELOG**, and bumb the correct **semantic version**. In addition, **ReleaseIt** can also automate publishing to **NPM** but I choose to control this process manually.
+
+### Getting started
+
+Please check out the following documentations/sections to learn more:
+- [core README](https://github.com/nartc/mapper/blob/main/packages/core/README.md)
+- [classes README](https://github.com/nartc/mapper/blob/main/packages/classes/README.md)
+- [pojos README](https://github.com/nartc/mapper/blob/main/packages/pojos/README.md)
+- [nestjs README](https://github.com/nartc/mapper/blob/main/packages/nestjs/README.md)
+
+Also check out the [full documentations](https://automapperts.netlify.app)
 
 ### Performance benchmark
 
