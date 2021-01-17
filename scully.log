@@ -480,3 +480,89 @@ Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------No configuration for route "/tag/:tagName" found. Skipping
 
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------Content file "./blog/automapper.md" has no content!No configuration for route "/tag/:tagName" found. Skipping
+
+
+Content file "./blog/automapper.md" has no content!No configuration for route "/tag/:tagName" found. Skipping
+
+Content file "./blog/automapper.md" has no content!
+Content file "./blog/automapper.md" has no content!
+ The router plugin "contentFolder has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitYAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 5, column 5:
+    date: '2021-01-16'
+        ^
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+---------------------------------- The router plugin "contentFolder has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitYAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 5, column 5:
+    date: '2021-01-16'
+        ^
+
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------Content file "./blog/automapper.md" has no content!No configuration for route "/tag/:tagName" found. Skipping
+
+
+Content file "./blog/automapper.md" has no content!No configuration for route "/tag/:tagName" found. Skipping
+
+Content file "./blog/automapper.md" has no content!
+Content file "./blog/automapper.md" has no content!
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+The file ./blog/assets/img/classes-mapping.png has extension .png that has no plugin defined, scully will skip this file.
+The file ./blog/assets/img/classes-mapping.png has extension .png that has no plugin defined, scully will skip this file.No configuration for route "/tag/:tagName" found. Skipping
+
+The file ./blog/assets/img/classes-mapping.png has extension .png that has no plugin defined, scully will skip this file.
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+No configuration for route "/tag/:tagName" found. Skipping
+Received Kill command

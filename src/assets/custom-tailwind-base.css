@@ -30,6 +30,7 @@ h6 {
   --gray-light: theme('colors.gray.500');
   --gray-medium: theme('colors.gray.400');
   --gray-dark: theme('colors.gray.300');
+  --table-even-row: theme('colors.gray.700');
   --shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
 }
 
@@ -41,5 +42,6 @@ h6 {
   --gray-light: theme('colors.gray.500');
   --gray-medium: theme('colors.gray.600');
   --gray-dark: theme('colors.gray.700');
+  --table-even-row: theme('colors.gray.200');
   --shadow: theme('boxShadow.lg');
 }

@@ -62,8 +62,17 @@ p {
 
 p {
   @apply my-4;
+
+  & > img {
+    @apply mx-auto;
+  }
+
   & > img ~ em {
     @apply block text-center text-sm;
+  }
+
+  & > span > img {
+    @apply inline-block;
   }
 }
 
@@ -75,6 +84,31 @@ iframe {
   @apply text-secondary rounded px-1 font-thin break-words;
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
+  font-size: inherit;
+}
+
+table {
+  @apply w-full overflow-auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  & th {
+    @apply font-semibold;
+  }
+
+  & td,
+  & th {
+    @apply px-1.5 py-3.5 border border-solid border-gray-300;
+  }
+
+  & tr {
+    @apply border-t border-solid border-gray-400 transition-colors;
+    background-color: var(--background-color);
+  }
+
+  & tr:nth-child(2n) {
+    background-color: var(--table-even-row);
+  }
 }
 
 :host ::ng-deep .utterances {
