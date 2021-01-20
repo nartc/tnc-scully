@@ -131,10 +131,10 @@ export class TransformBioVm {
     @Expose()
     job: string;
     @Expose()
-    @Transform((_, obj) => obj.age > 18, {toClassOnly: true})
+    @Transform(({ obj }) => obj.age > 18, {toClassOnly: true})
     isAdult: boolean;
     @Expose()
-    @Transform(val => val.toDateString())
+    @Transform(({ value }) => value.toDateString())
     birthday: string;
 }
 
@@ -145,7 +145,7 @@ export class TransformUserVm {
     last: string;
 
     @Expose()
-    @Transform((_, obj) => obj.firstName + ' ' + obj.lastName, {toClassOnly: true})
+    @Transform(({ obj }) => obj.firstName + ' ' + obj.lastName, {toClassOnly: true})
     full: string;
 
     @Expose()
@@ -174,13 +174,16 @@ The above mapping configuration is executed for 10000 items for each library. Th
 
 | library               | description                                              | time        |
 | --------------------- | -------------------------------------------------------- | ----------- |
-| `@nartc/automapper`   | -                                                        | 90.1690ms   |
-| `morphism`            | -                                                        | 110.0060ms  |
-| `morphism`            | with `mapper` approach                                   | 107.9050ms  |
-| `class-transformer`   | -                                                        | 1849.0160ms |
-| `class-transformer`   | with `iterative` approach instead of passing in an array | 1950.1730ms |
+| `@nartc/automapper`   | -                                                        | 83.4028ms   |
+| `morphism`            | -                                                        | 115.6094ms  |
+| `morphism`            | with `mapper` approach                                   | 111.4560ms  |
+| `class-transformer`   | -                                                        | 109.3750ms  |
+| `class-transformer`   | with `iterative` approach instead of passing in an array | 113.9456ms  |
 | `@automapper/classes` | -                                                        | 79.1730ms   |
 | `@automapper/pojos`   | -                                                        | 81.8340ms   |
+
+> Latest version of `class-transformer` has improved the performance tremendously 🔥. This benchmark result has been 
+> updated to reflect that. Before, `class-transformer` is in the 1000s ms for the same operations.
 
 ### Conclusion
 
