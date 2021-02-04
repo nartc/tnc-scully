@@ -24,6 +24,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         class="mb-0 ml-2 lg:mb-2 lg:ml-0 transition-colors duration-200 ease-in-out hover:underline hover:text-primary cursor-pointer"
         href="https://hackmd.io/@0sCkvgiFQNm2fLdxLu5M8g/bio"
         target="_blank"
+        rel="noopener"
       >
         Bio
       </a>
