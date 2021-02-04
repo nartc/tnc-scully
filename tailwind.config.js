@@ -1,10 +1,9 @@
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 
-module.exports = (isProd) => ({
+module.exports = {
   prefix: '',
   important: true,
   purge: {
-    enabled: isProd,
     content: ['./src/**/*.html', './src/**/*.ts'],
   },
   theme: {
@@ -47,4 +46,4 @@ module.exports = (isProd) => ({
       },
     },
   },
-});
+};

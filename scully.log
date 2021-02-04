@@ -566,3 +566,9 @@ No configuration for route "/tag/:tagName" found. Skipping
 No configuration for route "/tag/:tagName" found. Skipping
 No configuration for route "/tag/:tagName" found. Skipping
 Received Kill command
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------No configuration for route "/tag/:tagName" found. Skipping
+

@@ -1,29 +1,11 @@
-const webpackMerge = require('webpack-merge');
+const { addTailwindPlugin } = require('@ngneat/tailwind');
+const tailwindConfig = require('./tailwind.config.js');
 
 module.exports = (config) => {
-  const isProd = config.mode === 'production';
-  const tailwindConfig = require('./tailwind.config.js')(isProd);
-  const merge = webpackMerge && webpackMerge.merge ? webpackMerge.merge : webpackMerge;
-
-  return merge(config, {
-    module: {
-      rules: [
-        {
-          test: /\.scss$/,
-          loader: 'postcss-loader',
-          options: {
-            postcssOptions: {
-              ident: 'postcss',
-              syntax: 'postcss-scss',
-              plugins: [
-                require('postcss-import'),
-                require('tailwindcss')(tailwindConfig),
-                require('autoprefixer'),
-              ],
-            },
-          },
-        },
-      ],
-    },
+  addTailwindPlugin({
+    webpackConfig: config,
+    tailwindConfig,
+    patchComponentsStyles: true,
   });
+  return config;
 };
