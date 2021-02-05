@@ -12,7 +12,7 @@ A recent [PR](https://github.com/angular/angular-cli/commit/73b409881f71a8235769
 
 The PR adds code to detect if there is a `tailwind.config.js` in the project's root (or workspace's root if you're using workspace feature of Angular CLI). Let's explore this built-in feature.
 
-### Initialize a new AngularCLI project
+## Initialize a new AngularCLI project
 
 ```bash
 npx @angular/cli@next new test-tailwindcss-cli --minimal
@@ -21,7 +21,7 @@ npx @angular/cli@next new test-tailwindcss-cli --minimal
 We'll be using `next` version of the **Angular CLI** to generate this new project. I also use `--minimal` flag to 
 speed up the generation process a bit by skipping initializing tests. Go ahead and pick whatever **CSS Flavor** you want, I go with **SCSS**.
 
-### Install and initialize TailwindCSS
+## Install and initialize TailwindCSS
 
 Change directory into the newly created Angular application.
 
@@ -37,7 +37,7 @@ npx tailwindcss init
 
 At this point, our Angular application has been *TailwindCSS enabled*
 
-### Purging unused CSS
+## Purging unused CSS
 
 If you're interested in **TailwindCSS**, you are probably aware that **TailwindCSS** adds a lot of CSS utilities classes. This means the CSS size is pretty big by default. Luckily, **TailwindCSS** does come with a purging mechanism that we would want to enable when we run a production build (`ng build --prod`). To do that, we'll install an additional library:
 
@@ -78,6 +78,6 @@ module.exports = {
 }
 ```
 
-### Conclusion
+## Conclusion
 
 This addition to the **Angular CLI** is extremely helpful to get developers started with **TailwindCSS**.
