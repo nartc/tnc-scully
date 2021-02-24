@@ -47,7 +47,7 @@ npm i -DE cross-env
 
 Then, we'll add a new `script` to our `package.json`
 
-```json
+```
 ...
 "scripts": {
   ...
