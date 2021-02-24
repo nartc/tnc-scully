@@ -4,7 +4,7 @@ module.exports = {
   prefix: '',
   important: true,
   purge: {
-    content: ['./src/**/*.html', './src/**/*.ts'],
+    content: ['./src/**/*.{html,ts}'],
   },
   theme: {
     fontFamily: {
