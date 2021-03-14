@@ -34,7 +34,7 @@ module.exports = {
         128: '32rem',
       },
       maxHeight: {
-        220: '55rem',
+        228: '57rem',
       },
       colors: {
         primary: 'var(--primary)',

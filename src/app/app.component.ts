@@ -4,7 +4,7 @@ import { ThemeService } from './shared/services/theme.service';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="container mx-auto p-8">
+    <div class="container mx-auto p-8 h-full">
       <router-outlet></router-outlet>
     </div>
   `,

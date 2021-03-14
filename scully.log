@@ -617,3 +617,57 @@ Using deprecated plugin type:"render"  use "postProcessByHtml" instead
 Received Kill command
 Using deprecated plugin type:"render"  use "postProcessByHtml" instead
 Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------No configuration for route "/tag/:tagName" found. Skipping
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------No configuration for route "/tag/:tagName" found. Skipping
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------No configuration for route "/tag/:tagName" found. Skipping
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+ The postProcessByHtml plugin "customMinifyHtmlPlugin has thrown the below error,
+              while trying to render route "/blog/internalize-request-status-rxjs"
+              Scully will exitTypeError: scully_plugin_minify_html_1.minifyHtmlPlugin is not a function
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------No configuration for route "/tag/:tagName" found. Skipping
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------No configuration for route "/tag/:tagName" found. Skipping
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Received Kill command
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead

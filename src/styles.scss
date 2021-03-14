@@ -11,3 +11,9 @@ body {
   transition: color 200ms ease-in-out, background-color 200ms ease-in-out,
     border-color 200ms ease-in-out, fill 200ms ease-in-out, stroke 200ms ease-in-out;
 }
+
+@screen lg {
+  body {
+    height: 100vh;
+  }
+}
