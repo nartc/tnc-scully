@@ -53,6 +53,9 @@ ul {
 ol,
 ul {
   @apply ml-8 my-4;
+  & li:not(:last-of-type) {
+    @apply mb-2;
+  }
 }
 
 li,

@@ -12,6 +12,30 @@ body {
     border-color 200ms ease-in-out, fill 200ms ease-in-out, stroke 200ms ease-in-out;
 }
 
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+h5 {
+  @apply text-xl;
+}
+
+h6 {
+  @apply text-lg;
+}
+
 @screen lg {
   body {
     height: 100vh;
