@@ -1,20 +1,20 @@
 <ng-container *ngIf="blog$ | async as blog">
   <app-all-blogs-btn></app-all-blogs-btn>
   <app-theme-toggler
-      positionClass="transform translate-y-3 inline-block lg:translate-y-0 lg:fixed lg:right-1"
+    positionClass="transform translate-y-3 inline-block lg:translate-y-0 lg:fixed lg:right-1"
   ></app-theme-toggler>
   <h1 class="text-center text-4xl font-bold mb-6">{{ blog.title }}</h1>
   <!-- This is where Scully will inject the static HTML -->
   <scully-content></scully-content>
   <!-- This is where Scully will inject the static HTML -->
   <h4 class="italic text-lg mt-4">Published on {{ blog.date | date: 'mediumDate' }}</h4>
-  <hr/>
+  <hr />
   <div class="flex flex-row items-center my-4">
     <a
-        class="tag-link px-4 py-2 rounded-full border border-text text-center cursor-pointer transition-colors duration-200 ease-in-out hover:text-primary"
-        [ngClass]="{ 'ml-1': !first }"
-        *ngFor="let tag of blog.tags; let first = first"
-        [routerLink]="['/tag', tag.toLowerCase()]"
+      class="tag-link px-4 py-2 rounded-full border border-text text-center cursor-pointer transition-colors duration-200 ease-in-out hover:text-primary"
+      [class.ml-1]="!first"
+      *ngFor="let tag of blog.tags; let first = first"
+      [routerLink]="['/tag', tag.toLowerCase()]"
     >
       {{ tag }}
     </a>
