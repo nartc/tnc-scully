@@ -32,7 +32,7 @@
     "@angular/platform-browser-dynamic": "11.2.6",
     "@angular/router": "11.2.6",
     "@angular/service-worker": "11.2.6",
-    "@scullyio/init": "1.1.1",
+    "@scullyio/init": "1.1.2",
     "@scullyio/ng-lib": "1.1.0",
     "@scullyio/scully": "1.1.0",
     "rxjs": "6.6.6",
