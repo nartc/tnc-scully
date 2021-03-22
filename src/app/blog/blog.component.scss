@@ -14,8 +14,7 @@ h6 {
   @apply flex border-b border-solid border-gray-dark;
 
   & > strong {
-    @apply font-thin text-sm px-2 py-1 mt-4 text-white;
-    background-color: #2e3440;
+    @apply font-thin text-sm px-2 py-1 mt-4;
   }
 
   & + pre {

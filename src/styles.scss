@@ -41,3 +41,17 @@ h6 {
     height: 100vh;
   }
 }
+
+.theme-dark {
+  h6 > strong {
+    @apply text-white;
+    background-color: #111b27;
+  }
+}
+
+.theme-light {
+  h6 > strong {
+    @apply text-black;
+    background-color: #e3eaf2;
+  }
+}
