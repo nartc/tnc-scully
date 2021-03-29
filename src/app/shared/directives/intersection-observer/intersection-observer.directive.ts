@@ -20,11 +20,12 @@ export class IntersectionObserverDirective implements AfterViewInit {
           return filtered.length && callback(filtered, observer);
         });
       },
-      { rootMargin: this.rootMargin, threshold: this.threshold },
+      { rootMargin: this.rootMargin, threshold: 0.5 },
     );
   }
 
   observe(target: Element, callback: IntersectionObserverCallback = () => {}) {
+    console.log('observing', target);
     this.observer?.observe(target);
     this.callbacks.set(target, callback);
   }
@@ -36,5 +37,6 @@ export class IntersectionObserverDirective implements AfterViewInit {
 
   ngOnDestroy() {
     this.observer?.disconnect();
+    this.observer = null;
   }
 }

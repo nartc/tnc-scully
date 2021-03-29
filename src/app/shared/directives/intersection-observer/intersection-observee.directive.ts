@@ -75,6 +75,11 @@ export class IntersectionObserveeDirective extends Destroyable implements AfterV
     });
   }
 
+  ngOnDestroy() {
+    super.ngOnDestroy();
+    console.log('destroy');
+  }
+
   private _updateView() {
     if (this.isIntersect) {
       if (!this._thenViewRef) {

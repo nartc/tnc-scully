@@ -8,8 +8,7 @@ import { Frontmatter } from '../../frontmatter';
       <span class="font-light text-gray-medium">
         {{ route.date | date: 'mediumDate' }}
         <span *ngIf="route.readingTime">
-          - {{ route.readingTime | number: '1.0-0' }} min
-          <ng-container *ngIf="route.readingTime > 1">s</ng-container>
+          - {{ route.readingTime | number: '1.0-0' }} {{ route.readingTime > 1 ? 'mins' : 'min' }}
         </span>
       </span>
       <a

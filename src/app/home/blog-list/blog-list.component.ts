@@ -8,23 +8,28 @@ import { latestByDate } from '../../shared/utils/operators/latest-by-date.operat
 @Component({
   selector: 'app-blog-list',
   template: `
-    <div appIntersectionObserver class="flex flex-col divide-y divide-gray-400">
-      <section #sectionElement *ngFor="let link of links$ | async">
-        <app-blog-list-item
-          *appIntersectionObservee="sectionElement; else skeleton"
-          [route]="link"
-        ></app-blog-list-item>
-        <ng-template #skeleton>
-          <div class="py-4 flex flex-col animate-pulse gap-4">
-            <div class="flex justify-between">
-              <div class="h-4 bg-gray-400 rounded w-1/4"></div>
-              <div class="h-4 bg-gray-400 rounded w-1/4"></div>
-            </div>
-            <div class="h-6 bg-gray-400 rounded w-2/3"></div>
-            <div class="h-4 bg-gray-400 rounded"></div>
-          </div>
-        </ng-template>
-      </section>
+    <!--    IntersectionObserver needs to be revisit-->
+    <!--    <div appIntersectionObserver class="flex flex-col divide-y divide-gray-400">-->
+    <!--      <section #sectionElement *ngFor="let link of links$ | async">-->
+    <!--        <app-blog-list-item-->
+    <!--          *appIntersectionObservee="sectionElement; else skeleton"-->
+    <!--          [route]="link"-->
+    <!--        ></app-blog-list-item>-->
+    <!--        <ng-template #skeleton>-->
+    <!--          <div class="py-4 flex flex-col animate-pulse gap-4">-->
+    <!--            <div class="flex justify-between">-->
+    <!--              <div class="h-4 bg-gray-400 rounded w-1/4"></div>-->
+    <!--              <div class="h-4 bg-gray-400 rounded w-1/4"></div>-->
+    <!--            </div>-->
+    <!--            <div class="h-6 bg-gray-400 rounded w-2/3"></div>-->
+    <!--            <div class="h-4 bg-gray-400 rounded"></div>-->
+    <!--          </div>-->
+    <!--        </ng-template>-->
+    <!--      </section>-->
+    <!--    </div>-->
+
+    <div class="flex flex-col divide-y divide-gray-400">
+      <app-blog-list-item *ngFor="let link of links$ | async" [route]="link"></app-blog-list-item>
     </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
