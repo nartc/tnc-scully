@@ -7,21 +7,21 @@ slug: 'deploy-scully-netlify'
 tags: ['Scully', 'Angular', 'Netlify']
 ---
 
-In this blog post, I will introduce to you all how to deploy your [Scully](https://scully.io) powered [Angular](https://angular.io) application to [Netlify](https://netlify.com).
+In this blog post, I will introduce to you how to deploy your [Scully](https://scully.io) powered [Angular](https://angular.io) application to [Netlify](https://netlify.com).
 
 ## Prerequisite
 
 In order to follow this blog post, the following is needed:
 
 - A [Github](https://github.com) account
-- A **Netlify** account
+- A [**Netlify**](https://app.netlify.com/signup) account
 - **AngularCLI** installed*
 
 > *: this can be skipped if you prefer to use `npx` instead.
 
 ## What is Scully?
 
-**Scully** is a Static Site Generation solution for **Angular** developers who embrace the [JAMstack](https://jamstack.org/). Upon invocation, **Scully** will attempt to scan your **Angular** application (via the build `ng build` artifacts), and create an `index.html` for every routes you have configured in your application. By generating these `index.html` filled with content, your **Angular** application will be extremely fast, SEO-friendly, and will still function as an **Angular** application that you know and love.
+**Scully** is a Static Site Generation solution for **Angular** developers who embrace the [JAMstack](https://jamstack.org/). Upon invocation, **Scully** will attempt to scan your **Angular** application (via the build `ng build` artifacts), and create an `index.html` for every route you have configured in your application. By generating these `index.html` filled with content, your **Angular** application will be extremely fast, SEO-friendly, and will still function as an **Angular** application that you know and love.
 
 Another big advantage of **Scully** is that they have a growing ecosystem with extensible and easy-to-use plugins that enable you to manipulate the generation process so that you can customize the output as you see fit.
 
@@ -30,7 +30,7 @@ In this blog post, we will skip setting up a **Scully** application step to focu
 ## Preparations
 
 ### Github
-Assuming you have your **Scully** application ready, the next step is to setup a **Github** repository. Go ahead and create a new repository by visiting your **Github** account or go to [https://repo.new](https://repo.new).
+Assuming you have your **Scully** application ready, the next step is to set up a **Github** repository. Go ahead and create a new repository by visiting your **Github** account or go to [https://repo.new](https://repo.new).
 
 Once you have the repository ready, let's get started
 
@@ -39,7 +39,7 @@ Once you have the repository ready, let's get started
 - `git remote add origin <your_git_repo_url>`
 - `git push -u origin main`
 
-#### Change default branch to `main`
+#### (Optional) Change default branch to `main`
 
 Make sure your current default branch (`master`) is up-to-date and is clean (has no current changes)
 
@@ -48,7 +48,7 @@ Make sure your current default branch (`master`) is up-to-date and is clean (has
 
 ### Build script
 
-Next, we will setup our build script that will execute a production build for our **Angular** application and run **Scully** afterwards. Open up `package.json` and add the following script to `scripts`:
+Next, we will set up our build script that will execute a production build for our **Angular** application and run **Scully** afterwards. Open up `package.json` and add the following script to `scripts`:
 
 ```
 "scripts": {
@@ -58,7 +58,7 @@ Next, we will setup our build script that will execute a production build for ou
 }
 ```
 
-You can call `"build:prod"` whatever you see fit. As mentioned above, this script will execute:
+You can call `"build:prod"` whatever you want. As mentioned above, this script will execute:
 - `ng build --prod`: **Angular** production build
 - `scully --prod --scanRoutes`: **Scully** production build. We also use `--scanRoutes` flag to force **Scully** to re-scan all routes.
 
@@ -81,7 +81,7 @@ _Getting started_
 ![select_git](/assets/static/images/scully-netlify/select-git.png)
 _Selecting Git providers_
 
-Now, **Netlify** will start the Authorization flow to authorize itself with your Git provider. In the case of **Github**, **Netlify** will then ask to be configured with your **Github** account. Do so however you see fit, just make sure that the repository in which contains your **Scully** application is made available to **Netlify**
+Now, **Netlify** will start the Authorization flow to authorize itself with your Git provider. In the case of **Github**, **Netlify** will then ask to be configured with your **Github** account. Do so however you like, just make sure that the repository in which contains your **Scully** application is made available to **Netlify**
 
 ![configure_netlify](/assets/static/images/scully-netlify/configure-netlify-access.png)
 _Configure Netlify App on Github_
@@ -109,13 +109,13 @@ _Change your site name_
 Since this is a free domain, the site name needs to be unique across **Netlify** so pick something unique for yourself. After you save, your domain will now become `https://<your_site_name>.netlify.app`.
 
 ![updated_site_name](/assets/static/images/scully-netlify/updated-site-name.png)
-_Updated site name on dashboard_
+_Updated site name on the dashboard_
 
-That's it. Everytime you push changes to your repository, **Netlify** will pick that up and build a new version based on the new changes.
+That's it. Every time you push changes to your repository, **Netlify** will pick that up and build a new version based on the new changes.
 
 ## Summary
 
-By the end of this blog post, you've already had a **Scully** application configured for writing blog posts via **Markdown** files. In addition, you've also setup a CI/CD pipeline to deploy new changes to the World Wide Web automatically with **Netlify**. Happy blogging!
+By the end of this blog post, you've already had a **Scully** application configured for writing blog posts via **Markdown** files. In addition, you've also set up a CI/CD pipeline to deploy new changes to the World Wide Web automatically with **Netlify**. Happy blogging!
 
 ## Resources
 
@@ -123,3 +123,5 @@ By the end of this blog post, you've already had a **Scully** application config
 - [Netlify](https://netlify.com)
 - [Scully](https://scully.io)
 - ["Getting started with Scully" blog post](https://nartc.me/blog/getting-started-scully)
+
+Special thanks to [@jefiozie](https://twitter.com/jefiozie) for proof-reading this blog post.
