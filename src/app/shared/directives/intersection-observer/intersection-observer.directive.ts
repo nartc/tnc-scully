@@ -14,9 +14,7 @@ export class IntersectionObserverDirective implements AfterViewInit {
     this.observer = new IntersectionObserver(
       (entries, observer) => {
         this.callbacks.forEach((callback, element) => {
-          const filtered = entries.filter(
-            ({ target, isIntersecting }) => target === element && isIntersecting,
-          );
+          const filtered = entries.filter(({ target, isIntersecting }) => target === element);
           return filtered.length && callback(filtered, observer);
         });
       },

@@ -69,15 +69,13 @@ export class IntersectionObserveeDirective extends Destroyable implements AfterV
       source$ = source$.pipe(debounceTime(this.debounce));
     }
 
-    source$.pipe(takeUntil(this.$destroyed)).subscribe(() => {
-      this.isIntersect = true;
-      this._updateView();
-    });
-  }
-
-  ngOnDestroy() {
-    super.ngOnDestroy();
-    console.log('destroy');
+    source$
+      .pipe(takeUntil(this.$destroyed))
+      .subscribe(([entries]: [IntersectionObserverEntry[]]) => {
+        const intersectEntry = entries.find((entry) => entry.isIntersecting);
+        this.isIntersect = !!intersectEntry;
+        this._updateView();
+      });
   }
 
   private _updateView() {
