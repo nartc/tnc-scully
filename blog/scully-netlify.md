@@ -81,22 +81,22 @@ _Getting started_
 ![select_git](/assets/static/images/scully-netlify/select-git.png)
 _Selecting Git providers_
 
-Now, **Netlify** will start the Authorization flow to authorize itself with your Git provider. In the case of **Github**, **Netlify** will then ask to be configured with your **Github** account. Do so however you like, just make sure that the repository in which contains your **Scully** application is made available to **Netlify**
+4. **Netlify** will start the Authorization flow to authorize itself with your Git provider. In the case of **Github**, **Netlify** will then ask to be configured with your **Github** account. Do so however you like, just make sure that the repository in which contains your **Scully** application is made available to **Netlify**
 
 ![configure_netlify](/assets/static/images/scully-netlify/configure-netlify-access.png)
 _Configure Netlify App on Github_
 
-Click **Save** then select the repository you want to continue with **Netlify**
+5. Click **Save** then select the repository you want to continue with **Netlify**
 
 ![select_repo](/assets/static/images/scully-netlify/select-repo.png)
 _Select repository_
 
-On the next screen, let's fill in the inputs as the screenshot
+6. On the next screen, let's fill in the inputs as the screenshot
 
 ![configure_deploy](/assets/static/images/scully-netlify/configure-deploy.png)
 _Configure deploy settings_
 
-As soon as you're ready, hit **Deploy**, and you'll be redirected back to the Dashboard. Here, **Netlify** will start building your site based on the configuration earlier. When it's finished, you can start visiting your site via the domain that **Netlify** provides
+7. As soon as you're ready, hit **Deploy**, and you'll be redirected back to the Dashboard. Here, **Netlify** will start building your site based on the configuration earlier. When it's finished, you can start visiting your site via the domain that **Netlify** provides
 
 ![site_dashboard](/assets/static/images/scully-netlify/site-dashboard.png)
 _Site dashboard_
