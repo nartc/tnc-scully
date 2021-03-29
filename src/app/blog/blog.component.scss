@@ -78,6 +78,12 @@ p {
   }
 }
 
+@screen md {
+  p > img {
+    max-width: 75%;
+  }
+}
+
 iframe {
   @apply w-full min-h-128;
 }
