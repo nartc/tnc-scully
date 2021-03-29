@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogListItemModule } from '../../shared/components/blog-list-item/blog-list-item.module';
 import { BlogListComponent } from './blog-list.component';
+import { IntersectionObserverModule } from '../../shared/directives/intersection-observer/intersection-observer.module';
 
 const blogListRoutes: Routes = [{ path: '', component: BlogListComponent }];
 
 @NgModule({
   declarations: [BlogListComponent],
-  imports: [CommonModule, RouterModule.forChild(blogListRoutes), BlogListItemModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(blogListRoutes),
+    BlogListItemModule,
+    IntersectionObserverModule,
+  ],
 })
 export class BlogListModule {}

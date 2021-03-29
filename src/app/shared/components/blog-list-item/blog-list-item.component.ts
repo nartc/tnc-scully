@@ -8,7 +8,8 @@ import { Frontmatter } from '../../frontmatter';
       <span class="font-light text-gray-medium">
         {{ route.date | date: 'mediumDate' }}
         <span *ngIf="route.readingTime">
-          - {{ route.readingTime | number: '1.0-0' }} min<ng-container *ngIf="route.readingTime > 1">s</ng-container>
+          - {{ route.readingTime | number: '1.0-0' }} min
+          <ng-container *ngIf="route.readingTime > 1">s</ng-container>
         </span>
       </span>
       <a
@@ -33,7 +34,7 @@ import { Frontmatter } from '../../frontmatter';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'py-4',
+    class: 'py-4 block',
   },
 })
 export class BlogListItemComponent {
