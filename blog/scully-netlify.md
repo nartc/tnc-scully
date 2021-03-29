@@ -50,7 +50,7 @@ Make sure your current default branch (`master`) is up-to-date and is clean (has
 
 Next, we will set up our build script that will execute a production build for our **Angular** application and run **Scully** afterwards. Open up `package.json` and add the following script to `scripts`:
 
-```
+```text
 "scripts": {
     ...,
     "build:prod": "ng build --prod && scully --prod --scanRoutes",
@@ -124,4 +124,4 @@ By the end of this blog post, you've already had a **Scully** application config
 - [Scully](https://scully.io)
 - ["Getting started with Scully" blog post](https://nartc.me/blog/getting-started-scully)
 
-Special thanks to [@jefiozie](https://twitter.com/jefiozie) for proof-reading this blog post.
+Special thanks to [@jefiozie](https://twitter.com/jefiozie) and [@tuantrungvo](https://twitter.com/tuantrungvo) for proof-reading this blog post.
