@@ -2,10 +2,10 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 import { SwUpdate } from '@angular/service-worker';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { defer, EMPTY, from, Observable, of } from 'rxjs';
-import { mapTo, startWith, switchMap, tap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
-import { Frontmatter } from '../shared/frontmatter';
 import { MetaService } from '../shared/services/meta.service';
+import { Frontmatter } from '../shared/frontmatter';
+import { mapTo, startWith, switchMap, switchMapTo, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog',
@@ -22,7 +22,7 @@ export class BlogComponent {
       return defer(() => {
         if (isProd && this.swUpdate.isEnabled) {
           return from(this.swUpdate.checkForUpdate()).pipe(
-            switchMap(() => this.swUpdate.available.pipe(mapTo(true), startWith(false))),
+            switchMapTo(this.swUpdate.available.pipe(mapTo(true), startWith(false))),
             switchMap((hasUpdate) => {
               if (hasUpdate) {
                 this.swUpdate.checkForUpdate().then(() => window?.location?.reload());
@@ -41,6 +41,8 @@ export class BlogComponent {
       );
     }),
   );
+
+  // blog$ = of(null);
 
   constructor(
     private readonly scullyRoutesService: ScullyRoutesService,
