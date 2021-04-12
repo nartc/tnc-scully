@@ -5,7 +5,16 @@ import { defer, EMPTY, from, Observable, of } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { MetaService } from '../shared/services/meta.service';
 import { Frontmatter } from '../shared/frontmatter';
-import { mapTo, startWith, switchMap, switchMapTo, tap } from 'rxjs/operators';
+import {
+  catchError,
+  mapTo,
+  pairwise,
+  startWith,
+  switchMap,
+  switchMapTo,
+  tap,
+  timeout,
+} from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog',
@@ -22,12 +31,21 @@ export class BlogComponent {
       return defer(() => {
         if (isProd && this.swUpdate.isEnabled) {
           return from(this.swUpdate.checkForUpdate()).pipe(
-            switchMapTo(this.swUpdate.available.pipe(mapTo(true), startWith(false))),
-            switchMap((hasUpdate) => {
+            switchMapTo(
+              this.swUpdate.available.pipe(
+                timeout(10000),
+                mapTo(true),
+                startWith(false),
+                pairwise(),
+                catchError(() => of([false, null])),
+              ),
+            ),
+            switchMap(([_, hasUpdate]) => {
               if (hasUpdate) {
-                this.swUpdate.checkForUpdate().then(() => window?.location?.reload());
+                this.swUpdate.activateUpdate().then(() => window?.location?.reload());
                 return EMPTY;
               }
+
               return this.scullyRoutesService.getCurrent();
             }),
           );
