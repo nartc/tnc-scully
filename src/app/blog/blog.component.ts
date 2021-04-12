@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
-import { defer, EMPTY, from, Observable, of } from 'rxjs';
+import { combineLatest, defer, from, Observable, of } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { MetaService } from '../shared/services/meta.service';
 import { Frontmatter } from '../shared/frontmatter';
 import {
   catchError,
+  map,
   mapTo,
   pairwise,
   startWith,
-  switchMap,
   switchMapTo,
   tap,
   timeout,
@@ -26,37 +26,37 @@ import {
 })
 export class BlogComponent {
   isProd = environment.production;
-  blog$: Observable<Frontmatter> = of(this.isProd).pipe(
-    switchMap((isProd) => {
-      return defer(() => {
-        if (isProd && this.swUpdate.isEnabled) {
-          return from(this.swUpdate.checkForUpdate()).pipe(
-            switchMapTo(
-              this.swUpdate.available.pipe(
-                timeout(10000),
-                mapTo(true),
-                startWith(false),
-                pairwise(),
-                catchError(() => of([false, null])),
-              ),
+  blog$: Observable<{ loading: boolean; content: Frontmatter }> = defer(() => {
+    if (this.isProd && this.swUpdate.isEnabled) {
+      return combineLatest([
+        this.scullyRoutesService.getCurrent(),
+        from(this.swUpdate.checkForUpdate()).pipe(
+          switchMapTo(
+            this.swUpdate.available.pipe(
+              timeout(5000), // timeout 5s
+              mapTo(true),
+              startWith(false),
+              pairwise(),
+              catchError(() => of([false, false])),
+              map(([_, hasUpdate]) => {
+                if (hasUpdate) {
+                  this.swUpdate.activateUpdate().then(() => window?.location?.reload());
+                }
+                return false;
+              }),
             ),
-            switchMap(([_, hasUpdate]) => {
-              if (hasUpdate) {
-                this.swUpdate.activateUpdate().then(() => window?.location?.reload());
-                return EMPTY;
-              }
+          ),
+          startWith(true),
+        ),
+      ]).pipe(map(([content, loading]) => ({ loading, content })));
+    }
 
-              return this.scullyRoutesService.getCurrent();
-            }),
-          );
-        }
-
-        return this.scullyRoutesService.getCurrent();
-      }).pipe(
-        tap((blog: Frontmatter) => {
-          this.metaService.update({ ...blog, url: `${environment.baseUrl}${blog.route}` });
-        }),
-      );
+    return this.scullyRoutesService
+      .getCurrent()
+      .pipe(map((content) => ({ loading: false, content })));
+  }).pipe(
+    tap(({ content }) => {
+      this.metaService.update({ ...content, url: `${environment.baseUrl}${content.route}` });
     }),
   );
 

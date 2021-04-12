@@ -1053,4 +1053,136 @@ Using stored unhandled routes!.
 ****************************************************************************************
 This is a development tool for Scully applications.
 You can ignore the warning (TLS) or run scully with --no-warning
-****************************************************************************************
+****************************************************************************************Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping
+
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/internalize-request-status-rxjs"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/internalize-request-status-rxjs"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/angular-recaptcha-v2"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/angular-recaptcha-v2"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/customizing-angular-ui-library"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/customizing-angular-ui-library"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/nestjs-typegoose"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/nestjs-typegoose"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/angular-root-injector"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/angular-root-injector"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/typed-mat-cell-def"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/typed-mat-cell-def"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/add-utterances-comments-scully"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/add-utterances-comments-scully"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/getting-started-scully"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/getting-started-scully"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/automapper-typescript-1"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/automapper-typescript-1"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/angular-cli-tailwindcss"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/angular-cli-tailwindcss"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/automapper-nestjs"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/automapper-nestjs"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/nestjs-swagger-generics"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/nestjs-swagger-generics"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+
+
+
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/deploy-scully-netlify"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/deploy-scully-netlify"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+
+
+
+
+
+
+
+
+
