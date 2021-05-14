@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 
 @Directive()
 export abstract class Destroyable implements OnDestroy {
-  protected $destroyed = new Subject();
+  protected $destroyed = new Subject<void>();
 
   ngOnDestroy() {
     this.$destroyed.next();
