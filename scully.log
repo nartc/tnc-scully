@@ -1186,3 +1186,6 @@ No configuration for route "/tag/:tagName" found. Skipping
 
 
 
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping
