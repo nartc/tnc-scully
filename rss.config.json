@@ -1,0 +1,21 @@
+{
+  "title": "Chau Tran",
+  "description": "Personal blog of Chau Tran aka nartc",
+  "id": "https://nartc.me",
+  "link": "https://nartc.me",
+  "language": "en",
+  "image": "https://nartc.me/assets/icons/favicon.png",
+  "favicon": "https://nartc.me/assets/icons/favicon.png",
+  "copyright": "2020 nartc.me",
+  "generator": "Personal blog of Chau Tran",
+  "filename": "feed",
+  "feedLinks": {
+    "atom": "https://nartc.me/feed.atom",
+    "json": "https://nartc.me/feed.json",
+    "xml": "https://nartc.me/feed.xml"
+  },
+  "outDir": "./dist/static",
+  "categories": ["programming", "typescript", "angular", "nestjs", "scully"],
+  "blogPostRouteSlug": "/blog",
+  "newestPostsFirst": true
+}

@@ -2,6 +2,7 @@ import { RouteTypes, ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import { timeToRead, timeToReadOptions } from 'scully-plugin-time-to-read';
 import { MinifyHtml } from './scully/plugins/custom-minify-html-plugin';
+import '@notiz/scully-plugin-rss';
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 

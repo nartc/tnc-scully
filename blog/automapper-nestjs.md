@@ -1,10 +1,12 @@
 ---
 title: AutoMapper + NestJS
 description: AutoMapper integration with NestJS is better than ever
-date: '2021-03-14'
+publishedAt: 2021-03-14
+updatedAt: 2021-03-14
 published: true
 slug: 'automapper-nestjs'
 tags: ['TypeScript', 'NestJS']
+authors: ['Chau Tran']
 ---
 
 [AutoMapper TypeScript](https://automapperts.netlify.app) provides an official integration package with [NestJS](https://nestjs.com) as `@automapper/nestjs`

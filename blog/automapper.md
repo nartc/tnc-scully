@@ -1,10 +1,12 @@
 ---
 title: (re)Introduce to AutoMapper TypeScript
 description: I have just cut an official release for v1.0.0 of AutoMapper TypeScript and here's everything you, if interested, need to know.
-date: '2021-01-16'
+publishedAt: 2021-01-16
+updatedAt: 2021-01-16
 published: true
 slug: 'automapper-typescript-1'
 tags: ['TypeScript']
+authors: ['Chau Tran']
 ---
 
 ### Preface

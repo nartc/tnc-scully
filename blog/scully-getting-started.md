@@ -1,10 +1,12 @@
 ---
 title: Getting started with Scully
 description: In this blog post, I will show you how to get started with Scully
-date: '2020-06-02'
+publishedAt: 2020-06-02
+updatedAt: 2020-06-02
 published: true
 slug: 'getting-started-scully'
 tags: ['Scully', 'Angular', 'TypeScript']
+authors: ['Chau Tran']
 ---
 
 Allow me to start off by saying how good and _at home_ I feel to be able to write my blog posts using [Angular](https://angular.io){:target=\_blank rel=noreferrer} with the help of [Scully](https://scully.io){:target=\_blank rel=noreferrer}.

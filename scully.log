@@ -1195,3 +1195,47 @@ No configuration for route "/tag/:tagName" found. Skipping
 Using deprecated plugin type:"render"  use "postProcessByHtml" instead
 Using deprecated plugin type:"render"  use "postProcessByHtml" instead
 No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'toISOString' of undefinedTypeError: Cannot read property 'toISOString' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exit
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'name' of undefined❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'name' of undefined
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'name' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'name' of undefined
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'name' of undefinedTypeError: Cannot read property 'name' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exit
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping
+Received Kill command
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping
+Received Kill command

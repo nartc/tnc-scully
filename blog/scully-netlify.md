@@ -1,10 +1,12 @@
 ---
 title: Deploy your Scully application with Netlify
 description: So easy that a blog description is overrated!
-date: '2021-03-28'
+publishedAt: 2021-03-28
+updatedAt: 2021-03-28
 published: true
 slug: 'deploy-scully-netlify'
 tags: ['Scully', 'Angular', 'Netlify']
+authors: ['Chau Tran']
 ---
 
 In this blog post, I will introduce to you how to deploy your [Scully](https://scully.io) powered [Angular](https://angular.io) application to [Netlify](https://netlify.com).

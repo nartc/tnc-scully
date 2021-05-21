@@ -1,10 +1,12 @@
 ---
 title: Add Google ReCaptcha v2 to Angular
 description: Adding ReCaptcha (v2) to Angular is made super easy with the help of Directives and Dependency Injection
-date: '2020-06-07'
+publishedAt: 2020-06-07
+updatedAt: 2020-06-07
 published: true
 slug: 'angular-recaptcha-v2'
 tags: ['Angular']
+authors: ['Chau Tran']
 ---
 
 Hi guys 👋, I have just worked on a task to add [Google ReCaptcha](https://developers.google.com/recaptcha/docs/display), specifically Google ReCaptcha v2 with Checkbox,

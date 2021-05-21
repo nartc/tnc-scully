@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-navigation',
@@ -28,8 +29,19 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       >
         Bio
       </a>
+      <a
+        *ngIf="isProd"
+        class="mb-0 ml-2 lg:mb-2 lg:ml-0 transition-colors duration-200 ease-in-out hover:underline hover:text-primary cursor-pointer"
+        href="https://nartc.me/feed.xml"
+        target="_blank"
+        rel="noopener"
+      >
+        RSS Feed
+      </a>
     </nav>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavigationComponent {}
+export class NavigationComponent {
+  isProd = environment.production;
+}

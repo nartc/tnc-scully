@@ -1,10 +1,12 @@
 ---
 title: Using root-provided Injectables in non-DI places
 description: This is a nice little trick to have access to Angular Services that are provided in root to use in places where Dependency Injection is not available
-date: '2020-05-31'
+publishedAt: 2020-05-31
+updatedAt: 2020-05-31
 published: true
 slug: 'angular-root-injector'
 tags: ['Angular', 'TypeScript']
+authors: ['Chau Tran']
 ---
 
 Hi guys, welcome back to my blog 👋. Today, I want to share with you all about a trick that I've been using to access

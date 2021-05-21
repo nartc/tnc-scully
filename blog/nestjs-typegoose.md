@@ -1,10 +1,12 @@
 ---
 title: NestJS + Typegoose
 description: A workflow that leverages the power of TypeScript and Typegoose to clue NestJS and MongoDB together
-date: '2020-07-22'
+publishedAt: 2020-07-22
+updatedAt: 2020-07-22
 published: true
 slug: 'nestjs-typegoose'
 tags: ['NestJS']
+authors: ['Chau Tran']
 ---
 
 Today, I am going to share with you a workflow/technique that I’ve been using when I work with **NestJS** and

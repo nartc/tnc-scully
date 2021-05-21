@@ -1,10 +1,12 @@
 ---
 title: How to generate Generics DTOs with nestjs/swagger
 description: nestjs/swagger provides consumers with enough tools to generate proper OpenAPI specs for Generics. Although, it is not straight-forward, yet it is possible.
-date: '2020-07-14'
+publishedAt: 2020-07-14
+updatedAt: 2020-07-14
 published: true
 slug: 'nestjs-swagger-generics'
 tags: ['NestJS']
+authors: ['Chau Tran']
 ---
 
 One of the most requested/asked question in [NestJS Discord Server](https://discord.gg/5SKeMhX) for `nestjs/swagger` is probably `"How can I provide the proper specification for Generics DTOs?"`.

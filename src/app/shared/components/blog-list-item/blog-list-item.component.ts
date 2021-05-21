@@ -6,7 +6,7 @@ import { Frontmatter } from '../../frontmatter';
   template: `
     <div class="flex justify-between items-center">
       <span class="font-light text-gray-medium">
-        {{ route.date | date: 'mediumDate' }}
+        {{ route.publishedDate | date: 'mediumDate' }}
         <span *ngIf="route.readingTime">
           - {{ route.readingTime | number: '1.0-0' }} {{ route.readingTime > 1 ? 'mins' : 'min' }}
         </span>

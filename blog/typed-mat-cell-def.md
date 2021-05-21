@@ -1,10 +1,12 @@
 ---
 title: Type-safe MatCellDef
 description: In this blog post, we will explore how we could provide strong-types for Template Variable in the MatCellDef
-date: '2021-03-19'
+publishedAt: 2021-03-19
+updatedAt: 2021-03-19
 published: true
 slug: 'typed-mat-cell-def'
 tags: ['Angular', 'TypeScript']
+authors: ['Chau Tran']
 ---
 
 [Angular Material](https://material.angular.io/) is probably the most popular UI Components Library in the [Angular](https://angular.io) ecosystem. Amongst the components that **Angular Material** provides, `MatTable` is one of the most used ones. It looks good, is feature-packed, and works with different types of `dataSource`.

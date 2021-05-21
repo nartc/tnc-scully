@@ -3,10 +3,12 @@ title: Add Utterances comments to Scully
 description:
   Engagement is what I have always wanted to achieve for my personal blog and so far, there is no easier
   implementation than Utterances.
-date: '2020-08-27'
+publishedAt: 2020-08-27
+updatedAt: 2020-08-27
 published: true
 slug: 'add-utterances-comments-scully'
 tags: ['Scully']
+authors: ['Chau Tran']
 ---
 
 Ever since I started working and publishing my personal blog, I've always wanted to add a **Comment** section to

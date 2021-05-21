@@ -1,10 +1,12 @@
 ---
 title: Internalize API Request Status with RxJS 
 description: Utilizing RxJS operators, we can come up with a robust approach to handle API request states.
-date: '2020-11-24'
+publishedAt: 2020-11-24
+updatedAt: 2020-11-24
 published: true
 slug: 'internalize-request-status-rxjs'
 tags: ['Angular', 'RxJS']
+authors: ['Chau Tran']
 ---
 
 Most of the times, front-end developers need to display a `loading` interface while an API request is `pending` (aka

@@ -1,10 +1,12 @@
 ---
 title: TailwindCSS with Angular CLI
 description: Angular 11.2 comes with built-in support for TailwindCSS
-date: '2021-02-04'
+publishedAt: 2021-02-04
+updatedAt: 2021-02-04
 published: true
 slug: 'angular-cli-tailwindcss'
 tags: ['Angular', 'Tailwind']
+authors: ['Chau Tran']
 ---
 
 A recent [PR](https://github.com/angular/angular-cli/commit/73b409881f71a8235769a345356dcde3c568d0c3) that enables 
