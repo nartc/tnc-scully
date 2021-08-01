@@ -3,6 +3,7 @@ import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import { timeToRead, timeToReadOptions } from 'scully-plugin-time-to-read';
 import { MinifyHtml } from './scully/plugins/custom-minify-html-plugin';
 import '@notiz/scully-plugin-rss';
+import '@notiz/scully-plugin-lazy-images';
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 
@@ -14,7 +15,7 @@ export const config: ScullyConfig = {
   projectRoot: './src',
   projectName: 'tnc-scully',
   outDir: './dist/static',
-  defaultPostRenderers: [MinifyHtml, getHttp404Plugin(), 'seoHrefOptimise'],
+  defaultPostRenderers: [MinifyHtml, getHttp404Plugin(), 'seoHrefOptimise', 'lazyImages'],
   routes: {
     '/blog/:slug': {
       type: RouteTypes.contentFolder,
