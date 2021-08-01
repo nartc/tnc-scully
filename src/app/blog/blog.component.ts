@@ -60,8 +60,6 @@ export class BlogComponent {
     }),
   );
 
-  // blog$ = of(null);
-
   constructor(
     private readonly scullyRoutesService: ScullyRoutesService,
     private readonly metaService: MetaService,
