@@ -1,6 +1,11 @@
 ---
-title: MacOS Dev Environment Setup 2021 description: Setting up a MacOS for web development in 2021 publishedAt:
-2021-08-01 updatedAt: 2021-08-01 published: true slug: 'macos-dev-setup' tags: ['Programming']
+title: MacOS Dev Environment Setup 2021 
+description: Setting up a MacOS for web development in 2021 
+publishedAt: 2021-08-01 
+updatedAt: 2021-08-01 
+published: true 
+slug: 'macos-dev-setup' 
+tags: ['Programming']
 authors: ['Chau Tran']
 ---
 
