@@ -278,7 +278,7 @@ export class CounterEffects {
     this.actions$.pipe(
       // using multiplyBy.trigger
       ofType(CounterActions.multiplyBy.trigger),
-      concatLatestFrom(() => this.store.select(selectValue)),
+      concatLatestFrom(() => this.store.select(CounterSelectors.selectValue)),
       // switchMap to a mock side-effect (timer)
       switchMap(([{ multiplier }, currentValue]) =>
         // delay 1s to simulate async task
