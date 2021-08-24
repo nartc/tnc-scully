@@ -9,9 +9,14 @@ tags: ['NestJS']
 authors: ['Chau Tran']
 ---
 
+### Update 08/24/2021:
+
+This blog post was written when `mongoose` did not have its own type definitions and had to rely on `@types/mongoose`. In later versions of Mongoose, it provides its own type definitions which makes `@types/mongoose` obsolete, as well as makes some typings in this blog post not working anymore in `BaseRepository`. Here's a [Github Gist](https://gist.github.com/nartc/bbee6424eb7dc379ba7915c0db583a2e) for `BaseRepository` with the updated typings.
+
+---
+
 Today, I am going to share with you a workflow/technique that I’ve been using when I work with **NestJS** and
-**MongoDB**. This workflow leverages the power of **TypeScript** and an npm package called [Typegoose](https
-://typegoose.github.io/typegoose/). This blog will be a quick one so let’s jump in.
+**MongoDB**. This workflow leverages the power of **TypeScript** and an npm package called [Typegoose](https://typegoose.github.io/typegoose/). This blog will be a quick one so let’s jump in.
 
 > I assume you’re already familiar with **NestJS** and **MongoDB** (**Mongoose** ODM to be exact)
 
