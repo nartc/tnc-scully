@@ -1293,3 +1293,7 @@ Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------No configuration for route "/tag/:tagName" found. Skipping
 
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead

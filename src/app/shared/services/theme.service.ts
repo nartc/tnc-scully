@@ -15,24 +15,19 @@ export class ThemeService {
 
   load() {
     this.getCurrentScheme();
-    this.add(this.scheme);
-    this.remove(this.scheme === 'dark' ? 'light' : 'dark');
+    this.set(this.scheme);
+
   }
 
   update() {
     const updateScheme = this.scheme === 'dark' ? 'light' : 'dark';
-    this.remove(this.scheme);
-    this.add(updateScheme);
+    this.set(updateScheme);
     localStorage.setItem('prefers-scheme', updateScheme);
     this.currentScheme = updateScheme;
   }
 
-  private remove(scheme: 'dark' | 'light') {
-    this.renderer.removeClass(document.body, `theme-${scheme}`);
-  }
-
-  private add(scheme: 'dark' | 'light') {
-    this.renderer.addClass(document.body, `theme-${scheme}`);
+  private set(scheme: 'dark' | 'light') {
+    this.renderer.setAttribute(document.body, 'class', `theme-${scheme}`);
   }
 
   private getCurrentScheme() {
