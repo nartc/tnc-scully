@@ -5,23 +5,23 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     <p class="font-thin text-lg mb-2">Hello world,</p>
     <p class="font-thin text-lg mb-2">
-      As you probably already notice, I am Chau. I am currently working as an engineer for
+      As you probably already notice, I am Chau. I am currently working as a Sr. Engineer for
       <a
-        href="https://swimlane.com/"
+        href="https://nrwl.io/"
         rel="noreferrer"
         target="_blank"
         class="text-primary underline cursor-pointer"
       >
-        Swimlane
+        Narwhal
       </a>
       . Follow us at
       <a
-        href="https://twitter.com/swimlane"
+        href="https://twitter.com/nrwl_io"
         rel="noreferrer"
         target="_blank"
         class="text-primary underline cursor-pointer"
       >
-        @swimlane
+        @nrwl_io
       </a>
     </p>
     <p class="font-thin text-lg mb-2">

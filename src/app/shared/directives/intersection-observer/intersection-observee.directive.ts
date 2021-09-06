@@ -7,10 +7,10 @@ import {
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
-import { IntersectionObserverDirective } from './intersection-observer.directive';
 import { fromEventPattern } from 'rxjs';
-import { Destroyable } from '../../destroyable';
 import { debounceTime, takeUntil } from 'rxjs/operators';
+import { Destroyable } from '../../destroyable';
+import { IntersectionObserverDirective } from './intersection-observer.directive';
 
 @Directive({
   selector: '[appIntersectionObservee]',

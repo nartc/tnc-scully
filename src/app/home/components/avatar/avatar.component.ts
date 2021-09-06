@@ -1,4 +1,5 @@
-import { ApplicationRef, ChangeDetectionStrategy, Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { ApplicationRef, ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { concat, interval } from 'rxjs';
 import { first, mapTo, startWith, takeUntil } from 'rxjs/operators';
@@ -38,7 +39,11 @@ import { Destroyable } from '../../../shared/destroyable';
 export class AvatarComponent extends Destroyable {
   hasUpdate$ = this.swUpdate.available.pipe(mapTo(true), startWith(false));
 
-  constructor(readonly appRef: ApplicationRef, private readonly swUpdate: SwUpdate) {
+  constructor(
+    readonly appRef: ApplicationRef,
+    private readonly swUpdate: SwUpdate,
+    @Inject(DOCUMENT) private readonly document: Document,
+  ) {
     super();
     if (swUpdate.isEnabled) {
       const appIsStable$ = appRef.isStable.pipe(first((isStable) => isStable === true));
@@ -54,6 +59,6 @@ export class AvatarComponent extends Destroyable {
     if (!hasUpdate) {
       return;
     }
-    window?.location?.reload();
+    this.document.defaultView?.location?.reload();
   }
 }

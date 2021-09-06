@@ -1,6 +1,8 @@
 import { tap } from 'rxjs/operators';
 
-export function latestByDate<TItems extends Array<{ publishedAt?: string }> = Array<{ publishedAt?: string }>>() {
+export function latestByDate<
+  TItems extends Array<{ publishedAt?: string }> = Array<{ publishedAt?: string }>,
+>() {
   return tap<TItems>((items) =>
     items.sort((a, b) => {
       const d1 = new Date(a.publishedAt);

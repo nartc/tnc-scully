@@ -1,12 +1,23 @@
-import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
-  private currentScheme: 'dark' | 'light';
-  private readonly renderer: Renderer2;
+  private static readonly lsKey = 'nartc-prefers-scheme';
 
-  constructor(readonly rendererFactory2: RendererFactory2) {
+  private readonly renderer: Renderer2;
+  private readonly window: Window;
+  private readonly body: HTMLElement;
+
+  private currentScheme: 'dark' | 'light';
+
+  constructor(
+    readonly rendererFactory2: RendererFactory2,
+    @Inject(DOCUMENT) readonly injectedDocument: Document,
+  ) {
     this.renderer = rendererFactory2.createRenderer(null, null);
+    this.window = injectedDocument.defaultView as Window;
+    this.body = injectedDocument.body;
   }
 
   get scheme() {
@@ -16,28 +27,27 @@ export class ThemeService {
   load() {
     this.getCurrentScheme();
     this.set(this.scheme);
-
   }
 
   update() {
     const updateScheme = this.scheme === 'dark' ? 'light' : 'dark';
     this.set(updateScheme);
-    localStorage.setItem('prefers-scheme', updateScheme);
+    localStorage.setItem(ThemeService.lsKey, updateScheme);
     this.currentScheme = updateScheme;
   }
 
   private set(scheme: 'dark' | 'light') {
-    this.renderer.setAttribute(document.body, 'class', `theme-${scheme}`);
+    this.renderer.setAttribute(this.body, 'class', `theme-${scheme}`);
   }
 
   private getCurrentScheme() {
-    const scheme = localStorage.getItem('prefers-scheme');
+    const scheme = localStorage.getItem(ThemeService.lsKey);
     if (scheme != null) {
       return (this.currentScheme = scheme as 'dark' | 'light');
     }
 
-    if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-      return (this.currentScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+    if (this.window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+      return (this.currentScheme = this.window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light');
     }

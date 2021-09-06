@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable, ReplaySubject } from 'rxjs';
 import { debounceTime, map, scan, startWith } from 'rxjs/operators';
@@ -34,8 +34,11 @@ import { latestByDate } from '../../shared/utils/operators/latest-by-date.operat
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlogListComponent implements OnInit {
-  links$: Observable<Frontmatter[]>;
+export class BlogListComponent {
+  links$: Observable<Frontmatter[]> = this.scullyRoutesService.available$.pipe(
+    map((links) => links.filter((l) => l.route.includes('/blog') && l.title != null)),
+    latestByDate<Frontmatter[]>(),
+  );
 
   readonly $intersectionLink = new ReplaySubject<{
     entries: IntersectionObserverEntry[];
@@ -55,11 +58,4 @@ export class BlogListComponent implements OnInit {
   );
 
   constructor(private readonly scullyRoutesService: ScullyRoutesService) {}
-
-  ngOnInit(): void {
-    this.links$ = this.scullyRoutesService.available$.pipe(
-      map((links) => links.filter((l) => l.route.includes('/blog') && l.title != null)),
-      latestByDate<Frontmatter[]>(),
-    );
-  }
 }
