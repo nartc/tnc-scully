@@ -1,6 +1,6 @@
 import { getHttp404Plugin } from '@gammastream/scully-plugin-http404';
 import '@notiz/scully-plugin-lazy-images';
-import '@notiz/scully-plugin-rss';
+// import '@notiz/scully-plugin-rss';
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
 import { timeToRead, timeToReadOptions } from 'scully-plugin-time-to-read';
 import { MinifyHtml } from './scully/plugins/custom-minify-html-plugin';

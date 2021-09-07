@@ -1,35 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.blocksToHtml = exports.defaultPluginOptions = void 0;
+exports.parseRichTexts = exports.parseImage = exports.parseEmbedded = exports.parseList = exports.blocksToHtml = void 0;
 const utils_1 = require("./utils");
-const defaultTransformersFactory = (pluginOptions) => ({
-    file: (file) => `<img src='${file.url}' alt='${file.url}'>`,
-    externalFile: (externalFile) => `<img src='${externalFile.url}' alt='${externalFile.url}'>`,
-    imageCaption: (richTexts) => `<em>${parseRichTexts(richTexts, pluginOptions)}</em>`,
-    link: (original, text) => `<a href='${text.link.url}' rel='noopener noreferrer' target='_blank'>${original}</a>`,
-});
-exports.defaultPluginOptions = {
-    parsers: {
-        unorderedListWrapper: (listItemsHtml) => `<ul>${listItemsHtml}</ul>`,
-        orderedListWrapper: (listItemsHtml) => `<ol>${listItemsHtml}</ol>`,
-        embed: parseEmbedded,
-        image: (image) => parseImage(image, defaultTransformersFactory(exports.defaultPluginOptions)),
-        heading1: (richTexts) => `<h1>${parseRichTexts(richTexts, exports.defaultPluginOptions)}</h1>`,
-        heading2: (richTexts) => `<h2>${parseRichTexts(richTexts, exports.defaultPluginOptions)}</h2>`,
-        heading3: (richTexts) => `<h3>${parseRichTexts(richTexts, exports.defaultPluginOptions)}</h3>`,
-        paragraph: (richTexts) => `<p>${parseRichTexts(richTexts, exports.defaultPluginOptions)}</p>`,
-        listItem: (list) => parseList(list, exports.defaultPluginOptions),
-    },
-    annotate: {
-        bold: (original) => `<strong>${original}</strong>`,
-        code: (original) => `<code>${original}</code>`,
-        italic: (original) => `<em>${original}</em>`,
-        underline: (original) => `<span style='text-decoration: underline'>${original}</span>`,
-        strikethrough: (original) => `<span style='text-decoration: line-through'>${original}</span>`,
-    },
-    transformers: defaultTransformersFactory(this),
-};
-function blocksToHtml(blocks, pluginOptions = exports.defaultPluginOptions) {
+function blocksToHtml(blocks, pluginOptions) {
     let html = '';
     let listItems = {
         type: '',
@@ -128,12 +101,14 @@ function annotate(original, annotations, pluginAnnotate) {
 function parseList(list, pluginOptions) {
     return `<li>${parseRichTexts(list.text, pluginOptions)}</li>`;
 }
+exports.parseList = parseList;
 function parseEmbedded(embed) {
     if (embed.url.includes('gist.github')) {
         return `<script src='${embed.url}.js' type='text/javascript' async defer></script>`;
     }
     return `<iframe src='${embed.url}'></iframe>`;
 }
+exports.parseEmbedded = parseEmbedded;
 function parseImage(image, imageTransformers) {
     function parseFileType(file) {
         switch (file.type) {
@@ -149,6 +124,7 @@ function parseImage(image, imageTransformers) {
     }
     return `<p>${imageContent}</p>`;
 }
+exports.parseImage = parseImage;
 function parseRichTexts(richTexts, pluginOptions) {
     let parsedText = '';
     for (const richText of richTexts) {
@@ -156,6 +132,7 @@ function parseRichTexts(richTexts, pluginOptions) {
     }
     return parsedText;
 }
+exports.parseRichTexts = parseRichTexts;
 function parseRichText(richText, pluginOptions) {
     function parseText(textInput) {
         let content = textInput.text.content;

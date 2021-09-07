@@ -1,13 +1,59 @@
 import { Client } from '@notionhq/client';
-import { HandledRoute, log, red, registerPlugin, RouteConfig, yellow } from '@scullyio/scully';
+import {
+  getPluginConfig,
+  HandledRoute,
+  log,
+  red,
+  registerPlugin,
+  RouteConfig,
+  yellow,
+} from '@scullyio/scully';
 import { injectHtml } from '@scullyio/scully/src/lib/renderPlugins/content-render-utils/injectHtml';
 import { JSDOM } from 'jsdom';
-import { blocksToHtml } from './blocks-to-html';
+import {
+  blocksToHtml,
+  parseEmbedded,
+  parseImage,
+  parseList,
+  parseRichTexts,
+} from './blocks-to-html';
+import { NotionPluginOptions, NotionPluginTransformers } from './notion-plugin-options';
 import { pagePropertiesToFrontmatter } from './page-properties-to-frontmatter';
 import { stringifyLog } from './utils';
 
 export const NotionDom = 'notionDom';
 export const NotionDomRouter = 'notionDomRouter';
+
+const defaultTransformersFactory: (pluginOptions: NotionPluginOptions) => NotionPluginTransformers =
+  (pluginOptions) => ({
+    file: (file) => `<img src='${file.url}' alt='${file.url}'>`,
+    externalFile: (externalFile) => `<img src='${externalFile.url}' alt='${externalFile.url}'>`,
+    imageCaption: (richTexts) => `<em>${parseRichTexts(richTexts, pluginOptions)}</em>`,
+    link: (original, text) =>
+      `<a href='${text.link.url}' rel='noopener noreferrer' target='_blank'>${original}</a>`,
+  });
+
+export const defaultPluginOptions: NotionPluginOptions = {
+  parsers: {
+    unorderedListWrapper: (listItemsHtml) => `<ul>${listItemsHtml}</ul>`,
+    orderedListWrapper: (listItemsHtml) => `<ol>${listItemsHtml}</ol>`,
+    embed: parseEmbedded,
+    image: (image) => parseImage(image, defaultTransformersFactory(defaultPluginOptions)),
+    heading1: (richTexts) => `<h1>${parseRichTexts(richTexts, defaultPluginOptions)}</h1>`,
+    heading2: (richTexts) => `<h2>${parseRichTexts(richTexts, defaultPluginOptions)}</h2>`,
+    heading3: (richTexts) => `<h3>${parseRichTexts(richTexts, defaultPluginOptions)}</h3>`,
+    paragraph: (richTexts) => `<p>${parseRichTexts(richTexts, defaultPluginOptions)}</p>`,
+    listItem: (list) => parseList(list, defaultPluginOptions),
+  },
+  annotate: {
+    bold: (original) => `<strong>${original}</strong>`,
+    code: (original) => `<code>${original}</code>`,
+    italic: (original) => `<em>${original}</em>`,
+    underline: (original) => `<span style='text-decoration: underline'>${original}</span>`,
+    strikethrough: (original) => `<span style='text-decoration: line-through'>${original}</span>`,
+  },
+  transformers: defaultTransformersFactory(this),
+};
 
 let notion: Client;
 
@@ -82,7 +128,12 @@ async function notionDomPlugin(dom: JSDOM, route: HandledRoute): Promise<JSDOM> 
       return Promise.resolve(dom);
     }
 
-    return injectHtml(dom, blocksToHtml(blocks.results), route);
+    const pluginOptions: NotionPluginOptions = {
+      ...defaultPluginOptions,
+      ...(getPluginConfig(NotionDom, 'postProcessByDom') || {}),
+    };
+
+    return injectHtml(dom, blocksToHtml(blocks.results, pluginOptions), route);
   } catch (e) {
     log(red(`Something went wrong. ${e}`));
     return Promise.resolve(dom);

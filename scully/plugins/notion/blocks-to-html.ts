@@ -13,41 +13,7 @@ import type {
 } from './notion-plugin-options';
 import { stringifyLog } from './utils';
 
-const defaultTransformersFactory: (pluginOptions: NotionPluginOptions) => NotionPluginTransformers =
-  (pluginOptions) => ({
-    file: (file) => `<img src='${file.url}' alt='${file.url}'>`,
-    externalFile: (externalFile) => `<img src='${externalFile.url}' alt='${externalFile.url}'>`,
-    imageCaption: (richTexts) => `<em>${parseRichTexts(richTexts, pluginOptions)}</em>`,
-    link: (original, text) =>
-      `<a href='${text.link.url}' rel='noopener noreferrer' target='_blank'>${original}</a>`,
-  });
-
-export const defaultPluginOptions: NotionPluginOptions = {
-  parsers: {
-    unorderedListWrapper: (listItemsHtml) => `<ul>${listItemsHtml}</ul>`,
-    orderedListWrapper: (listItemsHtml) => `<ol>${listItemsHtml}</ol>`,
-    embed: parseEmbedded,
-    image: (image) => parseImage(image, defaultTransformersFactory(defaultPluginOptions)),
-    heading1: (richTexts) => `<h1>${parseRichTexts(richTexts, defaultPluginOptions)}</h1>`,
-    heading2: (richTexts) => `<h2>${parseRichTexts(richTexts, defaultPluginOptions)}</h2>`,
-    heading3: (richTexts) => `<h3>${parseRichTexts(richTexts, defaultPluginOptions)}</h3>`,
-    paragraph: (richTexts) => `<p>${parseRichTexts(richTexts, defaultPluginOptions)}</p>`,
-    listItem: (list) => parseList(list, defaultPluginOptions),
-  },
-  annotate: {
-    bold: (original) => `<strong>${original}</strong>`,
-    code: (original) => `<code>${original}</code>`,
-    italic: (original) => `<em>${original}</em>`,
-    underline: (original) => `<span style='text-decoration: underline'>${original}</span>`,
-    strikethrough: (original) => `<span style='text-decoration: line-through'>${original}</span>`,
-  },
-  transformers: defaultTransformersFactory(this),
-};
-
-export function blocksToHtml(
-  blocks: Block[],
-  pluginOptions: NotionPluginOptions = defaultPluginOptions,
-): string {
+export function blocksToHtml(blocks: Block[], pluginOptions: NotionPluginOptions): string {
   let html = '';
   let listItems = {
     type: '',
@@ -164,14 +130,14 @@ function annotate(
   return original;
 }
 
-function parseList(
+export function parseList(
   list: { text: RichText[]; children?: Block[] },
   pluginOptions: NotionPluginOptions,
 ) {
   return `<li>${parseRichTexts(list.text, pluginOptions)}</li>`;
 }
 
-function parseEmbedded(embed: { url: string; caption?: RichText[] }) {
+export function parseEmbedded(embed: { url: string; caption?: RichText[] }) {
   if (embed.url.includes('gist.github')) {
     return `<script src='${embed.url}.js' type='text/javascript' async defer></script>`;
   }
@@ -179,7 +145,7 @@ function parseEmbedded(embed: { url: string; caption?: RichText[] }) {
   return `<iframe src='${embed.url}'></iframe>`;
 }
 
-function parseImage(
+export function parseImage(
   image: ExternalFileWithCaption | FileWithCaption,
   imageTransformers: Omit<NotionPluginTransformers, 'link'>,
 ) {
@@ -201,7 +167,7 @@ function parseImage(
   return `<p>${imageContent}</p>`;
 }
 
-function parseRichTexts(richTexts: RichText[], pluginOptions: NotionPluginOptions): string {
+export function parseRichTexts(richTexts: RichText[], pluginOptions: NotionPluginOptions): string {
   let parsedText = '';
 
   for (const richText of richTexts) {
@@ -212,7 +178,6 @@ function parseRichTexts(richTexts: RichText[], pluginOptions: NotionPluginOption
 }
 
 function parseRichText(richText: RichText, pluginOptions: NotionPluginOptions) {
-
   function parseText(textInput: RichTextTextInput) {
     let content = textInput.text.content;
     content = linkify(content, textInput.text, pluginOptions.transformers.link);

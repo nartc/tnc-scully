@@ -2580,3 +2580,62 @@ No configuration for route "/tag/:tagName" found. Skipping
 Received Kill commandClosed servers
 
 Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+No configuration for route "/tag/:tagName" found. Skipping❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'title' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'title' of undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/macos-dev-setup"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/macos-dev-setup"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+
+      ----------------
+      Error, missing "<scully-content>" in route "/blog/intro-to-ngrx-slice"
+      without <scully-content> we can not render this route.
+      Make sure it is in there, and not inside any conditionals (*ngIf)
+      You can check this by opening "http://localhost:4200/blog/intro-to-ngrx-slice"
+      when you serve your app with ng serve and then in the browsers console run:
+      document.querySelector('scully-content')
+      ----------------
+      
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead
