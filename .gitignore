@@ -49,3 +49,6 @@ src/assets/scully-routes.json
 ./scully.tnc-scully.config.js
 
 .env
+
+scully/plugins/**/*.js
+scully/plugins/**/*.js.map
