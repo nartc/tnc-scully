@@ -47,4 +47,5 @@ Thumbs.db
 
 src/assets/scully-routes.json
 ./scully.tnc-scully.config.js
+
 .env
