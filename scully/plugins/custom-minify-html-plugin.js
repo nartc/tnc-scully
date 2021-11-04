@@ -29,7 +29,7 @@ const defaultMinifyOptions = {
 };
 const minifyHtmlPlugin = (html) => {
     let localMinifyOptions = defaultMinifyOptions;
-    const customMinifyOptions = scully_1.getMyConfig(exports.minifyHtmlPlugin);
+    const customMinifyOptions = (0, scully_1.getMyConfig)(exports.minifyHtmlPlugin);
     if (customMinifyOptions && customMinifyOptions.minifyOptions) {
         localMinifyOptions = {
             ...defaultMinifyOptions,
@@ -48,8 +48,8 @@ const minifyHtmlPlugin = (html) => {
             ],
         };
     }
-    return Promise.resolve(html_minifier_terser_1.minify(html, localMinifyOptions));
+    return Promise.resolve((0, html_minifier_terser_1.minify)(html, localMinifyOptions));
 };
 exports.minifyHtmlPlugin = minifyHtmlPlugin;
-scully_1.registerPlugin('postProcessByHtml', exports.MinifyHtml, exports.minifyHtmlPlugin);
+(0, scully_1.registerPlugin)('postProcessByHtml', exports.MinifyHtml, exports.minifyHtmlPlugin);
 //# sourceMappingURL=custom-minify-html-plugin.js.map
