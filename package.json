@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration=production",
     "build:prod": "cross-env NODE_ENV=production ng build --configuration=production && scully --prod --scanRoutes && npm run pwa:regen",
     "test": "ng test",
     "lint": "ng lint",
