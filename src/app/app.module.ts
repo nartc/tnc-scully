@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { environment } from '../environments/environment';
-import { appRoutes } from './app-routes';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found.component';
@@ -13,7 +12,16 @@ import { NotFoundComponent } from './not-found.component';
   declarations: [AppComponent, NotFoundComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot([
+      { path: '', loadChildren: () => import('./home/home.component').then((m) => m.HomeModule) },
+      {
+        path: 'blog',
+        loadChildren: () => import('./blog/blog.component').then((m) => m.BlogModule),
+      },
+      { path: 'tag', loadChildren: () => import('./tag.component').then((m) => m.TagModule) },
+      { path: '404', component: NotFoundComponent },
+      { path: '**', component: NotFoundComponent },
+    ]),
     ScullyLibModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
