@@ -1,2 +1,11 @@
 identifier: kfe2d4b8tej76ec1
 allowErrorCollect: true
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: tnc-scully
+homeFolder: /Users/ctran/code/oss/personal-blog
+distFolder: dist/tnc-scully
+outDir: /Users/ctran/code/oss/personal-blog/dist/static
+handle404: ''

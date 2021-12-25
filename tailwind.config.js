@@ -3,9 +3,7 @@ const { fontFamily, spacing } = require('tailwindcss/defaultTheme');
 module.exports = {
   prefix: '',
   important: true,
-  purge: {
-    content: ['./src/**/*.{html,ts}'],
-  },
+  content: ['./src/**/*.{html,ts}'],
   theme: {
     fontFamily: {
       sans: ['Quicksand', ...fontFamily.sans],
