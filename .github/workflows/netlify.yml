@@ -1,0 +1,28 @@
+name: Netlify Deploy
+on:
+  workflow_run:
+    workflows:
+      - "Run Scully"
+    types:
+      - completed
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Scully artifacts
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: tnc-scully-scully
+          workflow: scully.yml
+          path: ./dist
+
+      - name: Deploy Netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy --dir=dist --prod

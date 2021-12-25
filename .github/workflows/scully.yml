@@ -1,0 +1,87 @@
+name: Run Scully
+on:
+  workflow_run:
+    workflows:
+      - "Build and Upload Artifacts"
+    types:
+      - completed
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Build Scully with Scan Routes
+        uses: ./.github/actions/build-scully
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          notion_api_key: ${{ secrets.NOTION_API_KEY }}
+          should_scan_routes: true
+
+  on-failure:
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Check files changed
+        uses: ./.github/actions/check-changed-files
+        id: check-files-changed
+    outputs:
+      should_build: ${{ steps.check-files-changed.outputs.is_scully_changed == 'true' }}
+
+  on-dispatch:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    steps:
+      - run: echo Dispatching
+    outputs:
+      is_dispatch: 'true'
+
+  upload:
+    runs-on: ubuntu-latest
+    needs: on-failure
+    if: ${{ needs.on-failure.outputs.should_build != 'true' }}
+    steps:
+      - name: Download Scully artifacts
+        continue-on-error: true
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: tnc-scully-scully
+          workflow: scully.yml
+          path: ./dist
+
+      - name: Reupload
+        uses: actions/upload-artifact@v2
+        with:
+          name: tnc-scully-scully
+          path: |
+            ./dist
+
+  build:
+    runs-on: ubuntu-latest
+    needs:
+      - on-failure
+      - on-dispatch
+    if: ${{ needs.on-failure.outputs.should_build == 'true' || needs.on-dispatch.outputs.is_dispatch == 'true' }}
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Build Scully
+        uses: ./.github/actions/build-scully
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          notion_api_key: ${{ secrets.NOTION_API_KEY }}

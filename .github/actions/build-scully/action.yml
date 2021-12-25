@@ -1,0 +1,75 @@
+name: Build Scully
+description: Build Scully
+inputs:
+  should_scan_routes:
+    description: Should add --scanRoutes flag to Scully
+    required: false
+    default: 'false'
+  github_token:
+    description: Github Token
+    required: true
+  notion_api_key:
+    description: Notion API Key
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Cache node modules
+      uses: actions/cache@v2
+      id: cached-deps
+      env:
+        cache-name: cache-node-modules
+      with:
+        # npm cache files are stored in `~/.npm` on Linux/macOS
+        path: '**/node_modules'
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+
+    - name: Setup NodeJS
+      uses: actions/setup-node@v2
+
+    - name: Install dependencies
+      shell: bash
+      run: |
+        if ${{ steps.cached-deps.outputs.cache-hit != 'true' }}
+        then
+          yarn install --ignore-scripts
+        fi
+
+    - name: Download ng build artifacts
+      uses: dawidd6/action-download-artifact@v2
+      with:
+        github_token: ${{ inputs.github_token }}
+        name: tnc-scully-artifacts
+        workflow: build-and-upload-artifacts.yml
+        workflow_conclusion: success
+        path: ./dist
+
+    - name: Create .env
+      shell: bash
+      run: |
+        touch .env
+        echo "NOTION_API_KEY=${{ inputs.notion_api_key }}" >> .env
+
+    - name: Scully Build
+      shell: bash
+      run: |
+        if ${{ inputs.should_scan_routes == 'true' }}
+        then
+          yarn scully:prod --scanRoutes
+        else
+          yarn scully:prod
+        fi
+
+    - name: Upload Scully artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: tnc-scully-scully
+        path: |
+          ./dist/static
+branding:
+  color: green
+  icon: cpu

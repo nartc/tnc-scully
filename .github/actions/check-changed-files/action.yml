@@ -1,0 +1,27 @@
+name: Check Changed Files
+description: Check to see what type of files changed
+outputs:
+  is_angular_changed:
+    description: Is this an Angular related changed?
+    value: ${{ steps.check-angular-source.outputs.any_changed }}
+  is_scully_changed:
+    description: Is this a Scully related changed?
+    value: ${{ steps.check-scully-source.outputs.any_changed }}
+runs:
+  using: "composite"
+  steps:
+    - name: Check Angular Source
+      id: check-angular-source
+      uses: tj-actions/changed-files@v10
+      with:
+        files: |
+          package.json
+          angular.json
+          tailwind.config.js
+          src/**/*.*
+
+    - name: Check Scully Source
+      id: check-scully-source
+      uses: tj-actions/changed-files@v10
+      with:
+        files: scully.tnc-scully.config.ts
