@@ -7,10 +7,7 @@ import { AfterViewInit, Directive, ElementRef, Inject, Input } from '@angular/co
 export class UtterancesDirective implements AfterViewInit {
   @Input() appUtterances = false;
 
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    private readonly el: ElementRef<HTMLElement>,
-  ) {}
+  constructor(@Inject(DOCUMENT) private document: Document, private el: ElementRef<HTMLElement>) {}
 
   ngAfterViewInit() {
     if (this.appUtterances) {

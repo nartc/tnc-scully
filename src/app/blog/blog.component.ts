@@ -44,7 +44,7 @@ import { UtterancesDirective } from './directives/utterances.directive';
 export class BlogComponent {
   isProd = environment.production;
 
-  private readonly isUpdateAvailable = (): OperatorFunction<VersionReadyEvent, boolean[]> => {
+  private isUpdateAvailable = (): OperatorFunction<VersionReadyEvent, boolean[]> => {
     return pipe(
       timeout(5000),
       mapTo(true),
@@ -88,10 +88,10 @@ export class BlogComponent {
   );
 
   constructor(
-    private readonly scullyRoutesService: ScullyRoutesService,
-    private readonly metaService: MetaService,
-    private readonly swUpdate: SwUpdate,
-    @Inject(DOCUMENT) private readonly document: Document,
+    private scullyRoutesService: ScullyRoutesService,
+    private metaService: MetaService,
+    private swUpdate: SwUpdate,
+    @Inject(DOCUMENT) private document: Document,
   ) {}
 }
 

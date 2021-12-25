@@ -45,7 +45,7 @@ export class ThemeTogglerComponent {
 
   current = this.themeService.scheme;
 
-  constructor(private readonly themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) {}
 }
 
 @NgModule({

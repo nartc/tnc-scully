@@ -8,14 +8,9 @@ import { Frontmatter } from '../frontmatter';
   providedIn: 'root',
 })
 export class MetaService {
-  private _defaultImage =
-    'https://avatars1.githubusercontent.com/u/25516557?s=460&u=b15a0b6c89d6d8d0b7225a6eab30c060f70d3d9f&v=4';
+  private _defaultImage = 'https://nartc.me/assets/static/head.png';
 
-  constructor(
-    private readonly meta: Meta,
-    private readonly title: Title,
-    @Inject(DOCUMENT) private readonly dom: Document,
-  ) {}
+  constructor(private meta: Meta, private title: Title, @Inject(DOCUMENT) private dom: Document) {}
 
   update(front: Frontmatter) {
     this.title.setTitle(MetaService.getTitle(front.title));

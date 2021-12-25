@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { of } from 'rxjs';
-import { map, pluck, switchMap } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { AllBlogsBtnModule } from './shared/components/all-blogs-btn.component';
 import { BlogListItemModule } from './shared/components/blog-list-item.component';
 import { ThemeTogglerModule } from './shared/components/theme-toggler.component';
@@ -30,8 +30,8 @@ import { latestByDate } from './shared/utils/operators/latest-by-date.operator';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TagComponent {
-  taggedBlogs$ = this.route.params.pipe(
-    pluck('tagName'),
+  readonly taggedBlogs$ = this.route.params.pipe(
+    map((params) => params.tagName),
     switchMap((tagName: string) => {
       if (!tagName) return of([]);
       this.metaService.updateTagTitle(tagName);
@@ -48,9 +48,9 @@ export class TagComponent {
   );
 
   constructor(
-    private readonly route: ActivatedRoute,
-    private readonly scullyRoutesService: ScullyRoutesService,
-    private readonly metaService: MetaService,
+    private route: ActivatedRoute,
+    private scullyRoutesService: ScullyRoutesService,
+    private metaService: MetaService,
   ) {}
 }
 

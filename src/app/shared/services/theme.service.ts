@@ -5,16 +5,13 @@ import { Inject, Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 export class ThemeService {
   private static readonly lsKey = 'nartc-prefers-scheme';
 
-  private readonly renderer: Renderer2;
-  private readonly window: Window;
+  private renderer: Renderer2;
+  private window: Window;
   private readonly body: HTMLElement;
 
   private currentScheme: 'dark' | 'light';
 
-  constructor(
-    readonly rendererFactory2: RendererFactory2,
-    @Inject(DOCUMENT) readonly injectedDocument: Document,
-  ) {
+  constructor(rendererFactory2: RendererFactory2, @Inject(DOCUMENT) injectedDocument: Document) {
     this.renderer = rendererFactory2.createRenderer(null, null);
     this.window = injectedDocument.defaultView as Window;
     this.body = injectedDocument.body;

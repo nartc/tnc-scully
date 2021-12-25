@@ -39,7 +39,7 @@ import { latestByDate } from '../shared/utils/operators/latest-by-date.operator'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogListComponent {
-  links$: Observable<Frontmatter[]> = this.scullyRoutesService.available$.pipe(
+  readonly links$: Observable<Frontmatter[]> = this.scullyRoutesService.available$.pipe(
     map((links) => links.filter((l) => l.route.includes('/blog') && l.title != null)),
     latestByDate<Frontmatter[]>(),
   );
@@ -49,7 +49,7 @@ export class BlogListComponent {
     link: Frontmatter;
   }>(1);
 
-  intersectMap$: Observable<Record<string, boolean>> = this.$intersectionLink.pipe(
+  readonly intersectMap$: Observable<Record<string, boolean>> = this.$intersectionLink.pipe(
     scan((intersectMap, { entries, link }) => {
       const isIntersecting = entries.some((entry) => entry.isIntersecting);
       if (isIntersecting && !intersectMap[link.slug]) {
@@ -61,7 +61,7 @@ export class BlogListComponent {
     startWith({}),
   );
 
-  constructor(private readonly scullyRoutesService: ScullyRoutesService) {}
+  constructor(private scullyRoutesService: ScullyRoutesService) {}
 }
 
 @NgModule({

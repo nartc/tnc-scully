@@ -34,7 +34,7 @@ import { SocialsComponent } from './components/socials.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  constructor(readonly metaService: MetaService) {
+  constructor(metaService: MetaService) {
     metaService.resetMeta();
   }
 }

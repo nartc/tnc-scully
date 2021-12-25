@@ -10,7 +10,7 @@ import { ThemeService } from './shared/services/theme.service';
   `,
 })
 export class AppComponent {
-  constructor(readonly themeService: ThemeService) {
+  constructor(themeService: ThemeService) {
     themeService.load();
   }
 }

@@ -37,12 +37,12 @@ import { Destroyable } from '../../../shared/destroyable';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AvatarComponent extends Destroyable {
-  hasUpdate$ = this.swUpdate.versionUpdates.pipe(mapTo(true), startWith(false));
+  readonly hasUpdate$ = this.swUpdate.versionUpdates.pipe(mapTo(true), startWith(false));
 
   constructor(
-    readonly appRef: ApplicationRef,
-    private readonly swUpdate: SwUpdate,
-    @Inject(DOCUMENT) private readonly document: Document,
+    appRef: ApplicationRef,
+    private swUpdate: SwUpdate,
+    @Inject(DOCUMENT) private document: Document,
   ) {
     super();
     if (swUpdate.isEnabled) {
