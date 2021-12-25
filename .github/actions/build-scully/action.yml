@@ -64,6 +64,10 @@ runs:
           yarn scully:prod
         fi
 
+    - name: PWA Regen
+      shell: bash
+      run: yarn pwa:regen
+
     - name: Upload Scully artifacts
       uses: actions/upload-artifact@v2
       with:
