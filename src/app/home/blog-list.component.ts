@@ -1,9 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { IntersectionObserverModule } from '@ng-web-apis/intersection-observer';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable, ReplaySubject } from 'rxjs';
 import { debounceTime, map, scan, startWith } from 'rxjs/operators';
-import { Frontmatter } from '../../shared/frontmatter';
-import { latestByDate } from '../../shared/utils/operators/latest-by-date.operator';
+import { BlogListItemModule } from '../shared/components/blog-list-item.component';
+import { Frontmatter } from '../shared/frontmatter';
+import { latestByDate } from '../shared/utils/operators/latest-by-date.operator';
 
 @Component({
   selector: 'app-blog-list',
@@ -59,3 +63,14 @@ export class BlogListComponent {
 
   constructor(private readonly scullyRoutesService: ScullyRoutesService) {}
 }
+
+@NgModule({
+  declarations: [BlogListComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild([{ path: '', component: BlogListComponent }]),
+    BlogListItemModule,
+    IntersectionObserverModule,
+  ],
+})
+export class BlogListModule {}

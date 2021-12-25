@@ -1,11 +1,13 @@
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
   HostBinding,
   HostListener,
   Input,
+  NgModule,
 } from '@angular/core';
-import { ThemeService } from '../../services/theme.service';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-theme-toggler',
@@ -45,3 +47,10 @@ export class ThemeTogglerComponent {
 
   constructor(private readonly themeService: ThemeService) {}
 }
+
+@NgModule({
+  declarations: [ThemeTogglerComponent],
+  exports: [ThemeTogglerComponent],
+  imports: [CommonModule],
+})
+export class ThemeTogglerModule {}

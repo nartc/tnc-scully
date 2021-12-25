@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -66,3 +68,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent {}
+
+@NgModule({
+  declarations: [AboutComponent],
+  imports: [CommonModule, RouterModule.forChild([{ path: '', component: AboutComponent }])],
+})
+export class AboutModule {}

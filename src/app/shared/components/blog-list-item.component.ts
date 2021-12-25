@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Frontmatter } from '../../frontmatter';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input, NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Frontmatter } from '../frontmatter';
 
 @Component({
   selector: 'app-blog-list-item',
@@ -39,3 +41,10 @@ import { Frontmatter } from '../../frontmatter';
 export class BlogListItemComponent {
   @Input() route: Frontmatter;
 }
+
+@NgModule({
+  declarations: [BlogListItemComponent],
+  imports: [CommonModule, RouterModule],
+  exports: [BlogListItemComponent],
+})
+export class BlogListItemModule {}

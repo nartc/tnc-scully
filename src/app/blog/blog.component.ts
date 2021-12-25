@@ -1,7 +1,14 @@
-import { DOCUMENT } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
-import { SwUpdate, UpdateAvailableEvent } from '@angular/service-worker';
-import { ScullyRoutesService } from '@scullyio/ng-lib';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Inject,
+  NgModule,
+  ViewEncapsulation,
+} from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
+import { ScullyLibModule, ScullyRoutesService } from '@scullyio/ng-lib';
 import {
   catchError,
   combineLatest,
@@ -20,8 +27,11 @@ import {
   timeout,
 } from 'rxjs';
 import { environment } from '../../environments/environment';
+import { AllBlogsBtnModule } from '../shared/components/all-blogs-btn.component';
+import { ThemeTogglerModule } from '../shared/components/theme-toggler.component';
 import { Frontmatter } from '../shared/frontmatter';
 import { MetaService } from '../shared/services/meta.service';
+import { UtterancesDirective } from './directives/utterances.directive';
 
 @Component({
   selector: 'app-blog',
@@ -34,7 +44,7 @@ import { MetaService } from '../shared/services/meta.service';
 export class BlogComponent {
   isProd = environment.production;
 
-  private readonly isUpdateAvailable = (): OperatorFunction<UpdateAvailableEvent, boolean[]> => {
+  private readonly isUpdateAvailable = (): OperatorFunction<VersionReadyEvent, boolean[]> => {
     return pipe(
       timeout(5000),
       mapTo(true),
@@ -47,11 +57,11 @@ export class BlogComponent {
   blog$: Observable<{ loading: boolean; content: Frontmatter }> = defer(() => {
     if (this.isProd && this.swUpdate.isEnabled) {
       // noinspection JSDeprecatedSymbols
-      return combineLatest({
-        content: this.scullyRoutesService.getCurrent(),
-        loading: from(this.swUpdate.checkForUpdate()).pipe(
+      return combineLatest([
+        this.scullyRoutesService.getCurrent(),
+        from(this.swUpdate.checkForUpdate()).pipe(
           switchMapTo(
-            this.swUpdate.available.pipe(
+            this.swUpdate.versionUpdates.pipe(
               this.isUpdateAvailable(),
               map(([_, hasUpdate]) => {
                 if (hasUpdate) {
@@ -65,7 +75,7 @@ export class BlogComponent {
           ),
           startWith(true),
         ),
-      });
+      ]).pipe(map(([content, loading]) => ({ content, loading })));
     }
 
     return this.scullyRoutesService
@@ -84,3 +94,24 @@ export class BlogComponent {
     @Inject(DOCUMENT) private readonly document: Document,
   ) {}
 }
+
+@NgModule({
+  declarations: [BlogComponent, UtterancesDirective],
+  imports: [
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path: ':slug',
+        component: BlogComponent,
+      },
+      {
+        path: '**',
+        component: BlogComponent,
+      },
+    ]),
+    ScullyLibModule,
+    AllBlogsBtnModule,
+    ThemeTogglerModule,
+  ],
+})
+export class BlogModule {}

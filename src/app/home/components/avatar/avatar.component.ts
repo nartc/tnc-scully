@@ -37,7 +37,7 @@ import { Destroyable } from '../../../shared/destroyable';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AvatarComponent extends Destroyable {
-  hasUpdate$ = this.swUpdate.available.pipe(mapTo(true), startWith(false));
+  hasUpdate$ = this.swUpdate.versionUpdates.pipe(mapTo(true), startWith(false));
 
   constructor(
     readonly appRef: ApplicationRef,

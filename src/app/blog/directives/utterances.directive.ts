@@ -1,4 +1,5 @@
-import { AfterViewInit, Directive, ElementRef, Input, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Directive, ElementRef, Inject, Input } from '@angular/core';
 
 @Directive({
   selector: '[appUtterances]',
@@ -6,12 +7,15 @@ import { AfterViewInit, Directive, ElementRef, Input, Renderer2 } from '@angular
 export class UtterancesDirective implements AfterViewInit {
   @Input() appUtterances = false;
 
-  constructor(private readonly renderer: Renderer2, private readonly el: ElementRef) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private readonly el: ElementRef<HTMLElement>,
+  ) {}
 
   ngAfterViewInit() {
     if (this.appUtterances) {
       try {
-        const scriptEl: HTMLScriptElement = this.renderer.createElement('script');
+        const scriptEl = this.document.createElement('script');
         scriptEl.async = true;
         scriptEl.src = 'https://utteranc.es/client.js';
         scriptEl.setAttribute('repo', 'nartc/tnc-scully-comments');
@@ -19,7 +23,7 @@ export class UtterancesDirective implements AfterViewInit {
         scriptEl.setAttribute('id', 'utterances');
         scriptEl.setAttribute('theme', 'preferred-color-scheme');
         scriptEl.setAttribute('crossorigin', 'anonymous');
-        this.renderer.appendChild(this.el.nativeElement, scriptEl);
+        this.el.nativeElement.appendChild(scriptEl);
       } catch (e) {
         console.log('Error adding utterances comments', e);
       }

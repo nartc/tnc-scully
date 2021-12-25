@@ -7,7 +7,7 @@ import { environment } from '../environments/environment';
 import { appRoutes } from './app-routes';
 
 import { AppComponent } from './app.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from './not-found.component';
 
 @NgModule({
   declarations: [AppComponent, NotFoundComponent],

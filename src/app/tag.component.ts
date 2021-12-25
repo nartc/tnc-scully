@@ -1,11 +1,15 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ScullyRoutesService } from '@scullyio/ng-lib';
 import { of } from 'rxjs';
 import { map, pluck, switchMap } from 'rxjs/operators';
-import { Frontmatter } from '../shared/frontmatter';
-import { MetaService } from '../shared/services/meta.service';
-import { latestByDate } from '../shared/utils/operators/latest-by-date.operator';
+import { AllBlogsBtnModule } from './shared/components/all-blogs-btn.component';
+import { BlogListItemModule } from './shared/components/blog-list-item.component';
+import { ThemeTogglerModule } from './shared/components/theme-toggler.component';
+import { Frontmatter } from './shared/frontmatter';
+import { MetaService } from './shared/services/meta.service';
+import { latestByDate } from './shared/utils/operators/latest-by-date.operator';
 
 @Component({
   selector: 'app-tag',
@@ -49,3 +53,15 @@ export class TagComponent {
     private readonly metaService: MetaService,
   ) {}
 }
+
+@NgModule({
+  declarations: [TagComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild([{ path: ':tagName', component: TagComponent }]),
+    BlogListItemModule,
+    AllBlogsBtnModule,
+    ThemeTogglerModule,
+  ],
+})
+export class TagModule {}
