@@ -1,15 +1,12 @@
 ---
-title: NgRx Slice
-description: Introduction to ngrx-slice, a plugin that provides the same functionalities as Redux Toolkit createSlice to NgRx consumers
-publishedAt: 2021-08-10
-updatedAt: 2021-08-11
-published: true
-slug: 'ngrx-slice'
+title: NgRx Slice description: Introduction to ngrx-slice, a plugin that provides the same functionalities as Redux
+Toolkit createSlice to NgRx consumers publishedAt: 2021-08-10 updatedAt: 2021-08-11 published: true slug: 'ngrx-slice'
 tags: ['Angular', 'NgRx']
 authors: ['Chau Tran']
 ---
 
-In this blog post, I want to introduce my latest open source project [`ngrx-slice`](https://github.com/nartc/ngrx-slice).
+In this blog post, I want to introduce my latest open source project [`ngrx-slice`](https://github.com/nartc/ngrx-slice)
+.
 
 ## TLDR
 
@@ -27,9 +24,15 @@ npm install ngrx-slice ngrx-immer immer
 
 ## What is `ngrx-slice`?
 
-`ngrx-slice` is a [NgRx](https://ngrx.io) plugin that provides almost the same functionalities that [Redux Toolkit createSlice](https://redux-toolkit.js.org/api/createSlice) provides.
+`ngrx-slice` is a [NgRx](https://ngrx.io) plugin that provides almost the same functionalities
+that [Redux Toolkit createSlice](https://redux-toolkit.js.org/api/createSlice) provides.
 
-At this point, some of you might then ask "Hm... Chau, so what is `createSlice` then?" `createSlice` is dubbed, by [Mark Erikson](https://twitter.com/acemarke) aka the author, as the _modern_ way of implementing [Redux](https://redux.js.org/) in your JavaScript application, especially in [ReactJS](https://reactjs.org/). The idea is to group most, if not all, Redux related building blocks into a _single slice of the global state_. A _slice_ has multiple layers which _kind of_ represent multiple building blocks of a piece of State: Actions, Reducers, and Selectors.
+At this point, some of you might then ask "Hm... Chau, so what is `createSlice` then?" `createSlice` is dubbed,
+by [Mark Erikson](https://twitter.com/acemarke) aka the author, as the _modern_ way of
+implementing [Redux](https://redux.js.org/) in your JavaScript application, especially
+in [ReactJS](https://reactjs.org/). The idea is to group most, if not all, Redux related building blocks into a _single
+slice of the global state_. A _slice_ has multiple layers which _kind of_ represent multiple building blocks of a piece
+of State: Actions, Reducers, and Selectors.
 
 Let's take a look at the following Counter example in vanilla Redux:
 
@@ -90,13 +93,17 @@ export const selectValue = (state) => state.counter.value;
 
 > To learn more about this `createSlice` API, please refer to [Redux Toolkit createSlice](https://redux-toolkit.js.org/api/createSlice)
 
-You can already notice the amount of code is much less in `createSlice` version with Actions being generated from the Reducers. Coupled with [Immer](https://immerjs.github.io/immer/) for simpler state updates, the boilerplate becomes manageable.
+You can already notice the amount of code is much less in `createSlice` version with Actions being generated from the
+Reducers. Coupled with [Immer](https://immerjs.github.io/immer/) for simpler state updates, the boilerplate becomes
+manageable.
 
 `ngrx-slice` embraces this same idea, but for NgRx
 
 ## Why?
 
-The main goal of `ngrx-slice` is an attempt to reduce the amount of boilerplate of NgRx, at least for _simpler_ features. A by-product goal of `ngrx-slice` is to ease the learning curve to NgRx for React developers who now work with [Angular](https://angular.io) and NgRx.
+The main goal of `ngrx-slice` is an attempt to reduce the amount of boilerplate of NgRx, at least for _simpler_
+features. A by-product goal of `ngrx-slice` is to ease the learning curve to NgRx for React developers who now work
+with [Angular](https://angular.io) and NgRx.
 
 Imagine having the ability to reduce the following code (Counter example with NgRx):
 
@@ -182,7 +189,9 @@ export class CounterEffects {
 }
 ```
 
-The above snippets are pretty _standard_ in NgRx world. Most of the time, you will have all of those files for each of your feature states. And to be honest, it does feel a bit overwhelming, especially for NgRx beginners. Let's explore how `ngrx-slice` can help with this.
+The above snippets are pretty _standard_ in NgRx world. Most of the time, you will have all of those files for each of
+your feature states. And to be honest, it does feel a bit overwhelming, especially for NgRx beginners. Let's explore
+how `ngrx-slice` can help with this.
 
 ## How?
 
@@ -243,11 +252,15 @@ export const {
 
 > `createSlice`, `noopReducer()`, and `PayloadAction` are imported from `ngrx-slice`
 
-That's all. Just like Redux Toolkit's `createSlice`, `ngrx-slice` accepts a `SliceOptions` object and returns the Reducer, generated Actions, and **in addition** the Selectors. For more detailed explanation, please check out [ngrx-slice Documentations](https://ngrx-slice.netlify.app)
+That's all. Just like Redux Toolkit's `createSlice`, `ngrx-slice` accepts a `SliceOptions` object and returns the
+Reducer, generated Actions, and **in addition** the Selectors. For more detailed explanation, please check
+out [ngrx-slice Documentations](https://ngrx-slice.netlify.app)
 
 #### Using the Slice
 
-The return value of `createSlice` is an object with the shape `{ actions, selectors, name, reducer }`. With destructuring, `CounterFeature` here is actually an object of `{ name, reducer }`, which is compatible with `StoreModule.forFeature()`
+The return value of `createSlice` is an object with the shape `{ actions, selectors, name, reducer }`. With
+destructuring, `CounterFeature` here is actually an object of `{ name, reducer }`, which is compatible
+with `StoreModule.forFeature()`
 
 ###### **counter.module.ts**
 
@@ -265,7 +278,8 @@ The return value of `createSlice` is an object with the shape `{ actions, select
 export class CounterModule {}
 ```
 
-`CounterSelectors` and `CounterActions` are just namespacing the generated Actions and Selectors. With this, `counter.effect.ts` can be modified like so:
+`CounterSelectors` and `CounterActions` are just namespacing the generated Actions and Selectors. With
+this, `counter.effect.ts` can be modified like so:
 
 ###### **counter.effect.ts**
 
@@ -292,13 +306,18 @@ export class CounterEffects {
 }
 ```
 
-You can see that for simple features like a Counter, all the logic are handled in a single `counter.slice.ts` and every building blocks are generated thanks to TypeScript.
+You can see that for simple features like a Counter, all the logic are handled in a single `counter.slice.ts` and every
+building blocks are generated thanks to TypeScript.
 
 ## Miscellaneous
 
-Of course, there will be cases where more complex features do not benefit as much from `ngrx-slice` but it does not mean you cannot use `ngrx-slice` for those. The returned `selectors` and `actions` are just abstractions using `createSelector` and `createAction` under the hood. Hence, you can use/compose those like normal NgRx Selectors.
+Of course, there will be cases where more complex features do not benefit as much from `ngrx-slice` but it does not mean
+you cannot use `ngrx-slice` for those. The returned `selectors` and `actions` are just abstractions
+using `createSelector` and `createAction` under the hood. Hence, you can use/compose those like normal NgRx Selectors.
 
-Entity is something tricky when used with `ngrx-slice`. Supposedly, [ngrx/entity](https://ngrx.io/guide/entity) helps with providing utilities to _immutably_ update list data. With `ngrx-slice`, you can update your list/array _mutably_ with Immer. For example:
+Entity is something tricky when used with `ngrx-slice`. Supposedly, [ngrx/entity](https://ngrx.io/guide/entity) helps
+with providing utilities to _immutably_ update list data. With `ngrx-slice`, you can update your list/array _mutably_
+with Immer. For example:
 
 ```ts
 // adding a new item to a list
@@ -313,10 +332,14 @@ entity.addOne(newItem, state);
 state.items.push(newItem);
 ```
 
-That is all. Go ahead and give `ngrx-slice` a try. Feel free to reach out to me on Twitter [@Nartc1410](https://twitter.com/Nartc1410) if you have any questions or just want to chat, I'd love to hear from you. If you run into any issues, please feel free to open an issue on [ngrx-slice Github](https://github.com/nartc/ngrx-slice). Thank you for reading.
+That is all. Go ahead and give `ngrx-slice` a try. Feel free to reach out to me on
+Twitter [@Nartc1410](https://twitter.com/Nartc1410) if you have any questions or just want to chat, I'd love to hear
+from you. If you run into any issues, please feel free to open an issue
+on [ngrx-slice Github](https://github.com/nartc/ngrx-slice). Thank you for reading.
 
 ## Special Mentions
 
-- Marko Stanimirović ([@MarkoStDev](https://twitter.com/MarkoStDev)) for `ngrx-child-selectors` and his `createFeature` PR
+- Marko Stanimirović ([@MarkoStDev](https://twitter.com/MarkoStDev)) for `ngrx-child-selectors` and his `createFeature`
+  PR
 - Tim Deschryver ([@tim_deschryver](https://twitter.com/tim_deschryver)) for `ngrx-immer`
 - Mark Erikson ([@acemarke](https://twitter.com/acemarke)) for Redux Toolkit

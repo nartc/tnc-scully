@@ -1340,3 +1340,529 @@ Using deprecated plugin type:"render"  use "postProcessByHtml" instead Depricati
 
 
 
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npm run scully -- --scanRoutes"----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. SkippingError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'title' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'title' of undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npm run scully -- --scanRoutes"----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. SkippingError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'title' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'title' of undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+----------------------------------   To discover new routes in the angular app use "npm run scully -- --scanRoutes"Using stored unhandled routes!.----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. SkippingError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'title' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'title' of undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npm run scully -- --scanRoutes"----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. SkippingError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'title' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'title' of undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+--------------------------------------------------------------------   To discover new routes in the angular app use "npm run scully -- --scanRoutes"Using stored unhandled routes!.
+
+
+
+No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+----------------------------------   To discover new routes in the angular app use "npm run scully -- --scanRoutes"Using stored unhandled routes!.----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. SkippingError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'title' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'title' of undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+--------------------------------------------------------------------   To discover new routes in the angular app use "npm run scully -- --scanRoutes"Using stored unhandled routes!.
+
+
+
+No configuration for route "/tag/:tagName" found. SkippingError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'title' of undefined The routeDiscoveryDone plugin "rss has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'title' of undefinedError during feed item creation undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string or an instance of Buffer or URL. Received undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npm run scully -- --scanRoutes"----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npm run scully -- --scanRoutes"----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+--------------------------------------------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+
+
+
+No configuration for route "/tag/:tagName" found. Skipping❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'name' of undefined The routeDiscoveryDone plugin "customRssPlugin has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'name' of undefined
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npm run scully -- --scanRoutes"----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. Skipping❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'name' of undefined The routeDiscoveryDone plugin "customRssPlugin has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'name' of undefined
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+----------------------------------Using stored unhandled routes!.   To discover new routes in the angular app use "npm run scully -- --scanRoutes"----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. Skipping❌ Failed to create RSS feed. Error:
+TypeError: Cannot read property 'name' of undefined The routeDiscoveryDone plugin "customRssPlugin has thrown the below error,
+              while trying to render route "unknown"
+              Scully will exitTypeError: Cannot read property 'name' of undefined
+
+
+
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+----------------------------------   To discover new routes in the angular app use "npm run scully -- --scanRoutes"Using stored unhandled routes!.----------------------------------
+
+
+
+No configuration for route "/tag/:tagName" found. Skipping
+Using deprecated plugin type:"render"  use "postProcessByHtml" insteadUsing deprecated plugin type:"render"  use "postProcessByHtml" instead Deprication Notice:
+       ======================================================================
+         From now on, the plugin that is being used to render a route is
+         able to be changed by the user. You can do this by adding or
+         enabling the plugin in the scully.json file. For your convenience,
+         we loaded the Puppeteer plugin for you.
+
+         To disable this warning enable the plugin of your choiche.
+         for Puppteer please add:
+             import '@scullyio/scully-plugin-puppeteer';
+          to your scully.tnc-scully.config.ts file.
+
+          When you get this waring while not using scully-plugin-puppeteer
+          you need to set the defaultRouteRenderer to the name of your plugin.
+          The defaultRouteRenderer is now set to 'routeRenderer'.
+       ======================================================================
+
+
+--------------------------------------------------------------------   To discover new routes in the angular app use "npm run scully -- --scanRoutes"Using stored unhandled routes!.
+
+
+
+No configuration for route "/tag/:tagName" found. Skipping
