@@ -46,7 +46,7 @@ runs:
         name: tnc-scully-artifacts
         workflow: build-and-upload-artifacts.yml
         workflow_conclusion: success
-        path: ./dist
+        path: ./dist/tnc-scully
 
     - name: Create .env
       shell: bash
