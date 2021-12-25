@@ -10,6 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "dotenv scully",
+    "scully:prod": "dotenv scully -- --prod",
     "scully:serve": "scully serve",
     "pwa:regen": "rm dist/static/ngsw.json;node_modules/.bin/ngsw-config dist/static ./ngsw-config.json"
   },

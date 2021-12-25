@@ -70,7 +70,7 @@ jobs:
         with:
           name: tnc-scully-angular-cache
           workflow: build-and-upload-artifacts.yml
-          path: .angular/cache
+          path: ./.angular/cache
 
       #      - name: Derive appropriate SHAs for base and head for `nx affected` commands
       #        uses: nrwl/nx-set-shas@v2
@@ -91,7 +91,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: tnc-scully-angular-cache
-          path: .angular/cache
+          path: ./.angular/cache
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
