@@ -1,27 +1,67 @@
-# TncScully
+This is a repository for my personal blog which is written with the following technologies:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+- [Angular](https://angular.io)
+- [Scully](https://scully.io)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Notion](https://notion.so)
+- [Netlify](https://www.netlify.com/)
 
-## Development server
+You can check out my blog live at [https://nartc.me](https://nartc.me)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How it’s built
 
-## Code scaffolding
+### Angular
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+As mentioned above, this blog is built using the Angular framework. I always keep this project up-to-date with the
+latest version of Angular.
 
-## Build
+Code-style wise, I use Single File Component (aka `*.component.ts` files only) as much as possible. However, there are a
+couple of components that have rather complex HTML/Styles that I choose to keep in separate files.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Shared components and feature components (routed) are built using Single-Component-as-Module (SCAM) approach. You’ll
+find these components contain the components themselves as well as their modules.
 
-## Running unit tests
+Reactivity is achieved with `AsyncPipe` and `Observable`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### TailwindCSS
 
-## Running end-to-end tests
+This project uses TailwindCSS for stylings. Nothing too special here, I just like using TailwindCSS because it is easy
+to use. I also keep TailwindCSS as up-to-date as possible.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Scully
 
-## Further help
+Scully is THE Static-site Generator for Angular ecosystem. It is easy to use and extensible. In fact, I build my
+own [Scully Notion Plugin](https://github.com/nartc/notion-stuff/blob/main/libs/scully-plugin-notion/README.md) to
+integrate Notion with Scully.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Notion
+
+All my blogs are written in Notion. There is a custom Scully plugin that will fetch (possible thanks to the
+recent [Notion Developers API](https://developers.notion.com/)) the blog posts and generate the static site for them.
+
+The experience is nice because I can write my blogs from any device and Grammarly can help with my English as well.
+
+## CI / CD
+
+CI/CD for this project is quite complex. At the highest level, there are three separate moving parts:
+
+- Angular build
+- Scully build
+- Notion blogs
+
+The relationship between these three are: Angular build + Notion blogs → Scully build → Deploy
+
+To somewhat handle a sane amount of rebuild, I incorporate the following flow:
+
+![Workflows](workflows.png)
+
+- Angular files list:
+
+  ```
+  package.json
+  angular.json
+  tailwind.config.js
+  src/**/*.*
+  ```
+
+- Scully file: `scully.tnc-scully.config.ts`

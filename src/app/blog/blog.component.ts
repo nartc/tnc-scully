@@ -31,7 +31,7 @@ import { AllBlogsBtnModule } from '../shared/components/all-blogs-btn.component'
 import { ThemeTogglerModule } from '../shared/components/theme-toggler.component';
 import { Frontmatter } from '../shared/frontmatter';
 import { MetaService } from '../shared/services/meta.service';
-import { UtterancesDirective } from './directives/utterances.directive';
+import { GiscusDirective } from './directives/giscus.directive';
 
 @Component({
   selector: 'app-blog',
@@ -96,7 +96,7 @@ export class BlogComponent {
 }
 
 @NgModule({
-  declarations: [BlogComponent, UtterancesDirective],
+  declarations: [BlogComponent, GiscusDirective],
   imports: [
     CommonModule,
     RouterModule.forChild([
