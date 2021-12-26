@@ -64,13 +64,13 @@ jobs:
         if: ${{ steps.cached-deps.outputs.cache-hit != 'true' }}
         run: yarn install
 
-      - name: Download Angular Cache
-        continue-on-error: true
-        uses: dawidd6/action-download-artifact@v2
-        with:
-          name: tnc-scully-angular-cache
-          workflow: build-and-upload-artifacts.yml
-          path: ./.angular/cache
+      #      - name: Download Angular Cache
+      #        continue-on-error: true
+      #        uses: dawidd6/action-download-artifact@v2
+      #        with:
+      #          name: tnc-scully-angular-cache
+      #          workflow: build-and-upload-artifacts.yml
+      #          path: ./.angular/cache
 
       #      - name: Derive appropriate SHAs for base and head for `nx affected` commands
       #        uses: nrwl/nx-set-shas@v2
@@ -87,11 +87,11 @@ jobs:
       - name: Build projects
         run: yarn build
 
-      - name: Upload Angular Cache
-        uses: actions/upload-artifact@v2
-        with:
-          name: tnc-scully-angular-cache
-          path: ./.angular/cache
+      #      - name: Upload Angular Cache
+      #        uses: actions/upload-artifact@v2
+      #        with:
+      #          name: tnc-scully-angular-cache
+      #          path: ./.angular/cache
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
