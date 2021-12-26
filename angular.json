@@ -115,9 +115,6 @@
   },
   "defaultProject": "tnc-scully",
   "cli": {
-    "analytics": "b17e69be-2690-4937-901d-56d0e94a9b8e",
-    "cache": {
-      "environment": "all"
-    }
+    "analytics": "b17e69be-2690-4937-901d-56d0e94a9b8e"
   }
 }

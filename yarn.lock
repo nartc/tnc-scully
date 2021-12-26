@@ -1342,37 +1342,37 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@notion-stuff/blocks-html-parser@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@notion-stuff/blocks-html-parser/-/blocks-html-parser-5.0.0.tgz#8729a645f10d3332e292e9546c9b469f707e7539"
-  integrity sha512-ijhmYXmODd5XrAizV5JGztBH/b7FW2834mlKZ15h87mAT4kkNIN4DpYyMEWPucVGX/YyVVHs8x8cocvNMsCiRQ==
+"@notion-stuff/blocks-html-parser@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@notion-stuff/blocks-html-parser/-/blocks-html-parser-5.1.0.tgz#c1458eda807796a8d60c4e6a8771ead2443ffcdc"
+  integrity sha512-koqrhaCkdvi+rsyZbhPd4/w5aPPwBxPitoNY2nX6OvoeZB9GPxiP9fjPvaUjeRexAaqBUpksyyDc8X4wx15i2g==
   dependencies:
-    "@notion-stuff/blocks-markdown-parser" "5.0.0"
-    "@notion-stuff/v4-types" "5.0.0"
+    "@notion-stuff/blocks-markdown-parser" "5.1.0"
+    "@notion-stuff/v4-types" "5.1.0"
     "@notionhq/client" "~0.4.6"
 
-"@notion-stuff/blocks-markdown-parser@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@notion-stuff/blocks-markdown-parser/-/blocks-markdown-parser-5.0.0.tgz#07cf8cbb4dfe763f433a5474319905992cb239ac"
-  integrity sha512-DxlOb4SDvxC5Z20RQSZhip6BaK9NnrMrNpRc+v2doGEKWvLqv8fv/EVYg/lCfWd8fvcVhrNPJ+zSpPtuEvNmQQ==
+"@notion-stuff/blocks-markdown-parser@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@notion-stuff/blocks-markdown-parser/-/blocks-markdown-parser-5.1.0.tgz#0a97737ce679e5dbd990b50f2a0b6989c45e8b64"
+  integrity sha512-PthsDmZPJM1vJgrow9LJayZHy3/XtVPf8mSL2yc9+v/aYwYgpKryy52yGAJBW2/N9yK1g5NrnEAfK2bHEgQTug==
   dependencies:
-    "@notion-stuff/v4-types" "5.0.0"
+    "@notion-stuff/v4-types" "5.1.0"
     "@notionhq/client" "~0.4.6"
 
-"@notion-stuff/scully-plugin-notion@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@notion-stuff/scully-plugin-notion/-/scully-plugin-notion-5.0.0.tgz#0efc13c144fc4aa2f4d5301eb345ee1e77366529"
-  integrity sha512-4+drkLxKKrdY1rVetAQ9zBFWd50ZQceqOHw3UOWxrdAFS7MJF60KA5xDtChBRELytiqMNMwrUGWKp2s95CBB7g==
+"@notion-stuff/scully-plugin-notion@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@notion-stuff/scully-plugin-notion/-/scully-plugin-notion-5.1.0.tgz#885d15726457c1bf798de931fcb7df6aca41f989"
+  integrity sha512-AVA7lqCin59ohYzH6DRQqtGnU3AKASccsBbSmV/T8KCGxEK6NKp5f0R37OX9n9fzoko9JEbGLILIxnZAclzk+w==
   dependencies:
-    "@notion-stuff/blocks-html-parser" "5.0.0"
-    "@notion-stuff/blocks-markdown-parser" "5.0.0"
-    "@notion-stuff/v4-types" "5.0.0"
+    "@notion-stuff/blocks-html-parser" "5.1.0"
+    "@notion-stuff/blocks-markdown-parser" "5.1.0"
+    "@notion-stuff/v4-types" "5.1.0"
     "@notionhq/client" "~0.4.6"
 
-"@notion-stuff/v4-types@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@notion-stuff/v4-types/-/v4-types-5.0.0.tgz#2d35ee986456502b5039efac721a11f9923c54e5"
-  integrity sha512-aqZdf3mNR6gyBg050n1kDmNS/Iy818W5QILSZrhbY+9G5QcYuYOFHeWEuSxj+pvrTg8P4knvBy6M7zcZYrjM/A==
+"@notion-stuff/v4-types@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@notion-stuff/v4-types/-/v4-types-5.1.0.tgz#9bf06adf3d9f1907415e7b5fe61feb3d628e1eb9"
+  integrity sha512-RIIdwSE6EnmiDkYWhL9zHMndC5mXAlgrRx5fHz8sny4ZBlqZBPr3itlxspbBWIynA44QR9YA/E+EtWmdAApYCQ==
   dependencies:
     "@notionhq/client" "~0.4.6"
 
