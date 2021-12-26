@@ -8,7 +8,7 @@ import { Frontmatter } from '../frontmatter';
   providedIn: 'root',
 })
 export class MetaService {
-  private _defaultImage = 'https://nartc.me/assets/static/head.png';
+  private _defaultImage = environment.avatar;
 
   constructor(private meta: Meta, private title: Title, @Inject(DOCUMENT) private dom: Document) {}
 

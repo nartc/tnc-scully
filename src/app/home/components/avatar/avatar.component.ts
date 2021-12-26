@@ -3,6 +3,7 @@ import { ApplicationRef, ChangeDetectionStrategy, Component, Inject } from '@ang
 import { SwUpdate } from '@angular/service-worker';
 import { concat, interval } from 'rxjs';
 import { first, mapTo, startWith, takeUntil } from 'rxjs/operators';
+import { environment } from '../../../../environments/environment';
 import { Destroyable } from '../../../shared/destroyable';
 
 @Component({
@@ -24,7 +25,7 @@ import { Destroyable } from '../../../shared/destroyable';
         [attr.data-tooltip]="'New version available 🚀'"
       >
         <img
-          src="https://avatars1.githubusercontent.com/u/25516557?s=460&u=b15a0b6c89d6d8d0b7225a6eab30c060f70d3d9f&v=4"
+          [src]="avatar"
           alt="avatar"
           class="object-cover object-center rounded-full w-full h-full visible group-hover:hidden"
           width="64"
@@ -37,6 +38,7 @@ import { Destroyable } from '../../../shared/destroyable';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AvatarComponent extends Destroyable {
+  readonly avatar = environment.avatar;
   readonly hasUpdate$ = this.swUpdate.versionUpdates.pipe(mapTo(true), startWith(false));
 
   constructor(
