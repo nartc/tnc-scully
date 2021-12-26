@@ -69,12 +69,21 @@ p {
     @apply mx-auto;
   }
 
-  & > img ~ em {
-    @apply block text-center text-sm;
-  }
-
   & > span > img {
     @apply inline-block;
+  }
+}
+
+figure {
+  & > img {
+    @apply mx-auto;
+  }
+
+  & > figcaption {
+    @apply text-center;
+    & > p {
+      @apply mt-0 text-sm italic;
+    }
   }
 }
 
