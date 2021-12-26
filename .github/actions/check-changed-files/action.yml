@@ -18,7 +18,10 @@ runs:
           package.json
           angular.json
           tailwind.config.js
-          src/**/*.*
+          src/**/*.ts
+          src/**/*.scss
+          src/**/*.css
+          src/**/*.html
 
     - name: Check Scully Source
       id: check-scully-source
