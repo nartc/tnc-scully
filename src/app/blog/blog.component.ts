@@ -69,13 +69,19 @@ export class BlogComponent {
                     .activateUpdate()
                     .then(() => this.document.defaultView?.location?.reload());
                 }
+                console.log({ hasUpdate });
                 return false;
               }),
             ),
           ),
           startWith(true),
         ),
-      ]).pipe(map(([content, loading]) => ({ content, loading })));
+      ]).pipe(
+        map(([content, loading]) => {
+          console.log({ content, loading });
+          return { content, loading };
+        }),
+      );
     }
 
     return this.scullyRoutesService
