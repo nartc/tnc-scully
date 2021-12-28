@@ -78,7 +78,7 @@ export class BlogComponent {
         ),
       ]).pipe(
         map(([content, loading]) => {
-          console.log({ content, loading });
+          console.log('Content and loading: ', { content, loading });
           return { content, loading };
         }),
       );
