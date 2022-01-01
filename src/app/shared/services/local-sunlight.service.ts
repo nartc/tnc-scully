@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// @ts-ignore
 import * as SunCalc from 'suncalc';
 import { GeolocationService } from './geolocation.service';
 import { ThemeService } from './theme.service';
