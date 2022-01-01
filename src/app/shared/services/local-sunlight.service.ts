@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as SunCalc from 'suncalc';
+import { getTimes } from 'suncalc';
 import { GeolocationService } from './geolocation.service';
 import { ThemeService } from './theme.service';
 
@@ -13,11 +13,7 @@ export class LocalSunlightService {
         const { latitude, longitude } = position.coords;
         const now = new Date();
 
-        const { goldenHour, goldenHourEnd, dawn, dusk } = SunCalc.getTimes(
-          now,
-          latitude,
-          longitude,
-        );
+        const { goldenHour, goldenHourEnd, dawn, dusk } = getTimes(now, latitude, longitude);
 
         if (now < dawn || now > dusk) {
           this.themeService.set('dark');
