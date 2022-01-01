@@ -88,7 +88,7 @@ export class BlogComponent {
       .getCurrent()
       .pipe(map((content) => ({ loading: false, content })));
   }).pipe(
-    tap(({ content }) => {
+    tap(({ content }: { loading: boolean; content: Frontmatter }) => {
       this.metaService.update({ ...content, url: `${environment.baseUrl}${content.route}` });
     }),
   );

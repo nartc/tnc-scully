@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocalSunlightService } from './shared/services/local-sunlight.service';
 import { ThemeService } from './shared/services/theme.service';
 
 @Component({
@@ -10,7 +11,8 @@ import { ThemeService } from './shared/services/theme.service';
   `,
 })
 export class AppComponent {
-  constructor(themeService: ThemeService) {
+  constructor(themeService: ThemeService, localSunlightService: LocalSunlightService) {
     themeService.load();
+    localSunlightService.init();
   }
 }

@@ -13,7 +13,7 @@ import { ThemeService } from '../services/theme.service';
   selector: 'app-theme-toggler',
   template: `
     <div class="w-full h-full text-2xl">
-      <span *ngIf="current === 'dark'; else light">🌜</span>
+      <span *ngIf="(currentScheme$ | async) === 'dark'; else light">🌜</span>
       <ng-template #light>
         <span>🌞</span>
       </ng-template>
@@ -39,11 +39,10 @@ export class ThemeTogglerComponent {
 
   @HostListener('click')
   onClick() {
-    this.themeService.update();
-    this.current = this.themeService.scheme;
+    this.themeService.toggle();
   }
 
-  current = this.themeService.scheme;
+  currentScheme$ = this.themeService.currentScheme$;
 
   constructor(private themeService: ThemeService) {}
 }

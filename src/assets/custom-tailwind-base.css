@@ -1,23 +1,35 @@
 :root .theme-dark {
-    --primary: theme('colors.yellow.400');
-    --secondary: theme('colors.purple.400');
-    --background-color: theme('colors.gray.800');
+    --primary: theme('colors.sky.400');
+    --secondary: theme('colors.rose.400');
+    --background-color: theme('colors.neutral.900');
     --text-color: theme('colors.white');
-    --gray-light: theme('colors.gray.500');
-    --gray-medium: theme('colors.gray.400');
-    --gray-dark: theme('colors.gray.300');
-    --table-even-row: theme('colors.gray.700');
+    --gray-light: theme('colors.neutral.500');
+    --gray-medium: theme('colors.neutral.400');
+    --gray-dark: theme('colors.neutral.300');
+    --table-even-row: theme('colors.neutral.700');
+    --shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+}
+
+:root .theme-twilight {
+    --primary: theme('colors.sky.300');
+    --secondary: theme('colors.rose.300');
+    --background-color: theme('colors.neutral.700');
+    --text-color: theme('colors.white');
+    --gray-light: theme('colors.neutral.400');
+    --gray-medium: theme('colors.neutral.300');
+    --gray-dark: theme('colors.neutral.200');
+    --table-even-row: theme('colors.neutral.600');
     --shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
 }
 
 :root .theme-light {
-    --primary: theme('colors.purple.600');
-    --secondary: theme('colors.yellow.600');
+    --primary: theme('colors.rose.600');
+    --secondary: theme('colors.sky.600');
     --background-color: theme('colors.white');
     --text-color: theme('colors.black');
-    --gray-light: theme('colors.gray.500');
-    --gray-medium: theme('colors.gray.600');
-    --gray-dark: theme('colors.gray.700');
-    --table-even-row: theme('colors.gray.200');
+    --gray-light: theme('colors.neutral.500');
+    --gray-medium: theme('colors.neutral.600');
+    --gray-dark: theme('colors.neutral.700');
+    --table-even-row: theme('colors.neutral.200');
     --shadow: theme('boxShadow.lg');
 }
