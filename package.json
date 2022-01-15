@@ -54,7 +54,7 @@
     "cross-env": "7.0.3",
     "dotenv-cli": "4.1.1",
     "html-minifier-terser": "6.1.0",
-    "marked": "4.0.8",
+    "marked": "4.0.10",
     "postcss": "8.4.5",
     "prettier": "2.5.1",
     "prismjs": "1.25.0",
