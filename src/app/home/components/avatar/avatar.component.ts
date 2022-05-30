@@ -1,8 +1,8 @@
 import { DOCUMENT } from '@angular/common';
 import { ApplicationRef, ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { concat, interval } from 'rxjs';
-import { first, mapTo, startWith, takeUntil } from 'rxjs/operators';
+import { concat, interval, map } from 'rxjs';
+import { first, startWith, takeUntil } from 'rxjs/operators';
 import { environment } from '../../../../environments/environment';
 import { Destroyable } from '../../../shared/destroyable';
 
@@ -39,7 +39,10 @@ import { Destroyable } from '../../../shared/destroyable';
 })
 export class AvatarComponent extends Destroyable {
   readonly avatar = environment.avatar;
-  readonly hasUpdate$ = this.swUpdate.versionUpdates.pipe(mapTo(true), startWith(false));
+  readonly hasUpdate$ = this.swUpdate.versionUpdates.pipe(
+    map(() => true),
+    startWith(false),
+  );
 
   constructor(
     appRef: ApplicationRef,

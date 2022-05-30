@@ -15,14 +15,13 @@ import {
   defer,
   from,
   map,
-  mapTo,
   Observable,
   of,
   OperatorFunction,
   pairwise,
   pipe,
   startWith,
-  switchMapTo,
+  switchMap,
   tap,
   timeout,
 } from 'rxjs';
@@ -47,7 +46,7 @@ export class BlogComponent {
   private isUpdateAvailable = (): OperatorFunction<VersionReadyEvent, boolean[]> => {
     return pipe(
       timeout(5000),
-      mapTo(true),
+      map(() => true),
       startWith(false),
       pairwise(),
       catchError(() => of([false, false])),
@@ -60,7 +59,7 @@ export class BlogComponent {
       return combineLatest([
         this.scullyRoutesService.getCurrent(),
         from(this.swUpdate.checkForUpdate()).pipe(
-          switchMapTo(
+          switchMap(() =>
             this.swUpdate.versionUpdates.pipe(
               this.isUpdateAvailable(),
               map(([_, hasUpdate]) => {
