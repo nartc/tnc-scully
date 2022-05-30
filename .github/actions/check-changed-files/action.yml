@@ -18,10 +18,12 @@ runs:
           package.json
           angular.json
           tailwind.config.js
-          src/**/.*.(ts|scss|css|html)$
-          
+          src/**/.*.(ts|scss|css|html|png)$
+
     - name: Check Scully Source
       id: check-scully-source
       uses: tj-actions/changed-files@v10
       with:
-        files: scully.tnc-scully.config.ts
+        files: |
+          scully.tnc-scully.config.ts
+          scully/**/.*.ts$
